@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Barlow+Condensed&family=Staatliches&display=swap");
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav-container {
+  background-color: #ad7fa8;
+}
+.nav-container a {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+header .logo {
+  color: #aec896;
+  font-family: "Barlow Condensed";
+}
+header ul {
+  display: flex;
+}
+header ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+.social-header, .hero-design {
+  display: none;
+}
+
+.hero {
+  background: #cba0c6;
+  color: white;
+  display: grid;
+  text-align: center;
+  padding: 4em;
+}
+.hero h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.hero .colored-word {
+  color: #e9b96e;
+}
+
+.meet {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  font-family: "Barlow Condensed";
+  color: #aec896;
+}
+.meet i {
+  margin-top: 1.3em;
+  margin-right: 0.5em;
+}
+
+.scroll {
+  width: 30px;
+  margin-top: 2em;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.featured {
+  position: relative;
+}
+
+.featured::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #e9b96e;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  color: #ad7fa8;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+}
+
+.featured-title {
+  color: #505050;
+  font-family: "Staatliches", cursive;
+  font-size: 2.5em;
+  margin-top: -0.4em;
+  display: block;
+}
+
+featured-desc {
+  color: black;
+  margin-bottom: 3em;
+  font-size: 1em;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.skills {
+  background: #e9b96e;
+}
+
+.skills-container ul li {
+  background: white;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+.skills-container ul li .icon-container {
+  height: 100px;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  /*individual heights for icons later*/
+}
+.skills-container ul li .icon-container.one {
+  width: 50px;
+}
+.skills-container ul li .icon-container.two {
+  width: 100px;
+}
+.skills-container ul li .icon-container.three {
+  width: 60px;
+}
+.skills-container ul li .skill-title {
+  font-weight: bold;
+}
+.skills-container ul li .featured-desc {
+  margin-bottom: 2em;
+}
+
+.portfolio {
+  background: #fde8ff;
+}
+
+.portfolio-container a img {
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+/*media queries*/
+@media only screen and (min-width: 800px) {
+  .featured, .portfolio {
+    text-align: left;
+  }
+  .featured, .portfolio-container {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+  .left, .portfolio-left {
+    display: grid;
+    place-content: center;
+  }
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  .skills {
+    margin-top: -10em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+  .skills-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+  }
+  .portfolio {
+    padding-top: 7em;
+  }
+  .portfolio-container img {
+    margin-left: 3em;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .hero {
+    height: 90vh;
+  }
+  .nav-container {
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+  }
+  .nav-container header {
+    background: #ad7fa8;
+  }
+  header {
+    padding: 2em 2em 2em 4em;
+  }
+  .social-header {
+    padding: 2em 4em 2em 0;
+  }
+  section {
+    padding: 4em;
+  }
+  .social-header {
+    display: block;
+  }
+  .social-header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 3em;
+    float: right;
+  }
+  .social-header ul img {
+    width: 20px;
+  }
+  .social-header ul i {
+    color: #ad7fa8;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+    padding: 0;
+  }
+  .hero .content {
+    background: #cba0c6;
+    padding: 6em 8em 6em 4em;
+    text-align: left;
+  }
+  .hero .content h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  .meet {
+    margin: unset;
+  }
+  .hero-design {
+    display: unset;
+    margin-left: 92%;
+    margin-top: -50%;
+    width: 67%;
+  }
+  .portfolio img {
+    float: right;
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  header {
+    padding: 2em 2em 2em 10em;
+  }
+  .social-header {
+    padding: 2em 10em 2em 0;
+  }
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+  .hero .content {
+    padding: 6em 8em 6em 10em;
+  }
+}
+@media only screen and (min-width: 1550px) {
+  header {
+    padding: 2em 2em 2em 20em;
+  }
+  .social-header {
+    padding: 2em 20em 2em 0;
+  }
+  section {
+    padding: 20em 20em 4em 20em;
+  }
+  .hero .content {
+    padding: 6em 8em 6em 20em;
+  }
+}/*# sourceMappingURL=main.css.map */
