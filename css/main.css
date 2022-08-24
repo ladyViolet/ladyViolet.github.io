@@ -64,15 +64,17 @@ header ul a {
 }
 
 .meet {
-  display: flex;
+  display: block;
   margin: 0 auto;
-  width: 100px;
+  padding-top: 3em;
+  width: 100%;
   font-family: "Barlow Condensed";
-  color: #aec896;
+  text-align: center;
+  font-size: 1.2em;
+  color: #c8e4ae;
 }
-.meet i {
-  margin-top: 1.3em;
-  margin-right: 0.5em;
+.meet .scroll-hint {
+  margin-top: -1em;
 }
 
 .scroll {
@@ -92,10 +94,11 @@ section {
 .featured::before {
   content: "";
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #e9b96e;
+  width: 210px;
+  height: 305px;
+  background-image: url(/img/orange-dab.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   top: 0;
   left: 0;
   z-index: -1;
@@ -117,10 +120,10 @@ section {
   display: block;
 }
 
-featured-desc {
+.featured-desc {
   color: black;
   margin-bottom: 3em;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1.8em;
   font-weight: 500;
 }
@@ -143,16 +146,18 @@ featured-desc {
   /*individual heights for icons later*/
 }
 .skills-container ul li .icon-container.one {
-  width: 50px;
+  width: 200px;
 }
 .skills-container ul li .icon-container.two {
-  width: 100px;
+  width: 200px;
 }
 .skills-container ul li .icon-container.three {
-  width: 60px;
+  width: 200px;
 }
 .skills-container ul li .skill-title {
   font-weight: bold;
+  font-size: 2em;
+  margin-top: 2.5em;
 }
 .skills-container ul li .featured-desc {
   margin-bottom: 2em;
@@ -169,12 +174,19 @@ featured-desc {
 
 /*media queries*/
 @media only screen and (min-width: 800px) {
+  .meet {
+    padding-top: 8em;
+  }
   .featured, .portfolio {
     text-align: left;
   }
   .featured, .portfolio-container {
     display: grid;
     grid-template-columns: 40% auto;
+  }
+  /*IMG DOES NOT FLOAT RIGHT!S*/
+  .featured img {
+    float: right;
   }
   .left, .portfolio-left {
     display: grid;
@@ -185,9 +197,9 @@ featured-desc {
     margin-top: 1em;
   }
   .skills {
-    margin-top: -10em;
-    margin-bottom: -7em;
-    padding-top: 7em;
+    margin-top: -2em;
+    margin-bottom: -10em;
+    padding-top: 3em;
   }
   .skills-container ul {
     display: grid;
@@ -195,7 +207,7 @@ featured-desc {
     grid-gap: 1em;
   }
   .portfolio {
-    padding-top: 7em;
+    padding-top: 10em;
   }
   .portfolio-container img {
     margin-left: 3em;
@@ -204,6 +216,9 @@ featured-desc {
 @media only screen and (min-width: 1050px) {
   .hero {
     height: 90vh;
+  }
+  .meet {
+    padding-top: 10em;
   }
   .nav-container {
     display: grid;
@@ -218,9 +233,6 @@ featured-desc {
   }
   .social-header {
     padding: 2em 4em 2em 0;
-  }
-  section {
-    padding: 4em;
   }
   .social-header {
     display: block;
@@ -257,9 +269,16 @@ featured-desc {
   }
   .hero-design {
     display: unset;
-    margin-left: 92%;
-    margin-top: -50%;
-    width: 67%;
+    margin-left: 93%;
+    margin-top: -100%;
+    width: 60%;
+  }
+  section {
+    padding-right: 3em;
+  }
+  .portfolio-container {
+    padding-left: 2em;
+    padding-right: 2em;
   }
   .portfolio img {
     float: right;
@@ -273,11 +292,19 @@ featured-desc {
   .social-header {
     padding: 2em 10em 2em 0;
   }
-  section {
-    padding: 10em 10em 4em 10em;
-  }
   .hero .content {
     padding: 6em 8em 6em 10em;
+  }
+  .featured::before {
+    width: 400px;
+    height: 400px;
+  }
+  .portfolio-container {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .portfolio img {
+    max-width: 600px;
   }
 }
 @media only screen and (min-width: 1550px) {
@@ -287,10 +314,14 @@ featured-desc {
   .social-header {
     padding: 2em 20em 2em 0;
   }
-  section {
-    padding: 20em 20em 4em 20em;
-  }
   .hero .content {
     padding: 6em 8em 6em 20em;
+  }
+  .featured img {
+    max-width: 800px;
+  }
+  .portfolio-container {
+    padding-left: 10em;
+    padding-right: 10em;
   }
 }/*# sourceMappingURL=main.css.map */
