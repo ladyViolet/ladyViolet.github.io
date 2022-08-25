@@ -1,8 +1,14 @@
+/*FONTS
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Staatliches', cursive;
+*/
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Barlow+Condensed&family=Staatliches&display=swap");
 body {
   height: 100vh;
   margin: 0;
   font-family: "Alumni Sans Pinstripe", sans-serif;
+  background-color: #e6e6e6;
 }
 
 ul {
@@ -29,11 +35,13 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  font-size: 1.5em;
+  padding: 1em;
 }
 header .logo {
   color: #aec896;
   font-family: "Barlow Condensed";
+  float: left;
 }
 header ul {
   display: flex;
@@ -89,6 +97,7 @@ section {
 
 .featured {
   position: relative;
+  background-color: white;
 }
 
 .featured::before {
@@ -137,6 +146,7 @@ section {
   padding: 2em;
   border-radius: 1em;
   margin-bottom: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .skills-container ul li .icon-container {
   height: 100px;
@@ -184,7 +194,6 @@ section {
     display: grid;
     grid-template-columns: 40% auto;
   }
-  /*IMG DOES NOT FLOAT RIGHT!S*/
   .featured img {
     float: right;
   }
@@ -197,7 +206,6 @@ section {
     margin-top: 1em;
   }
   .skills {
-    margin-top: -2em;
     margin-bottom: -10em;
     padding-top: 3em;
   }
@@ -229,25 +237,22 @@ section {
     background: #ad7fa8;
   }
   header {
-    padding: 2em 2em 2em 4em;
-  }
-  .social-header {
-    padding: 2em 4em 2em 0;
+    padding: 2em 2em 2em 2em;
   }
   .social-header {
     display: block;
+    font-size: 1.5em;
+    padding: 2em 0 2em 0;
+    background-color: white;
+    width: 100%;
   }
   .social-header ul {
     display: flex;
-    justify-content: space-between;
-    width: 3em;
-    float: right;
-  }
-  .social-header ul img {
-    width: 20px;
+    justify-content: center;
   }
   .social-header ul i {
     color: #ad7fa8;
+    padding: 0 1em 0 1em;
   }
   .hero {
     display: grid;
@@ -269,12 +274,12 @@ section {
   }
   .hero-design {
     display: unset;
-    margin-left: 93%;
-    margin-top: -100%;
+    margin-left: 92%;
+    margin-top: -70%;
     width: 60%;
   }
   section {
-    padding-right: 3em;
+    padding: 3em;
   }
   .portfolio-container {
     padding-left: 2em;
@@ -287,10 +292,13 @@ section {
 }
 @media only screen and (min-width: 1250px) {
   header {
-    padding: 2em 2em 2em 10em;
+    padding: 2em 2em 2em 4em;
   }
   .social-header {
     padding: 2em 10em 2em 0;
+  }
+  section {
+    padding: 10em 10em 4em 10em;
   }
   .hero .content {
     padding: 6em 8em 6em 10em;
@@ -303,13 +311,16 @@ section {
     padding-left: 4em;
     padding-right: 4em;
   }
+  .portfolio-left {
+    margin-right: 2em;
+  }
   .portfolio img {
     max-width: 600px;
   }
 }
 @media only screen and (min-width: 1550px) {
   header {
-    padding: 2em 2em 2em 20em;
+    padding: 2em 2em 2em 4em;
   }
   .social-header {
     padding: 2em 20em 2em 0;
@@ -323,5 +334,76 @@ section {
   .portfolio-container {
     padding-left: 10em;
     padding-right: 10em;
+  }
+}
+/*ANIMATIONS*/
+/*draw hero-intro*/
+#brush {
+  visibility: hidden;
+}
+
+#start-1, #start-2, #middle-1, #end-1, #end-2 {
+  visibility: hidden;
+  -webkit-animation: reveal 1s linear forwards;
+          animation: reveal 1s linear forwards;
+}
+
+#line-1, #line-2 {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  -webkit-animation: draw 2s linear forwards;
+          animation: draw 2s linear forwards;
+}
+
+#middle-1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#end-1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#start-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#line-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#end-2 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes reveal {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes reveal {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }/*# sourceMappingURL=main.css.map */
