@@ -406,32 +406,34 @@ section {
 #start-1, #start-2, #middle-1, #end-1, #end-2 {
     visibility: hidden;
     animation: reveal 1s linear forwards;
+    animation-delay: 1s;
 }
 
 #line-1, #line-2 {
     stroke-dasharray: 450;
     stroke-dashoffset: 450;
     animation: draw 2s linear forwards;
+    animation-delay: 1s;
 }
 
 #middle-1 {
-animation-delay: 1s;
+animation-delay: 2s;
 }
 
 #end-1 {
-animation-delay: 2s;
+animation-delay: 3s;
 }
 
 #start-2 {
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 #line-2 {
-animation-delay: 2s;
+animation-delay: 3s;
 }
 
 #end-2 {
-animation-delay: 2.5s;
+animation-delay: 3.5s;
 }
   
 @keyframes draw {

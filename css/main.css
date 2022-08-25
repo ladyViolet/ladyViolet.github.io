@@ -346,6 +346,8 @@ section {
   visibility: hidden;
   -webkit-animation: reveal 1s linear forwards;
           animation: reveal 1s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 #line-1, #line-2 {
@@ -353,31 +355,33 @@ section {
   stroke-dashoffset: 450;
   -webkit-animation: draw 2s linear forwards;
           animation: draw 2s linear forwards;
-}
-
-#middle-1 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-#end-1 {
+#middle-1 {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+
+#end-1 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 #start-2 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 #line-2 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 #end-2 {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 @-webkit-keyframes draw {
