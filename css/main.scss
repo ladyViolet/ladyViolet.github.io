@@ -76,6 +76,11 @@ header {
 
     .colored-word {
         color: #e9b96e;
+        font-size: 2em;
+    }
+
+    .and {
+        font-size: 2em;
     }
 }
 
@@ -302,6 +307,7 @@ section {
             h1 {
                 font-size: 3em;
                 line-height: 1.2em;
+                margin-bottom: -20%;
             }
         }
     }
@@ -313,8 +319,12 @@ section {
     .hero-design {
         display: unset;
         margin-left: 92%;
-        margin-top: -70%;
+        margin-top: -100%;
         width: 60%;
+    }
+
+    .and {
+        margin-left: 2em;
     }
 
     section {
@@ -348,6 +358,10 @@ section {
 
     .hero .content {
         padding: 6em 8em 6em 10em;
+
+        h1 {
+            margin-bottom: -20%;
+        }
     }
 
     .featured::before {
@@ -447,5 +461,3 @@ to {
 0% {visibility: hidden;}
 100% {visibility: visible;}
 }
-  
-  

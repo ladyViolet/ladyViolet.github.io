@@ -27,17 +27,49 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="1.8771859"
-     inkscape:cx="499.41776"
-     inkscape:cy="211.22042"
+     inkscape:zoom="1.3273709"
+     inkscape:cx="322.81859"
+     inkscape:cy="154.81732"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1784" />
+     inkscape:current-layer="g33556" />
   <defs
      id="defs49754">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect1139"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 108.37145,217.54752 c 1.35764,0 2.59127,1.23364 2.59127,2.59128 v 4.58456 l 0,0 c 0,1.35764 -1.23363,2.59127 -2.59127,2.59127 -1.35764,0 -2.59128,-1.23363 -2.59128,-2.59127 v 0 -4.58456 c 0,-1.35764 1.23364,-2.59128 2.59128,-2.59128 z"
+       copytype="repeated"
+       prop_scale="1.29"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="true"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect1137"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,0 H 1"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
     <inkscape:path-effect
        effect="bspline"
        id="path-effect878"
@@ -147,18 +179,42 @@
            cy="308.12915"
            rx="35.879002"
            ry="35.879192" />
-        <circle
-           style="vector-effect:non-scaling-stroke;fill:#ad7fa8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00116857;-inkscape-stroke:hairline;paint-order:stroke fill markers"
-           id="circle33548"
-           cx="182.5966"
-           cy="308.12915"
-           r="31.693287" />
-        <circle
-           style="vector-effect:non-scaling-stroke;fill:#e9b96e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.000970134;-inkscape-stroke:hairline;paint-order:stroke fill markers"
-           id="circle33550"
-           cx="182.5966"
-           cy="308.12915"
-           r="26.311407" />
+        <g
+           id="g4487"
+           inkscape:label="outer-lens">
+          <circle
+             style="vector-effect:non-scaling-stroke;fill:#ad7fa8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00116857;-inkscape-stroke:hairline;paint-order:stroke fill markers"
+             id="circle33548"
+             cx="182.5966"
+             cy="308.12915"
+             r="31.693287" />
+          <g
+             id="path3954"
+             style="fill:#ffffff;fill-opacity:1">
+            <path
+               style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+               d="m 157.35779,322.4281 c 1.13224,1.77599 2.23851,3.56497 3.88691,5.08289"
+               id="path4300" />
+            <path
+               style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+               d="m 157.68164,320.96289 a 1.5,1.5 0 0 0 -1.13086,0.20117 1.5,1.5 0 0 0 -0.45703,2.07031 c 1.12487,1.76443 2.30035,3.69166 4.13477,5.38086 a 1.5,1.5 0 0 0 2.11914,-0.0879 1.5,1.5 0 0 0 -0.0859,-2.11914 c -1.46238,-1.34662 -2.49906,-2.99956 -3.63867,-4.78711 a 1.5,1.5 0 0 0 -0.94141,-0.6582 z"
+               id="path4302" />
+          </g>
+        </g>
+        <g
+           id="g4481"
+           inkscape:label="inner-lens">
+          <circle
+             style="vector-effect:non-scaling-stroke;fill:#e9b96e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.000970134;-inkscape-stroke:hairline;paint-order:stroke fill markers"
+             id="circle33550"
+             cx="182.5966"
+             cy="308.12915"
+             r="26.311407" />
+          <path
+             style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+             d="m 198.43945,290.92969 a 2,2 0 0 0 -1.39062,0.64258 2,2 0 0 0 0.11328,2.82421 c 0,0 6.36714,6.01251 5.83984,14.09766 a 2,2 0 0 0 1.86524,2.12695 2,2 0 0 0 2.125,-1.86718 c 0.66868,-10.2531 -7.11719,-17.29688 -7.11719,-17.29688 a 2,2 0 0 0 -1.43555,-0.52734 z"
+             id="path3599" />
+        </g>
         <circle
            style="vector-effect:non-scaling-stroke;fill:#ad7fa8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.000661455;-inkscape-stroke:hairline;paint-order:stroke fill markers"
            id="circle33552"
@@ -173,11 +229,5 @@
            r="5.9798627" />
       </g>
     </g>
-    <path
-       style="display:inline;fill:#e6e6e6;fill-rule:evenodd;stroke-width:0.507246"
-       d="m 48.857212,202.8194 c 0,0 -4.231901,-3.92257 -2.974373,-6.27536 1.257512,-2.3528 8.190643,-4.40948 8.190643,-4.40948 0,0 -8.627396,2.92117 -10.402552,1.43316 -1.775156,-1.48801 -0.01812,-10.44633 -0.01812,-10.44633 0,0 -2.297063,9.30759 -4.177778,9.5798 -1.88071,0.2722 -8.045069,-4.30212 -8.045069,-4.30212 0,0 5.431552,4.33788 5.326393,7.17086 -0.105157,2.83298 -5.564319,5.39834 -5.564319,5.39834 0,0 5.440141,-2.23054 7.374989,-0.34129 1.934822,1.88925 1.281915,8.629 1.281915,8.629 0,0 0.213605,-7.0055 2.197522,-8.48992 1.983918,-1.48441 6.810773,2.05329 6.810774,2.05329 z"
-       id="path876"
-       sodipodi:nodetypes="ccczczcccccccc"
-       inkscape:label="flash" />
   </g>
 </svg>
