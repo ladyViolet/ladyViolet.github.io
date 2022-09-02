@@ -11,6 +11,10 @@ body {
   background-color: #e6e6e6;
 }
 
+.impressum-body {
+  background-color: #e9b96e;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -19,6 +23,22 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+a:link {
+  color: #505050;
+}
+
+a:visited {
+  color: #ad7fa8;
+}
+
+a:hover {
+  color: #aec896;
+}
+
+a:active {
+  color: #e9b96e;
 }
 
 img {
@@ -43,6 +63,9 @@ header .logo {
   font-family: "Barlow Condensed";
   float: left;
 }
+header a:hover {
+  color: #e9b96e;
+}
 header ul {
   display: flex;
 }
@@ -50,9 +73,15 @@ header ul a {
   display: block;
   padding: 0 1em;
 }
+header ul a:hover {
+  color: #505050;
+}
 
 .social-header, .hero-design {
   display: none;
+}
+.social-header i:hover, .hero-design i:hover {
+  color: #aec896;
 }
 
 .hero {
@@ -222,6 +251,9 @@ section {
 .form-group {
   margin-bottom: 2em;
 }
+.form-group textarea {
+  resize: none;
+}
 
 .form-control {
   box-sizing: border-box;
@@ -266,6 +298,48 @@ textarea.form-control {
 
 .btn:active {
   background-color: #e2ccdf;
+}
+
+footer {
+  background-color: #f0e9f1;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.impressum {
+  background-color: white;
+  border-radius: 1em;
+  margin: 0em 1em 1em 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: left;
+  padding: 1em;
+}
+.impressum h1 {
+  margin-top: 0px;
+}
+
+.arr-mobile {
+  visibility: visible;
+  width: 200px;
+  margin: 1em;
+}
+
+.arr-desktop {
+  visibility: hidden;
+  width: 0px;
+}
+
+.fa-envelope {
+  color: #886684;
+  padding-right: 2px;
+}
+
+.disclaimer h1 {
+  margin-top: 0px;
 }
 
 /*media queries*/
@@ -314,6 +388,10 @@ textarea.form-control {
   }
   .loveletter {
     width: 500px;
+  }
+  .impressum {
+    font-size: 1.5em;
+    margin: 3em;
   }
 }
 @media only screen and (min-width: 1050px) {
@@ -389,6 +467,18 @@ textarea.form-control {
     padding-left: 2em;
     padding-right: 2em;
   }
+  .impressum {
+    margin: 0em 6em 3em 6em;
+  }
+  .arr-mobile {
+    visibility: hidden;
+    width: 0px;
+  }
+  .arr-desktop {
+    visibility: visible;
+    width: 200px;
+    margin: 2em 1em;
+  }
 }
 @media only screen and (min-width: 1250px) {
   header {
@@ -424,6 +514,9 @@ textarea.form-control {
     padding-left: 4em;
     padding-right: 4em;
   }
+  .impressum {
+    margin: 0em 6em 3em 8em;
+  }
 }
 @media only screen and (min-width: 1550px) {
   header {
@@ -441,6 +534,9 @@ textarea.form-control {
   .portfolio-container {
     padding-left: 10em;
     padding-right: 10em;
+  }
+  .impressum {
+    margin: 0em 6em 3em 10em;
   }
 }
 /*ANIMATIONS*/
