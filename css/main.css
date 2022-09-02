@@ -322,6 +322,11 @@ footer {
   margin-top: 0px;
 }
 
+.made-with-love {
+  height: 1em;
+  padding-right: 2em;
+}
+
 .arr-mobile {
   visibility: visible;
   width: 200px;

@@ -38,6 +38,9 @@ gsap.registerPlugin(ScrollTrigger);
         gsap.to("#curve", {scaleX: .2, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
         gsap.to("#ancor", {rotate: 5, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
         gsap.to("#pen", {x:5, y:5, repeat: -1, duration: 2, yoyo: true});
+        gsap.from("#fade-1", {opacity: 0, y:1, repeat: -1, duration: 1, yoyo: true, ease: "bounce.out"});
+        gsap.from("#fade-2", {opacity: 0, y:1, repeat: -1, duration: 2, yoyo: true, ease: "bounce.out"});
+        gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"})
 
         gsap.from(".transition3", {
             scrollTrigger: {
