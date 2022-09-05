@@ -89,6 +89,26 @@ header {
     }
 }
 
+#pageup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    color: #ad7fa8;
+    background-color: #cfb6ccaa;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: .5em;
+  }
+  
+  #pageup:hover {
+    background-color: #bea0baaa;
+  }
+
 .hero {
     background: #cba0c6;
     color: white;
@@ -124,6 +144,16 @@ header {
 
     .scroll-hint {
         margin-top: -1em;
+
+        i {
+            color: #c8e4ae;
+        }
+    }
+}
+
+.meet:hover {
+    i,p {
+        color: #aec896;
     }
 }
 
@@ -141,18 +171,6 @@ section {
     position: relative;
     background-color: white;
     padding-right: 0;
-}
-.featured::before {
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 305px;
-    background-image: url(/img/orange-dab.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .subtitle {
@@ -495,7 +513,6 @@ footer {
             background: #cba0c6;
             padding: 6em 8em 6em 4em;
             text-align: left;
-            z-index: 10;
 
             h1 {
                 font-size: 3em;
@@ -510,7 +527,6 @@ footer {
         margin-left: 92%;
         margin-top: -100%;
         width: 60%;
-        z-index: 1;
     }
 
     .and {
@@ -572,11 +588,6 @@ footer {
         h1 {
             margin-bottom: -20%;
         }
-    }
-
-    .featured::before {
-        width: 400px;
-        height: 400px;
     }
 
     .portfolio-container {

@@ -16,9 +16,9 @@
             <a href="index.html" class="logo">Laura Zeilbeck</a>
             <nav>
                 <ul>
-                    <li><a href="#">My work</a></li>
-                    <li><a href="#">My skills</a></li>
-                    <li><a href="#">Hire Me!</a></li>
+                    <li><a href="#portfolio-start">My work</a></li>
+                    <li><a href="#skills-start">My skills</a></li>
+                    <li><a href="#contact-start">Hire Me!</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,13 +37,16 @@
         </div>
     </div>
 
+    <i class="fa fa-chevron-up" onclick="pageUpFunction()" id="pageup"></i>
+
     <div class="hero">
         <div class="content">
             <h1><span class="unique stagger-1">Unique </span><span class="colored-word stagger-1">Visually Pleasing </span> <br><span class="and stagger-1">& </span><br> <span class="colored-word stagger-1">User-Friendly </span> <span class="experiences stagger-1">Experiences</span></h1>
-            <div class="meet stagger-1">
+              <div class="meet stagger-1">
                 <p>meet me!</p>
-                <p class="scroll-hint stagger-1"><i class="fa fa-arrow-down"></i></p>
+                <a href="#contact-start"><p class="scroll-hint stagger-1"><i class="fa fa-arrow-down"></i></p></a>
             </div>
+            
             <svg class="hero-design" viewBox="0 0 131.219 188.334" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="intro.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
                 <sodipodi:namedview pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:document-units="mm" showgrid="false" inkscape:zoom="1.877" inkscape:cx="355.053" inkscape:cy="285.267" inkscape:window-width="1920" inkscape:window-height="1002" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g2037" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"/>
                 <g id="Ebene 1">
@@ -83,7 +86,7 @@
           
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills-start">
         <div class="skills-container">
             <ul>
                 <li class="transition2">
@@ -284,7 +287,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio-start">
 
         <div class="portfolio-container transition3">
             <div class="portfolio-left">
@@ -323,7 +326,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact-start">
 
       <div class="loveletter">
         <svg viewBox="0 0 378.996 75.352" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="loveletter.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
@@ -392,5 +395,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="/scripts/home-animations.js" ></script>
     <script src="/scripts/msgHandler.js"></script>
+    <script>
+      //Get pageup button
+      var mybutton = document.getElementById("pageup");
+      
+      //button shows up when scrolled down 20px from the top of the document
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // scroll to top of page when button is clicked
+      function pageUpFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
 </body>
 </html>
