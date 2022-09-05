@@ -62,7 +62,7 @@
                 93047 Regensburg
                 </address>
             </p>
-        <i class="fa fa-envelope"></i><a target="_blank" href="mailto:laura@zeilbeck-metallbau.de"> laura@zeilbeck-metallbau.de</a>
+        <p class="send-mail" onclick="handleMsg()"><i class="fa fa-envelope"></i>  Contact</p>
     </section>    
 
     <section class="impressum disclaimer">
@@ -163,5 +163,6 @@
     gsap.from("#fade-2", {opacity: 0, y:1, repeat: -1, duration: 2, yoyo: true, ease: "bounce.out"});
     gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"})
     </script>
+    <script src="/scripts/msgHandler.js"></script>
 </body>
 </html>

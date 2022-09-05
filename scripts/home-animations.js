@@ -77,3 +77,22 @@ gsap.registerPlugin(ScrollTrigger);
         .to('#hearts', {
           opacity:1
         });
+
+        function hoveredLetter() {
+          var duration = 1;
+          console.log("letter hovered");
+          gsap.to("#top", {fill: '#d5a65d'});
+          gsap.to("#open-lower", {fill: '#e7b86f'});
+          gsap.to("#open-upper", {fill: '#b8945b'});
+          gsap.to("#mail-body", {fill: '#d5a65d'});
+          gsap.to("#mail", duration / 4, {y:-10, ease:Power2.easeOut});
+          gsap.to("#mail", duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+        }
+
+        function normalLetter() {
+          console.log("back to normal (;")
+          gsap.to("#top", {fill: '#ebbf7a'});
+          gsap.to("#open-lower", {fill: '#f7cf90'});
+          gsap.to("#open-upper", {fill: '#d6af72'});
+          gsap.to("#mail-body", {fill: '#ebbf7a'});
+        }
