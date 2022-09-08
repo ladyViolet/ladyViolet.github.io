@@ -6,6 +6,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Barlow+Condensed&family=Staatliches&display=swap');
 
+@font-face {
+    font-family: "Coolvetica";
+    src: url("/fonts/coolvetica\ compressed\ hv.otf");
+  } 
+
+
 body {
     height: 100vh;
     margin: 0;
@@ -14,7 +20,7 @@ body {
 }
 
 .impressum-body {
-    background-color: #e9b96e;
+    background-color: #3f2140;
 }
 
 ul {
@@ -32,11 +38,11 @@ a:link {
 }
 
 a:hover, .send-mail:hover {
-    color:#aec896;
+    color:#3f2140;
 }
 
 a:active, .send-mail:hover {
-    color:#e9b96e ;
+    color:#3f2140 ;
 } 
 
 img {
@@ -54,17 +60,17 @@ img {
 header {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 1em;
 
     .logo {
-        color: #aec896;
+        color: #3f2140;
         font-family: 'Barlow Condensed';
         float: left;
     }
 
     a:hover {
-        color:#e9b96e;
+        color:#3f2140;
     }
 
     ul {
@@ -81,11 +87,11 @@ header {
     }
 }
 
-.social-header, .hero-design {
+.social-header {
     display: none;
 
     i:hover {
-        color:#aec896;
+        color:#3f2140;
     }
 }
 
@@ -103,57 +109,52 @@ header {
     border-radius: 1em;
     cursor: pointer;
     padding: .5em;
-  }
+}
   
-  #pageup:hover {
-    background-color: #bea0baaa;
-  }
+#pageup:hover {
+background-color: #bea0baaa;
+}
 
 .hero {
     background: #cba0c6;
     color: white;
     display: grid;
     text-align: center;
-    padding: 4em;
+    padding: 2em;
+}
+.content {
+    padding-top: 6em;
+}
 
-    h1 {
-        font-family: 'Staatliches', cursive;
-        font-size: 2em;
-        letter-spacing: .05em;
-    }
-
-    .colored-word {
-        color: #e9b96e;
-        font-size: 2em;
-    }
-
-    .and {
-        font-size: 2em;
-    }
+.hero-design {
+    max-height: 60vh;
+    object-fit: contain;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 .meet {
     display: block;
     margin: 0 auto;
-    padding-top: 3em;
+    padding-top: 2em;
     width: 100%;
     font-family: 'Barlow Condensed';
     text-align: center;
     font-size: 1.2em;
-    color: #c8e4ae;
+    color: #3f2140;
 
     .scroll-hint {
         margin-top: -1em;
 
         i {
-            color: #c8e4ae;
+            color: #3f2140;
         }
     }
 }
 
 .meet:hover {
     i,p {
-        color: #aec896;
+        color:#707070;
     }
 }
 
@@ -198,7 +199,7 @@ section {
 }
 
 .skills {
-    background: #e9b96e;
+    background: #3f2140;
 }
 
 .skills-container ul li {
@@ -369,7 +370,7 @@ footer {
 
 .back-arrow:hover {
     path {
-     fill:#aec896;
+     fill:#3f2140;
     }
 }
 
@@ -395,12 +396,19 @@ footer {
 
 /*media queries*/
 @media only screen and (min-width: 800px) {
-
-    .meet {
-        padding-top: 8em;
+    header {
+        font-size: 1.5em;
     }
 
-    .featured, .portfolio {
+    .hero {
+        padding: 4em;
+    }
+
+    .content {
+        padding-top: 5em;
+    }
+
+      .featured, .portfolio {
         text-align: left;
     }
 
@@ -462,14 +470,6 @@ footer {
 
 @media only screen and (min-width: 1050px) {
 
-    .hero {
-        height: 90vh;
-    }
-
-    .meet {
-        padding-top: 10em;
-    }
-
     .nav-container {
         display: grid;
         grid-template-columns: 66% auto;
@@ -506,31 +506,19 @@ footer {
     .hero {
         display: grid;
         grid-template-columns: 66% auto;
+        height: 90vh;
         background: unset;
         padding: 0;
 
         .content {
             background: #cba0c6;
-            padding: 6em 8em 6em 4em;
-            text-align: left;
-
-            h1 {
-                font-size: 3em;
-                line-height: 1.2em;
-                margin-bottom: -20%;
-            }
+            padding: 6em 2em 1em 2em;
         }
     }
     
-    .hero-design {
-        display: unset;
-        margin-left: 92%;
-        margin-top: -100%;
-        width: 60%;
-    }
-
-    .and {
-        margin-left: 2em;
+    .hero-design, .meet {
+        width: 120%;
+        margin-left: 30%;
     }
 
     section {
@@ -583,11 +571,7 @@ footer {
     }
 
     .hero .content {
-        padding: 6em 8em 6em 10em;
-
-        h1 {
-            margin-bottom: -20%;
-        }
+        padding: 4em 4em 2em 4em;
     }
 
     .portfolio-container {
@@ -623,11 +607,6 @@ footer {
       padding: 2em 20em 2em 0;
     }
 
-
-    .hero .content {
-        padding: 6em 8em 6em 20em;
-    }
-
     .featured img {
         max-width: 800px;
     }
@@ -641,63 +620,3 @@ footer {
         margin:  0em 6em 3em 10em;
     }
 }
-
-/*ANIMATIONS*/
-
-/*draw hero-intro*/
-#brush {
-    visibility: hidden;
-}
-
-#start-1, #start-2, #middle-1, #end-1, #end-2 {
-    visibility: hidden;
-    animation: reveal 1s linear forwards;
-    animation-delay: 1s;
-}
-
-#line-1, #line-2 {
-    stroke-dasharray: 450;
-    stroke-dashoffset: 450;
-    animation: draw 2s linear forwards;
-    animation-delay: 1s;
-}
-
-#middle-1 {
-animation-delay: 2s;
-}
-
-#end-1 {
-animation-delay: 3s;
-}
-
-#start-2 {
-    animation-delay: 3s;
-}
-
-#line-2 {
-animation-delay: 3s;
-}
-
-#end-2 {
-animation-delay: 3.5s;
-}
-  
-@keyframes draw {
-
-to {
-    stroke-dashoffset: 0;
-}
-}
-
-@keyframes reveal {
-0% {visibility: hidden;}
-100% {visibility: visible;}
-}
-
-/*love-letter*/
-
-/*#line {
-    stroke-dasharray: 450;
-    stroke-dashoffset: 450;
-    animation: draw 2s linear forwards;
-}*/

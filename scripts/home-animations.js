@@ -1,20 +1,19 @@
 gsap.registerPlugin(ScrollTrigger);
         var tl = gsap.timeline();
 
-        tl.from('.plopp', {
+        tl.from('.hero-design', {
             opacity: 0,
             scale: 0.1,
-            duration: 2,
+            duration: 3,
             ease: Power4.easeOut
-        });
-
-        tl.from('.stagger-1', {
+        })
+        .from('.stagger-1', {
         opacity: 0,
         scale:0.1,
         y: -50,
         stagger: .3,
         ease: Power4.easeOut,
-        duration: 4}, "-=2" /*offset value to get rid of initial delay*/);
+        duration: 2}, "-=2" /*offset value to get rid of initial delay*/);
 
         gsap.to(".scroll-hint", { y: 10, duration: 2, repeat: -1, ease: "bounce.out", delay: 4 });
 
@@ -27,6 +26,16 @@ gsap.registerPlugin(ScrollTrigger);
             opacity: 0,
             duration: 1.2,
             stagger: .3
+        });
+
+        gsap.from(".transition-3", {
+          scrollTrigger: {
+            trigger: '.featured-title',
+            start: "top bottom"
+          },
+          opacity: 0,
+          duration: .5,
+          stagger: .1
         });
 
         gsap.to("#moon", {opacity: 0, duration: 2, repeat: -1, yoyo: true});
@@ -81,18 +90,18 @@ gsap.registerPlugin(ScrollTrigger);
         function hoveredLetter() {
           var duration = 1;
           console.log("letter hovered");
-          gsap.to("#top", {fill: '#d5a65d'});
-          gsap.to("#open-lower", {fill: '#e7b86f'});
-          gsap.to("#open-upper", {fill: '#b8945b'});
-          gsap.to("#mail-body", {fill: '#d5a65d'});
+          gsap.to("#top", {fill: '#cccccc'});
+          gsap.to("#open-lower", {fill: '#cccccc'});
+          gsap.to("#open-upper", {fill: '#9e9e9e'});
+          gsap.to("#mail-body", {fill: '#bababa'});
           gsap.to("#mail", duration / 4, {y:-10, ease:Power2.easeOut});
           gsap.to("#mail", duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
         }
 
         function normalLetter() {
           console.log("back to normal (;")
-          gsap.to("#top", {fill: '#ebbf7a'});
-          gsap.to("#open-lower", {fill: '#f7cf90'});
-          gsap.to("#open-upper", {fill: '#d6af72'});
-          gsap.to("#mail-body", {fill: '#ebbf7a'});
+          gsap.to("#top", {fill: '#e6e6e6'});
+          gsap.to("#open-lower", {fill: '#e6e6e6'});
+          gsap.to("#open-upper", {fill: '#b7b7b7'});
+          gsap.to("#mail-body", {fill: '#d3d3d3'});
         }
