@@ -67,6 +67,15 @@ header {
         color: #3f2140;
         font-family: 'Barlow Condensed';
         float: left;
+
+        .butterfly {
+            height: 2em;
+            vertical-align: middle;
+        }
+
+        .name {
+            display: none;
+        }
     }
 
     a:hover {
@@ -398,6 +407,12 @@ footer {
 @media only screen and (min-width: 800px) {
     header {
         font-size: 1.5em;
+
+        
+    }
+
+    .name {
+            display: unset !important;
     }
 
     .hero {
