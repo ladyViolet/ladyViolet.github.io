@@ -230,18 +230,18 @@ section {
   /*individual heights for icons later*/
 }
 .skills-container ul li .icon-container.one {
-  width: 200px;
+  width: 100px;
 }
 .skills-container ul li .icon-container.two {
-  width: 200px;
+  width: 100px;
 }
 .skills-container ul li .icon-container.three {
-  width: 200px;
+  width: 100px;
 }
 .skills-container ul li .skill-title {
   font-weight: bold;
   font-size: 2em;
-  margin-top: 2.5em;
+  margin-top: 1em;
 }
 .skills-container ul li .featured-desc {
   margin-bottom: 2em;
