@@ -55,7 +55,7 @@ gsap.to("#ancor", {rotate: 5, transformOrigin: 'center', duration: 2, repeat: -1
 gsap.to("#pen", {x:5, y:5, repeat: -1, duration: 2, yoyo: true});
 gsap.from("#fade-1", {opacity: 0, y:1, repeat: -1, duration: 1, yoyo: true, ease: "bounce.out"});
 gsap.from("#fade-2", {opacity: 0, y:1, repeat: -1, duration: 2, yoyo: true, ease: "bounce.out"});
-gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"})
+gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"});
 
 gsap.from(".transition3", {
     scrollTrigger: {
@@ -91,6 +91,15 @@ gsap.timeline({
 })
 .to('#hearts', {
   opacity:1
+})
+.from("#cursor-pointer", {
+  opacity: 0, 
+  scale:.5,
+  transformOrigin: 'center', 
+  repeat: -1, 
+  duration: 1, 
+  yoyo: true, 
+  ease: "bounce.out"
 });
 
 function hoveredLetter() {

@@ -23,12 +23,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.93859298"
-     inkscape:cx="904.01273"
-     inkscape:cy="44.215119"
+     inkscape:zoom="1.877186"
+     inkscape:cx="922.3913"
+     inkscape:cy="104.67796"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -57,6 +57,40 @@
   </sodipodi:namedview>
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2212"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.8520833,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.8520833,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="7"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2210"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1 @ F,0,0,1,0,1.8520833,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="7"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
     <inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect16795"
@@ -303,5 +337,13 @@
          sodipodi:nodetypes="ccsscsscccc"
          inkscape:label="top-heart" />
     </g>
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       id="path1037"
+       d="" />
+    <path
+       style="fill:#ad7fa8;stroke-width:0.230501;fill-opacity:1"
+       d="m 57.663745,87.917385 c -2.977208,-2.979232 -5.465793,-5.414063 -5.530189,-5.410738 -0.06439,0.0033 -1.102487,1.672632 -2.306857,3.70957 -2.495903,4.221316 -3.143315,4.92424 -4.354377,4.727693 -1.589468,-0.25792 -1.569606,-0.20545 -5.309099,-14.0242 -1.911294,-7.062919 -3.47509,-13.163613 -3.47509,-13.557096 0,-1.012475 0.377869,-1.595904 1.276896,-1.971543 0.73921,-0.308862 1.045711,-0.248471 6.032106,1.188513 19.865835,5.724971 21.162603,6.122407 21.698478,6.650176 0.64764,0.63785 0.752757,1.899331 0.224757,2.697365 -0.198926,0.300671 -2.086183,1.5272 -4.193905,2.72562 -2.107719,1.198418 -3.832222,2.236501 -3.832222,2.30685 0,0.07035 2.437185,2.563437 5.415969,5.540197 l 4.105903,4.103117 a 1.8538662,1.8538662 89.95299 0 1 0.0022,2.6205 l -1.396062,1.399701 c -0.534197,0.535598 -1.040514,1.036215 -1.473132,1.457875 -0.728956,0.710492 -1.966119,0.696724 -2.698165,-0.01688 -1.021423,-0.995695 -2.528734,-2.487165 -4.187161,-4.146716 z"
+       id="path1921" />
   </g>
 </svg>

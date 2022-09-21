@@ -245,7 +245,7 @@ section {
 .skills-container ul li .skill-title {
   font-weight: bold;
   font-size: 2em;
-  margin-top: 1em;
+  margin-top: unset;
 }
 .skills-container ul li .featured-desc {
   margin-bottom: 2em;
@@ -285,6 +285,7 @@ section {
 .section-title {
   font-weight: bold;
   font-size: 2em;
+  margin-top: 0.3em;
 }
 
 .section-subtitle {
@@ -292,62 +293,9 @@ section {
   margin-top: -1em;
   color: #ad7fa8;
 }
-
-.form-group {
-  margin-bottom: 2em;
-}
-.form-group textarea {
-  resize: none;
-}
-
-.form-control {
-  box-sizing: border-box;
-  font-family: "Barlow Condensed";
-  font-size: 1.1em;
-  color: #505050;
-  width: 100%;
-  height: 3em;
-  padding: 0.5em 1em;
-  background-color: #f0e9f1;
-  border: 1px solid transparent;
-  border-radius: 1em;
-  box-shadow: 0px 0px 10px -8px rgba(68, 38, 72, 0.75) inset;
-  -webkit-box-shadow: 0px 0px 10px -8px rgba(68, 38, 72, 0.75) inset;
-  -moz-box-shadow: 0px 0px 10px -8px rgba(68, 38, 72, 0.75) inset;
-  outline: none;
-}
-
-.form-control:focus {
-  border: 1px solid #cfb6cc;
-}
-
-textarea.form-control {
-  height: auto;
-}
-
-.btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-family: "Alumni Sans Pinstripe", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  background-color: #ad7fa8;
+.section-subtitle .fa-heart {
+  font-size: 0.6em;
   vertical-align: middle;
-  border: 1px solid transparent;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  white-space: nowrap;
-  padding: 0.5em 1em;
-  font-size: 1.5em;
-  line-height: 1.58;
-  border-radius: 1em;
-}
-
-.btn:hover {
-  background-color: #886684;
-}
-
-.btn:active {
-  background-color: #e2ccdf;
 }
 
 footer {
