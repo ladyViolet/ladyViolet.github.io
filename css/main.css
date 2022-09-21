@@ -71,6 +71,10 @@ img {
 .nav-container a {
   color: white;
 }
+.nav-container a:hover {
+  color: #3f2140;
+  font-weight: bold;
+}
 
 header {
   display: flex;
@@ -352,6 +356,10 @@ footer {
   text-align: center;
   font-size: 1.2em;
 }
+footer a:hover {
+  color: #3f2140;
+  font-weight: bold;
+}
 
 .made-with-love {
   height: 1em;
@@ -374,7 +382,7 @@ footer {
 }
 
 .back-arrow:hover path {
-  fill: #3f2140;
+  fill: #886684;
 }
 
 .arr-mobile {
@@ -388,9 +396,17 @@ footer {
   width: 0px;
 }
 
-.fa-envelope {
+.send-mail {
+  margin-bottom: unset;
+}
+.send-mail .fa-envelope {
   color: #886684;
   padding-right: 2px;
+}
+
+.send-mail:hover .fa-envelope, .send-mail:hover span {
+  color: #3f2140;
+  font-weight: bold;
 }
 
 .disclaimer h1 {
@@ -432,6 +448,9 @@ footer {
   .skills {
     margin-bottom: -10em;
     padding-top: 3em;
+  }
+  .skills svg {
+    width: 100%;
   }
   .skills-container ul {
     display: grid;

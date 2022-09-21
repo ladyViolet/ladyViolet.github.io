@@ -86,6 +86,11 @@ img {
     a {
         color: white;
     }
+
+    a:hover {
+        color: #3f2140;
+        font-weight: bold;
+    }
 }
 
 header {
@@ -385,6 +390,11 @@ footer {
     padding: .5em .5em;
     text-align: center;
     font-size: 1.2em;
+
+    a:hover {
+        color:#3f2140;
+        font-weight: bold;
+    }
 }
 
 .made-with-love {
@@ -410,7 +420,7 @@ footer {
 
 .back-arrow:hover {
     path {
-     fill:#3f2140;
+     fill:#886684;
     }
 }
 
@@ -425,9 +435,20 @@ footer {
     width: 0px;
 }
 
-.fa-envelope {
-    color: #886684;
-    padding-right: 2px;
+.send-mail {
+    margin-bottom: unset;
+
+    .fa-envelope {
+        color: #886684;
+        padding-right: 2px;
+    }
+}
+
+.send-mail:hover {
+    .fa-envelope, span  {
+        color: #3f2140;
+        font-weight: bold;
+    }
 }
 
 .disclaimer h1 {
@@ -480,6 +501,10 @@ footer {
     .skills {
         margin-bottom: -10em;
         padding-top: 3em;
+
+        svg {
+            width: 100%;
+        }
     }
 
     .skills-container ul {
