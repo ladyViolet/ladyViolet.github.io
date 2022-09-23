@@ -188,7 +188,6 @@ section {
 .featured {
   position: relative;
   background-color: white;
-  padding-right: 0;
 }
 
 .subtitle {
@@ -229,7 +228,7 @@ section {
 .skills-container ul li .icon-container {
   height: 100px;
   display: grid;
-  place-content: center;
+  justify-content: center;
   margin: 0 auto;
   /*individual heights for icons later*/
 }
