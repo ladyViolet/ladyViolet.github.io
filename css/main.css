@@ -124,7 +124,7 @@ header ul a:hover {
   font-size: 2em;
   border: none;
   outline: none;
-  color: #ad7fa8;
+  color: #505050;
   background-color: rgba(207, 182, 204, 0.6666666667);
   border-radius: 1em;
   cursor: pointer;
@@ -252,6 +252,16 @@ section {
 
 .portfolio {
   background: #f0e9f1;
+}
+.portfolio .readmore {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.portfolio .readmore:hover {
+  color: #cba0c6;
+}
+.portfolio .readmore:active {
+  color: #707070;
 }
 
 .separator {
