@@ -227,9 +227,8 @@ section {
 }
 .skills-container ul li .icon-container {
   height: 100px;
-  display: grid;
+  display: flex;
   justify-content: center;
-  float: none;
   margin: 0 auto;
   /*individual heights for icons later*/
 }
