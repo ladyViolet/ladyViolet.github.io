@@ -229,6 +229,7 @@ section {
   height: 100px;
   display: grid;
   justify-content: center;
+  float: none;
   margin: 0 auto;
   /*individual heights for icons later*/
 }
