@@ -54,6 +54,8 @@
         </svg>
     </a>
 
+    <i class="fa fa-chevron-up" onclick="pageUpFunction()" id="pageup"></i>
+
     <section class="portrait">
         <h1 class="featured-title">Lifestyle & Portrait</h1>
             <div class="container">
@@ -236,5 +238,26 @@
     gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"})
     </script>
     <script src="/scripts/msgHandler.js"></script>
+    <script>
+        //Get pageup button
+        var mybutton = document.getElementById("pageup");
+        
+        //button shows up when scrolled down 20px from the top of the document
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // scroll to top of page when button is clicked
+        function pageUpFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
