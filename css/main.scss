@@ -211,7 +211,6 @@ background-color: #bea0baaa;
 
 section {
     padding: 4em 2em;
-    text-align: center;
 }
 
 .featured {
@@ -232,12 +231,13 @@ section {
     font-family: 'Staatliches', cursive;
     font-size: 2.5em;
     margin-top: -.4em;
+    margin-bottom: 0;
     display: block;
 }
 
 .featured-desc {
     color: black;
-    margin-bottom: 3em;
+    margin-bottom: .5em;
     font-size: 1.5em;
     line-height: 1.8em;
     font-weight: 500;
@@ -248,6 +248,7 @@ section {
 }
 
 .skills-container ul li {
+    text-align: center;
     background: white;
     padding: 2em;
     border-radius: 1em;
@@ -276,29 +277,28 @@ section {
         font-weight: bold;
         font-size: 2em;
         margin-top: unset;
-
     }
 
     .featured-desc {
-        margin-bottom: 2em;
+        margin-bottom: .5em;
     }
 }
 
 .portfolio {
     background: #f0e9f1;
-
-    .readmore {
+}
+    
+.readmore {
         font-weight: bold;
         text-decoration: underline;
-        }
-
-    .readmore:hover {
-        color: #cba0c6;
     }
 
-    .readmore:active {
-        color: #707070;
-    }
+.readmore:hover {
+    color: #cba0c6;
+}
+
+.readmore:active {
+    color: #707070;
 }
 
 .separator {
@@ -308,15 +308,15 @@ section {
     box-shadow: rgba(255, 255, 255, 0.4) 0px 5px, rgba(255, 255, 255, 0.3) 0px 10px, rgba(255, 255, 255, 0.2) 0px 15px, rgba(255, 255, 255, 0.1) 0px 20px, rgba(255, 255, 255, 0.05) 0px 25px;
 }
 
-.portfolio-container a img {
+.portfolio-container img {
     border-radius: 1em;
-    margin-bottom: 1em;
-    margin-top: -2.5em;
+    margin: 1em 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .contact {
     background: white;
+    text-align: center;
 }
 
 .loveletter {
@@ -487,9 +487,6 @@ footer {
 
     .portfolio-container img {
         margin-left: 3em;
-    }
-
-    .portfolio-container a img {
         margin-top: 3em;
     }
 

@@ -130,39 +130,6 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script>
-    gsap.timeline().from('.back-arrow', {
-        opacity: 0,
-        scale: 0.1,
-        duration: 1,
-        ease: Power4.easeOut
-    })
-    .from('#arrow', {
-        opacity: 0,
-        scale: 0.1,
-        duration: 1,
-        ease: Power4.easeOut
-    })
-    .from('.arr-mobile #arrow', {
-        x: 5, 
-        scaleX: .8,
-        duration: 2, 
-        repeat: -1, 
-        ease: "bounce.out"
-    })
-    .from('.arr-desktop #arrow', {
-        x:2,
-        y: 2, 
-        scaleX: .8,
-        duration: 2, 
-        repeat: -1, 
-        ease: "bounce.out"
-    });
-
-    gsap.from("#fade-1", {opacity: 0, y:1, repeat: -1, duration: 1, yoyo: true, ease: "bounce.out"});
-    gsap.from("#fade-2", {opacity: 0, y:1, repeat: -1, duration: 2, yoyo: true, ease: "bounce.out"});
-    gsap.from("#top-heart", {scale:.9,transformOrigin: 'center', repeat: -1, duration: .5, yoyo: true, ease: "bounce.out"})
-    </script>
-    <script src="/scripts/msgHandler.js"></script>
+    <script src="/scripts/global-animations.js"></script>
 </body>
 </html>
