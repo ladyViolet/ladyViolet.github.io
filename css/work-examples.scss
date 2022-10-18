@@ -1,0 +1,83 @@
+.pineapplewake-body {
+    background-color: #f0e9f1;
+}
+
+.logo-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 1em;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.logo-farbig {
+    max-height: 30vh;
+    width: auto;
+    align-self: center;
+    display: block;
+    margin: auto;
+}
+
+.section-title {
+    color: #ad7fa8;
+    font-family: "Staatliches";
+    font-size: 5em;
+    margin: unset;
+    opacity: 50%;
+}
+
+.portfolio-container {
+    margin-bottom: 3em;
+}
+
+.portfolio {
+    padding-top: 2em;
+}
+
+#menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
+    box-shadow: unset;
+}
+
+footer {
+    background-color: white;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (min-width: 800px) {
+    .logo-wrapper {
+        padding: 1em;
+    }
+
+    .fullwidth-content {
+     display: block;
+     margin-top: 2em;
+
+     img {
+        max-width: 100%;
+     }
+
+     .featured-title, .featured-desc {
+        width: 40%;
+     }
+
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .logo-wrapper {
+        padding: 1em;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .logo-wrapper {
+        padding: 2em;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    .logo-wrapper {
+        padding: 2em;
+    }
+}

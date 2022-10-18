@@ -47,23 +47,11 @@ gsap.from(".transition-3", {
 gsap.to("#moon", {opacity: 0, duration: 2, repeat: -1, yoyo: true});
 gsap.to("#stars", {opacity: 0, duration: 1, repeat: -1, yoyo: true});
 gsap.to('#card-1, #card-2, #card-3', {y: 5, opacity: 0, duration: 3, repeat: -1, yoyo: true, stagger: .3});
-//gsap.to("#homepage", {y: 10, repeat: -1, duration: 2, yoyo: true});
 gsap.to("#inner-lens", {rotate: 180, transformOrigin: 'center', duration: .5, repeat: -1, yoyo: true, repeatDelay: 1, ease: "bounce.out"});
 gsap.to("#outer-lens", {rotate: -180,  transformOrigin: 'center', duration: .5, repeat: -1, yoyo: true, repeatDelay: 1, ease: "bounce.out"});
 gsap.to("#curve", {scaleX: .2, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
 gsap.to("#ancor", {rotate: 5, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
 gsap.to("#pen", {x:5, y:5, repeat: -1, duration: 2, yoyo: true});
-
-gsap.from(".transition3", {
-    scrollTrigger: {
-        trigger: '.transition3',
-        start: "top bottom"
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1.2,
-    stagger: .3
-});
 
 gsap.timeline({
   scrollTrigger: {
@@ -101,7 +89,6 @@ gsap.timeline({
 
 function hoveredLetter() {
   var duration = 1;
-  console.log("letter hovered");
   gsap.to("#top", {fill: '#cccccc'});
   gsap.to("#open-lower", {fill: '#cccccc'});
   gsap.to("#open-upper", {fill: '#9e9e9e'});
@@ -111,7 +98,6 @@ function hoveredLetter() {
 }
 
 function normalLetter() {
-  console.log("back to normal (;")
   gsap.to("#top", {fill: '#e6e6e6'});
   gsap.to("#open-lower", {fill: '#e6e6e6'});
   gsap.to("#open-upper", {fill: '#b7b7b7'});

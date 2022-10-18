@@ -20,6 +20,28 @@ function pageUpFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+//Container Animation
+var sections = gsap.utils.toArray(".portfolio-container").forEach(function(elem) {
+
+  var blocks = elem.querySelectorAll(".transition3");
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: elem,
+      start: "top 50%",
+      markers:false,
+
+      //entering,leaving,entering backwards,back past the beginning
+      toggleActions: "play"
+    },
+  })
+  // in css .word is 'overflow:hidden'
+  .from(blocks, {opacity:0, y: 50, duration: .8, stagger:.2}) 
+  
+  // The total amount of time (in seconds) that gets split among all the staggers.
+   //.to(blocks, {xPercent:105,  stagger:{amount:2}}) 
+  })
+
 //FOOTER
 gsap.from("#fade-1", {opacity: 0, y:1, repeat: -1, duration: 1, yoyo: true, ease: "bounce.out"});
     gsap.from("#fade-2", {opacity: 0, y:1, repeat: -1, duration: 2, yoyo: true, ease: "bounce.out"});
