@@ -348,14 +348,12 @@ footer a:hover {
 }
 
 .arr-mobile {
-  visibility: visible;
   width: 200px;
   margin: 1em;
 }
 
 .arr-desktop {
-  visibility: hidden;
-  width: 0px;
+  display: none;
 }
 
 .send-mail {
@@ -506,11 +504,10 @@ footer a:hover {
     margin: 0em 6em 3em 6em;
   }
   .arr-mobile {
-    visibility: hidden;
-    width: 0px;
+    display: none;
   }
   .arr-desktop {
-    visibility: visible;
+    display: unset;
     width: 200px;
     margin: 2em 1em;
   }
