@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="impressum-body">
+  <i class="fa fa-chevron-up" onclick="pageUpFunction()" id="pageup"></i>
     <a href="index.html">
         <svg class="back-arrow arr-mobile" viewBox="0 0 53.899 12.545" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="back-mobile.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
         <sodipodi:namedview pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:document-units="mm" showgrid="false" inkscape:zoom="2" inkscape:cx="386.75" inkscape:cy="13.75" inkscape:window-width="1920" inkscape:window-height="1002" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"/>
@@ -52,53 +54,56 @@
             </g>
         </svg>
     </a>
-    <section class="impressum beholder">
-        <h1 class="subtitle">Impressum</h1>
-            <p>Responsible for content (according to § 5 TMG / § 55 II RStV)</p>
-            <p>
-                <address>
-                Laura Zeilbeck<br>
-                Margaretenstr. 6b<br>
-                93047 Regensburg
-                </address>
-            </p>
-        <p class="send-mail" onclick="handleMsg()"><i class="fa fa-envelope"></i><span> Contact</span></p>
-    </section>    
-
-    <section class="impressum disclaimer">
-        <h1 class="subtitle">Disclaimer</h1>
-            <h3>Liability for contents</h3>
-                <p>The contents of my pages have been created with the utmost care. However, I cannot guarantee the accuracy, completeness and timeliness of the content. 
-                As a service provider I am responsible for my own content on these pages according to § 7 Abs.1 TMG. 
-                According to §§ 8 to 10 TMG I am not obligated to monitor transmitted or stored information or to investigate circumstances that indicate illegal activity. 
-                Obligations to remove or block the use of information under the general laws remain unaffected. 
-                However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. 
-                If I become aware of any such infringement, I will remove the respective content immediately.
-                </p>
-            <h3>Liability for links</h3>
-                <p>My offer contains links to external websites of third parties, on whose contents I have no influence. 
-                Therefore, I can not take any responsibility for these external contents. 
-                For the content of linked pages the respective provider or operator of the pages is responsible. 
-                The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. 
-                However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law. 
-                If I become aware of any infringements, I will remove such links immediately.
-                </p>
-            <h3>Copyright</h3>
-                <p>The content and works created by the site operator on these pages are subject to German copyright law. 
-                Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. 
-                Downloads and copies of this site are only permitted for private, non-commercial use. 
-                Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. 
-                In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform me accordingly. 
-                If I become aware of any infringements, I will remove such content immediately.
-                </p>
-            <h3>Privacy policy</h3>
-                <p>The use of my website is usually possible without providing personal data. 
-                As far as on this site personal data (such as name, address or e-mail addresses) are collected, this is as far as possible on a voluntary basis. 
-                This data will not be passed on to third parties without your explicit consent. I point out that data transmission over the Internet (eg communication by e-mail) security gaps. 
-                A complete protection of data against access by third parties is not possible. The use of contact data published within the framework of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information materials is hereby expressly prohibited. 
-                The operator of the pages expressly reserves the right to take legal action in the event of the unsolicited sending of advertising information, such as spam e-mails.
-                </p>
-    </section>
+    <div class="animated-container">
+      <section class="impressum beholder transition3">
+          <h1 class="subtitle">Impressum</h1>
+              <p>Responsible for content (according to § 5 TMG / § 55 II RStV)</p>
+              <p>
+                  <address>
+                  Laura Zeilbeck<br>
+                  Margaretenstr. 6b<br>
+                  93047 Regensburg
+                  </address>
+              </p>
+          <p class="send-mail" onclick="handleMsg()"><i class="fa fa-envelope"></i><span> Contact</span></p>
+      </section>    
+    </div>
+    <div class="animated-container">
+      <section class="impressum disclaimer transition3">
+          <h1 class="subtitle">Disclaimer</h1>
+              <h3>Liability for contents</h3>
+                  <p>The contents of my pages have been created with the utmost care. However, I cannot guarantee the accuracy, completeness and timeliness of the content. 
+                  As a service provider I am responsible for my own content on these pages according to § 7 Abs.1 TMG. 
+                  According to §§ 8 to 10 TMG I am not obligated to monitor transmitted or stored information or to investigate circumstances that indicate illegal activity. 
+                  Obligations to remove or block the use of information under the general laws remain unaffected. 
+                  However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. 
+                  If I become aware of any such infringement, I will remove the respective content immediately.
+                  </p>
+              <h3>Liability for links</h3>
+                  <p>My offer contains links to external websites of third parties, on whose contents I have no influence. 
+                  Therefore, I can not take any responsibility for these external contents. 
+                  For the content of linked pages the respective provider or operator of the pages is responsible. 
+                  The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. 
+                  However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law. 
+                  If I become aware of any infringements, I will remove such links immediately.
+                  </p>
+              <h3>Copyright</h3>
+                  <p>The content and works created by the site operator on these pages are subject to German copyright law. 
+                  Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. 
+                  Downloads and copies of this site are only permitted for private, non-commercial use. 
+                  Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. 
+                  In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform me accordingly. 
+                  If I become aware of any infringements, I will remove such content immediately.
+                  </p>
+              <h3>Privacy policy</h3>
+                  <p>The use of my website is usually possible without providing personal data. 
+                  As far as on this site personal data (such as name, address or e-mail addresses) are collected, this is as far as possible on a voluntary basis. 
+                  This data will not be passed on to third parties without your explicit consent. I point out that data transmission over the Internet (eg communication by e-mail) security gaps. 
+                  A complete protection of data against access by third parties is not possible. The use of contact data published within the framework of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information materials is hereby expressly prohibited. 
+                  The operator of the pages expressly reserves the right to take legal action in the event of the unsolicited sending of advertising information, such as spam e-mails.
+                  </p>
+      </section>
+    </div>
     <footer>
         <svg class="made-with-love" viewBox="0 0 50.861 7.336" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="love-and-coffee.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
           <sodipodi:namedview pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:document-units="mm" showgrid="false" inkscape:zoom="5.657" inkscape:cx="236.439" inkscape:cy="26.075" inkscape:window-width="1920" inkscape:window-height="1002" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g22371" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" showguides="true" inkscape:guide-bbox="true" inkscape:object-paths="true" inkscape:snap-intersection-paths="true" inkscape:snap-smooth-nodes="true" inkscape:snap-midpoints="true" inkscape:snap-center="true"/>
@@ -130,6 +135,7 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https:/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="/scripts/global-animations.js"></script>
 </body>
 </html>

@@ -44,6 +44,11 @@
   padding-left: 5em;
 }
 
+video {
+  -webkit-clip-path: inset(0 2px);
+          clip-path: inset(0 2px);
+}
+
 footer {
   background-color: white;
 }
@@ -57,7 +62,7 @@ footer {
     display: block;
     margin-top: 2em;
   }
-  .fullwidth-content img {
+  .fullwidth-content img, .fullwidth-content video {
     max-width: 100%;
   }
   .fullwidth-content .featured-title, .fullwidth-content .featured-desc {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pineapplewakepark</title>
-    <link rel="preconnect" href="https:/fonts.googleapis.com">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="https:/maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/work-examples.css">
@@ -60,7 +60,7 @@
 
     <section class="portfolio">
         <p class="section-title">Branding</p>
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="featured-title">Logo</p>
@@ -70,7 +70,7 @@
             <img id="logo-ananas" src="img/pineapplewake/pineapplewake-logo-ananas.svg" alt="Project Example">
         </div>
 
-        <div class="portfolio-container fullwidth-content">
+        <div class="portfolio-container animated-container fullwidth-content">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Variations</p>
@@ -83,7 +83,7 @@
 
         
         <p class="section-title">Print</p>
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Menu</p>
@@ -92,7 +92,7 @@
             </div>
             <img class="transition3" id="menu" src="img/pineapplewake/pineapplewake-menu.png" alt="Project Example">
         </div>
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Voucher</p>
@@ -102,7 +102,7 @@
             <img class="transition3" id="voucher" src="img/pineapplewake/pineapplewake-voucher.png" alt="Project Example">
         </div> 
 
-        <div class="portfolio-container fullwidth-content">
+        <div class="portfolio-container animated-container fullwidth-content">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Flyer</p>
@@ -115,16 +115,18 @@
 
         
         <p class="section-title">Web</p>
-        <div class="portfolio-container fullwidth-content">
+        <div class="portfolio-container animated-container fullwidth-content">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Homepage</p>
                     <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia excepturi rem, soluta iusto explicabo error corrupti iste quaerat culpa voluptas.</p>
-                    <img class="transition3" id="homepage-animation" src="img/pineapplewake/pineapplewake-hp-desktop.png" alt="Project Example">
+                    <video class="transition3" id="homepage-animation" autoplay muted loop> 
+                        <source src="https://onedrive.live.com/download?cid=1849ED2BC9ED288D&resid=1849ED2BC9ED288D%2150568&authkey=AEpoAat9rxgix0c" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
-        <div class="portfolio-container fullwidth-content">
+        <div class="portfolio-container animated-container fullwidth-content">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Desktop</p>
@@ -133,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-container fullwidth-content">
+        <div class="portfolio-container animated-container fullwidth-content">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Mobile</p>
@@ -146,7 +148,7 @@
 
         
         <p class="section-title">Merch</p>
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Lasercut Keychains</p>
@@ -156,7 +158,7 @@
             <img class="transition3" id="keyring" src="img/pineapplewake/pineapplewake-keyring.png" alt="Project Example">
         </div> 
 
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Wristbands</p>
@@ -166,7 +168,7 @@
             <img class="transition3" id="wristbands" src="img/pineapplewake/pineapplewake-wristbands.png" alt="Project Example">
         </div> 
 
-        <div class="portfolio-container">
+        <div class="portfolio-container animated-container">
             <div class="portfolio-left transition3">
                 <div class="inner">
                     <p class="featured-title">Teamshirts</p>
@@ -214,14 +216,14 @@
         gsap.timeline().from('.logo-farbig', {
         opacity: 0,
         scale: 0.1,
-        duration: 1,
+        duration: .5,
         ease: Power4.easeOut
     })
     .from('#text', {
         opacity: 0,
         scale: 0.1,
         transformOrigin: "center",
-        duration: 1,
+        duration: .5,
         ease: Power4.easeOut
     })
     .from('#line', {
@@ -235,7 +237,7 @@
         scale: 0.1,
         transformOrigin: "center",
         y: -100,
-        duration: 1,
+        duration: .3,
         ease: Power4.easeOut
     })
     .from('#leaf_bottom_left', {

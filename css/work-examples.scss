@@ -44,6 +44,10 @@
     padding-left: 5em;
 }
 
+video {
+    clip-path: inset(0 2px);
+}
+
 footer {
     background-color: white;
 }
@@ -59,7 +63,7 @@ footer {
      display: block;
      margin-top: 2em;
 
-     img {
+     img, video {
         max-width: 100%;
      }
 
