@@ -45,6 +45,7 @@
 }
 
 video {
+  width: 100%;
   -webkit-clip-path: inset(0 2px);
           clip-path: inset(0 2px);
 }
