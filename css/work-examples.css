@@ -2,6 +2,16 @@
   background-color: #f0e9f1;
 }
 
+.awwal-body {
+  background-color: black;
+}
+
+#intro-awwal {
+  width: 50vh;
+  display: block;
+  margin: auto;
+}
+
 .logo-wrapper {
   position: relative;
   z-index: 10;
@@ -10,18 +20,28 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
+.intro-img {
+  background-color: unset;
+  margin-bottom: -8em;
+  z-index: 0;
+}
+
 .back-home {
   max-height: 5em;
   display: block;
   margin: 1em auto;
 }
 
-.logo-farbig {
+.logo-farbig, .awwal-logo {
   max-height: 30vh;
   width: auto;
   align-self: center;
   display: block;
   margin: auto;
+}
+
+.awwal-logo {
+  padding: 3em;
 }
 
 section {
@@ -36,15 +56,20 @@ section {
   opacity: 50%;
 }
 
+.awwal-desc {
+  color: #ffffff;
+}
+
 .portfolio-container {
   margin-bottom: 3em;
 }
 
 .portfolio {
   padding-top: 2em;
+  background-color: unset;
 }
 
-#logo-ananas, #menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
+#logo-ananas, #logo-awwal, #menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
   box-shadow: unset;
 }
 
@@ -59,6 +84,10 @@ video {
   width: 100%;
   -webkit-clip-path: inset(0 2px);
           clip-path: inset(0 2px);
+}
+
+.grid-item {
+  border-radius: unset !important;
 }
 
 #end {
@@ -83,6 +112,23 @@ footer {
   }
   .fullwidth-content .featured-title, .fullwidth-content .featured-desc {
     width: 40%;
+  }
+  .picture-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    margin-bottom: 1em;
+  }
+  .picture-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+  }
+  .grid-item {
+    float: left;
+    margin: unset !important;
+    padding: unset;
+    border-radius: unset !important;
   }
 }
 @media only screen and (min-width: 1050px) {
