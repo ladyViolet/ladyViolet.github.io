@@ -86,8 +86,14 @@ video {
           clip-path: inset(0 2px);
 }
 
-.grid-item {
+.grid-item, #guitar-detail {
   border-radius: unset !important;
+}
+
+#cinemagraph {
+  width: 80%;
+  display: grid;
+  margin: 3em auto;
 }
 
 #end {
@@ -96,6 +102,10 @@ video {
 
 footer {
   background-color: white;
+}
+
+.awwal-footer {
+  background-color: #b7b7b7;
 }
 
 /*MEDIA QUERIES*/
@@ -129,6 +139,9 @@ footer {
     margin: unset !important;
     padding: unset;
     border-radius: unset !important;
+  }
+  #guitar-detail {
+    margin-bottom: 5em;
   }
 }
 @media only screen and (min-width: 1050px) {
