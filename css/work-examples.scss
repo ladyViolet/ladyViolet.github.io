@@ -61,7 +61,7 @@ section {
 }
 
 .portfolio-container {
-    margin-bottom: 3em;
+    margin: 3em 0;
 }
 
 .portfolio {
@@ -126,6 +126,11 @@ footer {
         width: 40%;
      }
 
+    }
+
+    .portfolio-container {
+        margin-bottom: 1em;
+        padding-left: unset;
     }
 
     .picture-grid-1 {

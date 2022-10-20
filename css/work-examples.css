@@ -61,7 +61,7 @@ section {
 }
 
 .portfolio-container {
-  margin-bottom: 3em;
+  margin: 3em 0;
 }
 
 .portfolio {
@@ -122,6 +122,10 @@ footer {
   }
   .fullwidth-content .featured-title, .fullwidth-content .featured-desc {
     width: 40%;
+  }
+  .portfolio-container {
+    margin-bottom: 1em;
+    padding-left: unset;
   }
   .picture-grid-1 {
     display: grid;
