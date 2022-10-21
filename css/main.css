@@ -343,6 +343,14 @@ footer a:hover {
   margin-top: 0px;
 }
 
+.goodbye {
+  height: 20vh;
+}
+.goodbye svg {
+  height: 100%;
+  margin-left: -100%;
+}
+
 .back-arrow:hover path {
   fill: #886684;
 }

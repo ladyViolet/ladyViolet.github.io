@@ -4,8 +4,6 @@
     font-family: 'Staatliches', cursive;
 */
 
-//@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Barlow+Condensed&family=Staatliches&display=swap');
-
 @font-face {
     font-family: "Coolvetica";
     src: url("/fonts/coolvetica\ compressed\ hv.otf");
@@ -379,7 +377,13 @@ footer {
     }
 }   
 
-
+.goodbye {
+    height: 20vh;
+    svg {
+        height: 100%;
+        margin-left: -100%;
+    }
+}
 
 .back-arrow:hover {
     path {
