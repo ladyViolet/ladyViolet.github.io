@@ -97,7 +97,4 @@ var sections = gsap.utils.toArray(".column").forEach(function(elem) {
   })
   // in css .word is 'overflow:hidden'
   .from(blocks, {opacity:0, scale:.5, duration: 0.5, stagger:0.1}) 
-  
-  // The total amount of time (in seconds) that gets split among all the staggers.
-   //.to(blocks, {xPercent:105,  stagger:{amount:2}}) 
   })
