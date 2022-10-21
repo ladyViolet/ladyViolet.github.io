@@ -117,6 +117,8 @@ footer {
 
      img, video {
         max-width: 100%;
+        float: unset;
+        margin: auto;
      }
 
      .featured-title, .featured-desc {

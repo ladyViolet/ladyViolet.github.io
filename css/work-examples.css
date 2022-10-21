@@ -118,6 +118,8 @@ footer {
   }
   .fullwidth-content img, .fullwidth-content video {
     max-width: 100%;
+    float: unset;
+    margin: auto;
   }
   .fullwidth-content .featured-title, .fullwidth-content .featured-desc {
     width: 40%;
