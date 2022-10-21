@@ -60,21 +60,23 @@ gsap.timeline().from('.back-arrow', {
 })
 .from('#arrow', {
     opacity: 0,
-    scale: 0.1,
+    scale: .1,
+    transformOrigin: "bottom left",
     duration: 1,
     ease: Power4.easeOut
 })
-.from('.arr-mobile #arrow', {
-    x: 5, 
-    scaleX: .8,
+.to('.arr-mobile #arrow', { 
+    scaleX: .9,
+    x: -1,
+    transformOrigin: "bottom left",
     duration: 2, 
     repeat: -1, 
     ease: "bounce.out"
 })
-.from('.arr-desktop #arrow', {
-    x:2,
-    y: 2, 
-    scaleX: .8,
+.to('.arr-desktop #arrow', {
+    scaleY: .9,
+    y: -1,
+    transformOrigin: "top left",
     duration: 2, 
     repeat: -1, 
     ease: "bounce.out"
