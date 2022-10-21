@@ -46,14 +46,14 @@
 
 footer {
     background-color: #505050;
-    color: #e6e6e6;
+    color: #e6e6e6 !important;
 
     a {
-       color: #e6e6e6; 
+       color: #e6e6e6 !important; 
     }
 
     a:hover {
-        color: #ad7fa8;
+        color: #ad7fa8 !important;
     }
 }
 

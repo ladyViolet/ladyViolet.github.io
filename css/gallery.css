@@ -46,13 +46,13 @@
 
 footer {
   background-color: #505050;
-  color: #e6e6e6;
+  color: #e6e6e6 !important;
 }
 footer a {
-  color: #e6e6e6;
+  color: #e6e6e6 !important;
 }
 footer a:hover {
-  color: #ad7fa8;
+  color: #ad7fa8 !important;
 }
 
 @media only screen and (max-width: 769px) {
