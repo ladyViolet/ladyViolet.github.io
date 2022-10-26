@@ -67,18 +67,27 @@
                     <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia excepturi rem, soluta iusto explicabo error corrupti iste quaerat culpa voluptas.</p>
                 </div>
             </div>
-            <img id="logo-ananas" src="img/pineapplewake/pineapplewake-logo-ananas.svg" alt="Project Example">
+            <img class="logo-ananas" src="img/pineapplewake/pineapplewake-logo-ananas.svg" alt="Project Example">
         </div>
 
-        <div class="portfolio-container animated-container fullwidth-content">
-            <div class="portfolio-left transition3">
+        <div class="portfolio-container animated-container">
+            <div class="portfolio-left">
                 <div class="inner">
-                    <p class="featured-title">Variations</p>
-                    <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia excepturi rem, soluta iusto explicabo error corrupti iste quaerat culpa voluptas.</p>
-                    <img class="transition3" id="flyer" src="img/pineapplewake/pineapplewake-logo-variations.svg" alt="Project Example">
+                    <img class="logo-ananas" src="img/pineapplewake/pineapplewake-logo-sw-1.svg" alt="">
                 </div>
             </div>
+            <img class="logo-ananas" src="img/pineapplewake/pineapplewake-logo-sw-2.svg" alt="Project Example">
         </div>
+
+        <div class="portfolio-container animated-container">
+            <div class="portfolio-left">
+                <div class="inner">
+                    <img class="logo-ananas" src="img/pineapplewake/pineapplewake-logo-neg-1.svg" alt="">
+                </div>
+            </div>
+            <img class="logo-ananas" src="img/pineapplewake/pineapplewake-logo-neg-2.svg" alt="Project Example">
+        </div>
+
         <div class="separator"></div>
 
         
@@ -286,40 +295,40 @@
             duration: .3,
             ease: Power4.easeOut
         })
-        .from('#leaf_bottom_left', {
-            opacity: 0,
-            scale: 0.1,
-            y: -100,
-            duration: .3,
-            ease: Power4.easeOut
-        })
         .from('#leaf_bottom_right', {
             opacity: 0,
             scale: 0.1,
-            y: -100,
-            duration: .3,
-            ease: Power4.easeOut
+            transformOrigin: "bottom left",
+            duration: .5,
+            ease: Elastic.easeOut.config(1.1, 0.4)
         })
-        .from('#leaf_top_left', {
+        .from('#leaf_bottom_left', {
             opacity: 0,
-            scale: 0.1,
-            y: -100,
-            duration: .3,
-            ease: Power4.easeOut
+            scale: 0,
+            transformOrigin: "bottom right",
+            duration: .5,
+            ease: Elastic.easeOut.config(1.1, 0.4)
         })
         .from('#leaf_top_right', {
             opacity: 0,
-            scale: 0.1,
-            y: -100,
-            duration: .3,
-            ease: Power4.easeOut
+            scale: 0,
+            transformOrigin: "bottom left",
+            duration: .5,
+            ease: Elastic.easeOut.config(1.1, 0.4)
+        })
+        .from('#leaf_top_left', {
+        opacity: 0,
+        scale: 0,
+        transformOrigin: "bottom right",
+            duration: .5,
+            ease: Elastic.easeOut.config(1.1, 0.4)
         })
         .from('#leaf_top', {
             opacity: 0,
-            scale: 0.1,
-            y: -100,
-            duration: .3,
-            ease: Power4.easeOut
+            scale: 0,
+            transformOrigin: "bottom center",
+            duration: .5,
+            ease: Elastic.easeOut.config(1.1, 0.4)
         })
         .from('#line', {
             opacity: 0,

@@ -53,6 +53,7 @@ section {
   font-size: 5em;
   margin: unset;
   opacity: 50%;
+  z-index: 999999999;
 }
 
 .awwal-desc {
@@ -68,15 +69,16 @@ section {
   background-color: unset;
 }
 
-#logo-ananas, #logo-awwal, #menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
+#logo-awwal, #menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
   box-shadow: unset;
 }
 
-#logo-ananas {
+.logo-ananas {
+  border-radius: unset !important;
+  box-shadow: none !important;
   display: block;
-  border-radius: unset;
   max-width: 50%;
-  margin: auto;
+  margin: 1em auto 2em auto !important;
 }
 
 video {
