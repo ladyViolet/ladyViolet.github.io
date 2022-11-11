@@ -29,6 +29,18 @@
   z-index: 0;
 }
 
+.featured-desc a {
+  text-decoration: underline;
+}
+
+.featured-desc a:hover {
+  color: #ad7fa8;
+}
+
+.featured-desc a:active {
+  color: #b7b7b7;
+}
+
 .back-home {
   max-height: 5em;
   display: block;
