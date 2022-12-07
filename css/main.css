@@ -351,19 +351,21 @@ footer a:hover {
   margin-left: -100%;
 }
 
-.back-arrow:hover path {
-  fill: #886684;
+.styled {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(173, 127, 168, 0.7529411765);
+  margin-bottom: 1em;
+  z-index: 9999999999;
 }
 
-.arr-mobile {
-  visibility: visible;
+.back-arrow {
   width: 200px;
   margin: 1em;
 }
 
-.arr-desktop {
-  visibility: hidden;
-  width: 0px;
+.back-arrow:hover path {
+  fill: #886684;
 }
 
 .send-mail {
@@ -512,15 +514,6 @@ footer a:hover {
   }
   .impressum {
     margin: 0em 6em 3em 6em;
-  }
-  .arr-mobile {
-    visibility: hidden;
-    width: 0px;
-  }
-  .arr-desktop {
-    visibility: visible;
-    width: 200px;
-    margin: 2em 1em;
   }
 }
 @media only screen and (min-width: 1250px) {

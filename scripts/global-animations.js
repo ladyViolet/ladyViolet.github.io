@@ -5,9 +5,10 @@ gsap.from("#left-lower-wing", {scaleX: .7, transformOrigin: 'right', duration: 1
 gsap.from("#right-upper-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 gsap.from("#right-lower-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 
-//PAGE UP
+//PAGE UP BUTTON & BACK ARROW
 //Get pageup button
 var mybutton = document.getElementById("pageup");
+var backArrow = document.getElementById("nav-back");
         
 //button shows up when scrolled down 20px from the top of the document
 window.onscroll = function() {scrollFunction()};
@@ -15,8 +16,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
+    backArrow.classList.add("styled");
   } else {
     mybutton.style.display = "none";
+    backArrow.classList.remove("styled");
   }
 }
 
@@ -65,18 +68,10 @@ gsap.timeline().from('.back-arrow', {
     duration: 1,
     ease: Power4.easeOut
 })
-.to('.arr-mobile #arrow', { 
+.to('#arrow', { 
     scaleX: .9,
     x: -1,
     transformOrigin: "bottom left",
-    duration: 2, 
-    repeat: -1, 
-    ease: "bounce.out"
-})
-.to('.arr-desktop #arrow', {
-    scaleY: .9,
-    y: -1,
-    transformOrigin: "top left",
     duration: 2, 
     repeat: -1, 
     ease: "bounce.out"

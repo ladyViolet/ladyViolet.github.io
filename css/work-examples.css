@@ -1,12 +1,21 @@
 .pineapplewake-body {
   background-color: #f0e9f1;
 }
+.pineapplewake-body #nav-back {
+  margin-bottom: -5.5em;
+}
 
 .awwal-body {
   background-color: black;
   -webkit-hyphens: manual;
       -ms-hyphens: manual;
           hyphens: manual;
+}
+.awwal-body #arrow, .awwal-body #back-text {
+  fill: rgba(173, 127, 168, 0.5882352941);
+}
+.awwal-body .styled {
+  background-color: rgba(35, 35, 35, 0.8823529412);
 }
 
 #intro-awwal {
