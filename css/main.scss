@@ -83,7 +83,9 @@ img {
 
     a {
         color: white;
-        letter-spacing: .01em;
+        letter-spacing: .02em;
+        word-spacing: .1em;
+        font-weight: 600;
     }
 
     a:hover {
@@ -364,7 +366,7 @@ footer {
 .impressum {
     background-color: white;
     border-radius: 1em;
-    margin: 0em 1em 1em 1em;
+    margin: 1em;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     color: black;
     font-size: 1.2em;
@@ -385,12 +387,15 @@ footer {
     }
 }
 
-.styled {
+#nav-back {
+    display: none;
     width: 100%;
     position: fixed;
-    background-color: #ad7fa8c0;
-    margin-bottom: 1em;
     z-index: 9999999999;
+}
+
+.styled {
+    background-color: #ad7fa8c0;
 }
 
 .back-arrow {
@@ -585,7 +590,7 @@ footer {
     }
 
     .impressum {
-        margin: 0em 6em 3em 6em;
+        margin: 3em 6em;
     }
 }
 
@@ -626,7 +631,7 @@ footer {
     }
 
     .impressum {
-        margin:  0em 6em 3em 8em;
+        margin:  3em 6em 3em 8em;
     }
 }
 
@@ -650,6 +655,6 @@ footer {
     }
 
     .impressum {
-        margin:  0em 6em 3em 10em;
+        margin:  3em 6em 3em 10em;
     }
 }

@@ -11,15 +11,27 @@ var mybutton = document.getElementById("pageup");
 var backArrow = document.getElementById("nav-back");
         
 //button shows up when scrolled down 20px from the top of the document
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction(), scrollFunctionArrow()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-    backArrow.classList.add("styled");
+    mybutton.style.display = "block"; 
+
   } else {
     mybutton.style.display = "none";
-    backArrow.classList.remove("styled");
+  }
+}
+
+function scrollFunctionArrow() {
+  if (backArrow != null ) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backArrow.style.display = "block"; 
+      backArrow.classList.add("styled");
+  
+    } else {
+      backArrow.style.display = "none";
+      backArrow.classList.remove("styled");
+    }
   }
 }
 

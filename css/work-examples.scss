@@ -1,9 +1,5 @@
 .pineapplewake-body {
     background-color: #f0e9f1;
-
-    #nav-back {
-        margin-bottom: -5.5em;
-    }
 }
 
 .awwal-body {
@@ -17,6 +13,10 @@
     .styled {
         background-color: #232323e1;
     }
+}
+
+#nav-back {
+    display: none;
 }
 
 #intro-awwal {

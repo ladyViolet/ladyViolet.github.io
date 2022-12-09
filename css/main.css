@@ -70,7 +70,9 @@ img {
 }
 .nav-container a {
   color: white;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  font-weight: 600;
 }
 .nav-container a:hover {
   color: #3f2140;
@@ -331,7 +333,7 @@ footer a:hover {
 .impressum {
   background-color: white;
   border-radius: 1em;
-  margin: 0em 1em 1em 1em;
+  margin: 1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   color: black;
   font-size: 1.2em;
@@ -351,12 +353,15 @@ footer a:hover {
   margin-left: -100%;
 }
 
-.styled {
+#nav-back {
+  display: none;
   width: 100%;
   position: fixed;
-  background-color: rgba(173, 127, 168, 0.7529411765);
-  margin-bottom: 1em;
   z-index: 9999999999;
+}
+
+.styled {
+  background-color: rgba(173, 127, 168, 0.7529411765);
 }
 
 .back-arrow {
@@ -513,7 +518,7 @@ footer a:hover {
     padding-right: 2em;
   }
   .impressum {
-    margin: 0em 6em 3em 6em;
+    margin: 3em 6em;
   }
 }
 @media only screen and (min-width: 1250px) {
@@ -544,7 +549,7 @@ footer a:hover {
     padding-right: 4em;
   }
   .impressum {
-    margin: 0em 6em 3em 8em;
+    margin: 3em 6em 3em 8em;
   }
 }
 @media only screen and (min-width: 1550px) {
@@ -562,6 +567,6 @@ footer a:hover {
     padding-right: 10em;
   }
   .impressum {
-    margin: 0em 6em 3em 10em;
+    margin: 3em 6em 3em 10em;
   }
 }/*# sourceMappingURL=main.css.map */

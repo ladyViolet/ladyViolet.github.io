@@ -8,6 +8,10 @@
     background-color: #322f31c0;
 }
 
+section {
+ padding: 4em !important;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -32,11 +36,6 @@
 .container .grid .column img {
     width: 100%;
     padding: .5em;
-  }
-
-.portrait {
-    margin-top: 0;
-    padding-top: 0;
 }
 
 .back-arrow {
@@ -46,6 +45,13 @@
 .featured-title {
     color: #e6e6e6;
     text-align: center;
+    margin-top: 0 !important;
+}
+
+.back-home {
+    max-height: 5em;
+    display: block;
+    margin: 1em auto;
 }
 
 footer {
