@@ -213,6 +213,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script src="/scripts/global-animations.js"></script>
   <script>
+      let van_animation = document.querySelector('.surfvan');
+      let x = () => (window.innerWidth + van_animation.getBoundingClientRect().width);
+      console.log("window width:" + window.innerWidth);
+      console.log("bounding client rect:" + van_animation.getBoundingClientRect().width);
+      console.log("x:" + x);
+      
       gsap.to('.wheels', {
       rotation: 360,
       transformOrigin: "center",
@@ -223,12 +229,13 @@
     
     gsap.timeline({repeat: -1})
     .to('#thanks', {
-      opacity: 0
+      opacity: 0,
+      duration: .01
     })
     .to('.surfvan', {
-      x: () => window.innerWidth * 1.6, // () => ensures updating on refresh
-      duration: 10,
-      ease: "power1.inOut"
+      x: () => window.innerWidth*2, // () => ensures updating on refresh
+      duration: 20
+      
     })
     .to('#gone-surfing', {
       opacity: 0,
@@ -240,15 +247,16 @@
     }) 
     .to('.surfvan', {
       scaleX: -1,
+      transformOrigin: "0%",
       duration: .01
     })
     .to('.surfvan', {
-      x: () => window.innerWidth * -0.001, // () => ensures updating on refresh
-      duration: 10,
-      ease: "power1.inOut"
+      x: () => (window.innerWidth) * -1, // () => ensures updating on refresh
+      duration: 20
     })
     .to('.surfvan', {
       scaleX: -1,
+      transformOrigin: "0%",
       duration: 0
     });
   </script>
