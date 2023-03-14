@@ -5,7 +5,7 @@ var part_3 = String.fromCharCode(58);
 var part_4 = "design";
 var part_5 = Math.pow(2,6);
 var part_6 = String.fromCharCode(part_5);
-´//console.log(part_6);
+//console.log(part_6);
 var part_7 = "laura";
 var part_8 = Math.floor(45.99);
 var part_9 = String.fromCharCode(part_8);
