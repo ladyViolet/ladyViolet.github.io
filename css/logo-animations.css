@@ -1,0 +1,9 @@
+.example {
+  width: 100%;
+}
+.example svg {
+  width: 30%;
+  align-self: center;
+  display: block;
+  margin: 3em auto;
+}/*# sourceMappingURL=logo-animations.css.map */

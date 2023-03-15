@@ -5,7 +5,6 @@
 .awwal-body {
   background-color: black;
   -webkit-hyphens: manual;
-      -ms-hyphens: manual;
           hyphens: manual;
 }
 .awwal-body #arrow, .awwal-body #back-text {
