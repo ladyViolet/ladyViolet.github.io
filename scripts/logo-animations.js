@@ -1,3 +1,6 @@
+//Scroll Trigger
+gsap.registerPlugin(ScrollTrigger);
+
 var t1 = gsap.timeline({repeat: 0});
 t1.from("#a", {y:-100, duration: 3});
 
@@ -28,10 +31,43 @@ t3.from(".ray", {
     x: 200
   });
 
-window.onload = function()
-{
+  var sunshineAnimation = function() { 
     t1.play();
     t2.play();
     t3.play();
-    console.log("animation played");
+};
+
+
+window.onload = function()
+{
+   sunshineAnimation();
+    //console.log("animation played");
 }
+
+
+var morph = KUTE.fromTo('#heart-1', {path: '#heart-1'}, {path: "#fill"}, {duration: 1000}, {morphPrecision: 2});
+var heartAnimation = KUTE.fromTo("#heart-2", {opacity: 0}, {opacity: 1});
+morph.chain(heartAnimation);
+//letters
+var t4 = gsap.timeline({repeat: 0, delay: 2.5});
+t4.from(".letter", {
+    duration: 1,
+    delay: 2,
+    opacity: 0,
+    stagger: {
+      grid: [0,27],
+      axis: "x",
+      from: "end",
+      amount: 1.5
+    }
+  }); 
+
+  var coffeeAnimation = function() {
+    morph.start();
+    t4.play();
+  } 
+
+ScrollTrigger.create({
+    trigger: "#BG",
+    onEnter: function() {coffeeAnimation();},
+  });

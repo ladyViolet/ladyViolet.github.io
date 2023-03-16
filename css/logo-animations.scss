@@ -1,12 +1,35 @@
 body {
-    background-image: linear-gradient(#e6e6e6, rgb(255, 190, 121));
+    
 }
+
 .example {
-    width: 100%;
+    height: 100vh;
     svg {
-        width: 30%;
+        height: 50%;
         align-self: center;
         display: block;
-        margin: 3em auto;
+        margin: auto;
     }
+}
+
+#example-1 {
+    background-image: linear-gradient(#e6e6e6, rgb(255, 190, 121));
+    svg {
+        padding: 20vh;
+    }
+}
+
+#example-2 {
+    background-color: #342828;
+    svg {
+        padding: 25vh;
+    }
+}
+
+#fill {
+    visibility: hidden;
+}
+
+#heart-2 {
+    opacity: 0;
 }
