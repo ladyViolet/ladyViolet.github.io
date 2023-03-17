@@ -3,9 +3,10 @@ body {
 }
 
 .example {
+    width: 100vw;
     height: 100vh;
     svg {
-        height: 50%;
+        width: 50%;
         align-self: center;
         display: block;
         margin: auto;
@@ -15,21 +16,22 @@ body {
 #example-1 {
     background-image: linear-gradient(#e6e6e6, rgb(255, 190, 121));
     svg {
-        padding: 20vh;
+        padding-top: 30%;
     }
 }
 
 #example-2 {
     background-color: #342828;
     svg {
-        padding: 25vh;
+        height: 50%;
+        padding-top:  40%;
     }
-}
-
-#fill {
-    visibility: hidden;
 }
 
 #heart-2 {
     opacity: 0;
+}
+
+#morph-1, #morph-2, #fill {
+    visibility: hidden;
 }

@@ -1,25 +1,27 @@
-//Scroll Trigger
+//enable scroll trigger
 gsap.registerPlugin(ScrollTrigger);
 
+//SUNSHINE ANIMATION
+//sunrise
 var t1 = gsap.timeline({repeat: 0});
-t1.from("#a", {y:-100, duration: 3});
+t1.from("#a", {y:-100, duration: 2});
 
 var t2 = gsap.timeline({repeat: 0});
-t2.from("#body", {y:70, duration: 3});
+t2.from("#body", {y:70, duration: 2});
 
-var t3 = gsap.timeline({repeat: 0, delay: 2.5});
+//ray sparkle & text pop
+var t3 = gsap.timeline({repeat: 0, delay: 1.8});
 t3.from(".ray", {
-    duration: 1,
     opacity: 0,
     stagger: {
       grid: [0,13],
       axis: "x",
       from: "center",
-      amount: 1.5
+      amount: 0.5
     }
   }); 
   t3.from("#HEY", {
-    duration: 2,
+    duration: 1.3,
     ease: "bounce.out",
     opacity: 0,
     y: -200
@@ -31,43 +33,125 @@ t3.from(".ray", {
     x: 200
   });
 
+  //complete timeline
   var sunshineAnimation = function() { 
     t1.play();
     t2.play();
     t3.play();
 };
 
+  var restartSunshineAnimation = function() { 
+    t1.restart(true, false);
+    t2.restart(true, false);
+    t3.restart(true, false);
+};
 
-window.onload = function()
-{
-   sunshineAnimation();
-    //console.log("animation played");
-}
 
+//COFFEE ANIMATION
+//morph heart into coffee
+var morph_1 = KUTE.fromTo(
+  "#heart-1",
+  { path: "#heart-1" }, // from shape
+  { path: "#morph-1" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 500,
+    delay: 500,
+    morphPrecision: 1
+  }
+);
 
-var morph = KUTE.fromTo('#heart-1', {path: '#heart-1'}, {path: "#fill"}, {duration: 1000}, {morphPrecision: 2});
-var heartAnimation = KUTE.fromTo("#heart-2", {opacity: 0}, {opacity: 1});
-morph.chain(heartAnimation);
-//letters
+var morph_2 = KUTE.fromTo(
+  "#heart-1",
+  { path: "#morph-1" },
+  { path: "#morph-2" },
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 200,
+    morphPrecision: 1
+  }
+);
+
+var morph_3 = KUTE.fromTo(
+  "#heart-1",
+  { path: "#morph-2" },
+  { path: "#fill" },
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 200,
+    morphPrecision: 1
+  }
+);
+
+morph_1.chain(morph_2);
+morph_2.chain(morph_3);
+
+//pop letters
 var t4 = gsap.timeline({repeat: 0, delay: 2.5});
-t4.from(".letter", {
-    duration: 1,
-    delay: 2,
+t4.from(".letter-1", {
     opacity: 0,
     stagger: {
-      grid: [0,27],
+      grid: [1,9],
       axis: "x",
       from: "end",
-      amount: 1.5
+      amount: 1
+    }
+  }), 
+  t4.from(".coffee", {
+    duration: 1,
+    ease: "elastic",
+    opacity: 0,
+    scale: 0.5
+  });
+t4.from(".letter-2", {
+    opacity: 0,
+    stagger: {
+      grid: [1,4],
+      axis: "x",
+      from: "end",
+      amount: 0.5
     }
   }); 
+  t4.from(".mornings", {
+    duration: 1,
+    ease: "elastic",
+    opacity: 0,
+    scale: 0.5
+  });
+  
+var showHeart = gsap.timeline({repeat: 0, delay: 7});
+showHeart.to("#heart-2", {scale: 0.9, opacity: 1, duration: 2, ease: "elastic"});
 
+//complete animation
   var coffeeAnimation = function() {
-    morph.start();
+    morph_1.start();
     t4.play();
+    showHeart.play();
   } 
 
+  var restartCoffeeAnimation = function() {
+    morph_1.start();
+    t4.restart(true, false);
+    showHeart.restart(true, false);
+    latteArtSwirl.play(true, false);
+  } 
+
+
+//TRIGGER EVENTS
 ScrollTrigger.create({
-    trigger: "#BG",
-    onEnter: function() {coffeeAnimation();},
+    trigger: "#example-1", //markers: true,
+    onEnter: function() {sunshineAnimation()},
+    onEnterBack: function() {restartSunshineAnimation()} //TODO FIX enterBack ISSUE
+  });
+
+  ScrollTrigger.create({
+    trigger: "#example-2", // markers: true,
+    onEnter: function() {coffeeAnimation()},
+    onEnterBack: function() {restartCoffeeAnimation()}
   });
