@@ -1,27 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 200vh;
+}
+
 .example {
   width: 100vw;
   height: 100vh;
 }
 .example svg {
+  height: 100%;
   width: 50%;
   align-self: center;
   display: block;
   margin: auto;
 }
 
+@media screen and (min-width: 800px) {
+  .example svg {
+    width: 30%;
+  }
+}
 #example-1 {
   background-image: linear-gradient(#e6e6e6, rgb(255, 190, 121));
-}
-#example-1 svg {
-  padding-top: 30%;
 }
 
 #example-2 {
   background-color: #342828;
-}
-#example-2 svg {
-  height: 50%;
-  padding-top: 40%;
 }
 
 #heart-2 {

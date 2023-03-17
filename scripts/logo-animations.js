@@ -139,19 +139,26 @@ showHeart.to("#heart-2", {scale: 0.9, opacity: 1, duration: 2, ease: "elastic"})
     morph_1.start();
     t4.restart(true, false);
     showHeart.restart(true, false);
-    latteArtSwirl.play(true, false);
   } 
 
 
 //TRIGGER EVENTS
 ScrollTrigger.create({
-    trigger: "#example-1", //markers: true,
+    trigger: "#example-1",
+    pin: "#example-1",
+    start: "bottom bottom",
+    end: "+=2000",
+    markers: false,
     onEnter: function() {sunshineAnimation()},
-    onEnterBack: function() {restartSunshineAnimation()} //TODO FIX enterBack ISSUE
+    onEnterBack: function() {restartSunshineAnimation()} 
   });
 
   ScrollTrigger.create({
-    trigger: "#example-2", // markers: true,
+    trigger: "#example-2",
+    pin: "#example-2",
+    start: "bottom bottom",
+    end: "+=2000",
+    markers: false,
     onEnter: function() {coffeeAnimation()},
-    onEnterBack: function() {restartCoffeeAnimation()}
+    onEnterBack: function() {restartCoffeeAnimation()} //TODO FIX enterBack ISSUE
   });
