@@ -141,6 +141,23 @@ showHeart.to("#heart-2", {scale: 0.9, opacity: 1, duration: 2, ease: "elastic"})
     showHeart.restart(true, false);
   } 
 
+//FLOWER ANIMATION
+var flowerAnimation = function() {
+  gsap.to(".flower", {
+    rotation: 360, transformOrigin:"50% 50%",
+    repeat: -1,
+    duration: 10,
+    stagger: {
+      from: "center",
+      amount: 1
+    }
+  }); 
+}
+
+var drawSurfsup = function () {
+  KUTE.fromTo('#path7390',{draw:'0% 0%'}, {draw:'0% 100%'});
+
+}
 
 //TRIGGER EVENTS
 ScrollTrigger.create({
@@ -161,4 +178,13 @@ ScrollTrigger.create({
     markers: false,
     onEnter: function() {coffeeAnimation()},
     onEnterBack: function() {restartCoffeeAnimation()} //TODO FIX enterBack ISSUE
+  });
+
+  ScrollTrigger.create({
+    trigger: "#example-3",
+    pin: "#example-3",
+    start: "bottom bottom",
+    end: "+=2000",
+    markers: false,
+    onEnter: function() {flowerAnimation(), drawSurfsup()} //TODO draw surfsup
   });

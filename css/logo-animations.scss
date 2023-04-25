@@ -36,6 +36,24 @@ body {
     background-color: #342828;
 }
 
+#example-3 {
+    background-color: #ffdca4;
+
+    #singlefin {
+        height: 80%;
+        width: auto;
+        padding: 2em 2em 0 2em;
+    }
+
+    #surfsup {
+        position: relative;
+        height: 20%;
+        width: auto;
+        padding: 2em;
+        left: 10%;
+    }
+}
+
 #heart-2 {
     opacity: 0;
 }
