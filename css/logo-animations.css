@@ -38,15 +38,14 @@ body {
 }
 #example-3 #singlefin {
   height: 80%;
-  width: auto;
+  width: 100%;
   padding: 2em 2em 0 2em;
 }
 #example-3 #surfsup {
   position: relative;
   height: 20%;
-  width: auto;
+  width: 100%;
   padding: 2em;
-  left: 10%;
 }
 
 #heart-2 {

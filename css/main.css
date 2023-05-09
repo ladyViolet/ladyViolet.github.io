@@ -231,7 +231,7 @@ section {
 }
 .skills-container ul li .icon-container {
   height: 100px;
-  display: flex;
+  display: block;
   justify-content: center;
   margin: 0 auto;
   /*individual heights for icons later*/
@@ -246,11 +246,14 @@ section {
   width: 100px;
 }
 .skills-container ul li .skill-title {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 2em;
   margin-top: unset;
+  margin-bottom: unset;
+  padding-bottom: unset;
 }
 .skills-container ul li .featured-desc {
+  margin-top: unset;
   margin-bottom: 0.5em;
 }
 

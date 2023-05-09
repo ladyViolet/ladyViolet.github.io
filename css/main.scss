@@ -257,7 +257,7 @@ section {
 
     .icon-container {
         height: 100px;
-        display: flex;
+        display: block;
         justify-content: center;
         margin: 0 auto;
 
@@ -274,12 +274,15 @@ section {
     }
 
     .skill-title {
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 2em;
         margin-top: unset;
+        margin-bottom: unset;
+        padding-bottom: unset;
     }
 
     .featured-desc {
+        margin-top: unset;
         margin-bottom: .5em;
     }
 }
