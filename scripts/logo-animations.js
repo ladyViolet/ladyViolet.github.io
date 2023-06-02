@@ -46,6 +46,23 @@ t3.from(".ray", {
     t3.restart(true, false);
 };
 
+//BUTTERFLY ANIMATION
+gsap.from("#left-upper-wing", {scaleX: .7, transformOrigin: 'right', duration: 1, repeat: -1, yoyo: true});
+gsap.from("#left-lower-wing", {scaleX: .7, transformOrigin: 'right', duration: 1, repeat: -1, yoyo: true});
+gsap.from("#right-upper-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
+gsap.from("#right-lower-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
+gsap.from("#triangle", {scale: .97, transformOrigin: 'center', repeat: -1, yoyo: true});
+var t0 = gsap.timeline({repeat: -1, yoyo: true});
+t0.from("#triangle", {
+ fill: '#b6ecf0',
+ duration: 1,
+ yoyo: true
+}), 
+t0.from("#triangle", {
+ fill: '#ffccaa',
+ duration: 1,
+ yoyo: true
+});
 
 //COFFEE ANIMATION
 //morph heart into coffee
@@ -108,7 +125,7 @@ t4.from(".letter-1", {
     ease: "elastic",
     opacity: 0,
     scale: 0.5
-  });
+  }),
 t4.from(".letter-2", {
     opacity: 0,
     stagger: {
@@ -117,7 +134,7 @@ t4.from(".letter-2", {
       from: "end",
       amount: 0.5
     }
-  }); 
+  }), 
   t4.from(".mornings", {
     duration: 1,
     ease: "elastic",
@@ -160,6 +177,9 @@ var drawSurfsup = function () {
 }
 
 //TRIGGER EVENTS
+window.onload = function () {
+  t0.play();
+}
 ScrollTrigger.create({
     trigger: "#example-1",
     pin: "#example-1",
