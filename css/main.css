@@ -38,6 +38,9 @@ body {
 .impressum-body {
   background-color: #3f2140;
 }
+.impressum-body section {
+  padding: 2em !important;
+}
 
 ul {
   list-style-type: none;
