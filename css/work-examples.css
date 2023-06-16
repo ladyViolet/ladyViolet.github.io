@@ -90,16 +90,8 @@ section {
   background-color: unset;
 }
 
-#logo-awwal, #menu, #voucher, #flyer, #homepage-animation, #desktop-view, #mobile-view {
+#logo-awwal, #flyer, #homepage-animation, #desktop-view, #mobile-view {
   box-shadow: unset;
-}
-
-.logo-ananas {
-  border-radius: unset !important;
-  box-shadow: none !important;
-  display: block;
-  max-width: 50%;
-  margin: 1em auto 2em auto !important;
 }
 
 video {
@@ -144,12 +136,11 @@ footer {
     float: unset;
     margin: auto;
   }
-  .fullwidth-content .featured-title, .fullwidth-content .featured-desc {
-    width: 40%;
-  }
   .portfolio-container {
     margin-bottom: 1em;
-    padding-left: unset;
+  }
+  .portfolio-right {
+    padding-left: 2em;
   }
   .awwal-logo {
     padding: 3em;
