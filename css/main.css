@@ -453,6 +453,9 @@ footer a:hover {
   .portfolio-container img, video {
     margin-top: 3em;
   }
+  .portfolio-right {
+    padding-left: 2em;
+  }
   .separator {
     visibility: hidden;
   }
