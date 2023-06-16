@@ -259,7 +259,6 @@ section {
 
 .portfolio {
   background: #f0e9f1;
-  padding: 0 3em;
 }
 
 .readmore {
@@ -449,6 +448,9 @@ footer a:hover {
   }
   #portfolio-start {
     padding-top: 10em;
+  }
+  .portfolio {
+    padding: 0 3em;
   }
   .portfolio-container img, video {
     margin-top: 3em;
