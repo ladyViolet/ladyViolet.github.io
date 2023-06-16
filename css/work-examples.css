@@ -19,9 +19,10 @@
 }
 
 #intro-awwal {
-  width: 50vh;
+  width: 60vh;
   display: block;
   margin: auto;
+  margin-bottom: 0 !important;
 }
 
 .logo-wrapper {

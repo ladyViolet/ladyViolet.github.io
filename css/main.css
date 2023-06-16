@@ -446,8 +446,11 @@ footer a:hover {
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
   }
-  #portfolio-start {
+  #portfolio-section-start {
     padding-top: 10em;
+  }
+  .portfolio-start {
+    padding-top: 3em !important;
   }
   .portfolio {
     padding: 0 3em;
