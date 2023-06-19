@@ -194,6 +194,13 @@ section {
   position: relative;
   background-color: white;
 }
+.featured svg > g > g:hover {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+}
 
 .subtitle {
   text-transform: uppercase;
