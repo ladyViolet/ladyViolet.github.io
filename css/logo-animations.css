@@ -54,6 +54,7 @@
 }
 
 #example-4 {
+  padding: unset;
   background-color: var(--color-2-2);
 }
 #example-4 svg {

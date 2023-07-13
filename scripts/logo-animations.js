@@ -1,8 +1,7 @@
 //enable scroll trigger
-gsap.registerPlugin(ScrollTrigger);
+//gsap.registerPlugin(ScrollTrigger);
 
 //SUNSHINE ANIMATION
-//sunrise
 var sunriseAnimation = gsap.timeline({repeat: -1, repeatDelay: 3});
 
 sunriseAnimation.from("#a", {y:-100, duration: 2},0), //the "0" marks the same starting point of clip-path & path
@@ -93,9 +92,9 @@ morph_1.chain(morph_2);
 morph_2.chain(morph_3);
 
 //pop letters
-var t4 = gsap.timeline({repeat: -1, repeatDelay: 2});
-t4.add( function(){ morph_1.start() } ),
-t4.from(".letter-1", {
+var coffeeAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
+coffeeAnimation.add( function(){ morph_1.start() } ),
+coffeeAnimation.from(".letter-1", {
   opacity: 0,
   delay: 2.5,
   stagger: {
@@ -105,13 +104,13 @@ t4.from(".letter-1", {
     amount: 1
   }
 }), 
-t4.from(".coffee", {
+coffeeAnimation.from(".coffee", {
   duration: 1,
   ease: "elastic",
   opacity: 0,
   scale: 0.5
 }),
-t4.from(".letter-2", {
+coffeeAnimation.from(".letter-2", {
   opacity: 0,
   stagger: {
     grid: [1,4],
@@ -120,13 +119,13 @@ t4.from(".letter-2", {
     amount: 0.5
   }
 }), 
-t4.from(".mornings", {
+coffeeAnimation.from(".mornings", {
   duration: 1,
   ease: "elastic",
   opacity: 0,
   scale: 0.5
 }),
-t4.to("#heart-2", {
+coffeeAnimation.to("#heart-2", {
   scale: 0.9, 
   opacity: 1, 
   duration: 2, 
@@ -148,8 +147,17 @@ var flowerAnimation = function() {
 
 var drawSurfsup = function () {
   KUTE.fromTo('#path7390',{draw:'0% 0%'}, {draw:'0% 100%'});
-
 }
+
+//VAN-ANIMATION
+var vanAnimation = gsap.timeline({repeat: -1});
+vanAnimation.from(".wheels", { 
+  rotation: -660, 
+  transformOrigin: "50% 50%", 
+  duration: 5,
+  ease: "none"
+},0),
+vanAnimation.fromTo("#vito", {x: -500}, {x: 500, duration: 5},0);
 
 //TRIGGER EVENTS
 window.onload = function () {
@@ -157,36 +165,6 @@ window.onload = function () {
   butterflyAnimation.play();
   flowerAnimation();
   //drawSurfsup();
-  t4.play();
-
+  coffeeAnimation.play();
+  vanAnimation.play();
 }
-
-/*
-ScrollTrigger.create({
-    trigger: "#example-1",
-    pin: "#example-1",
-    start: "bottom bottom",
-    end: "+=2000",
-    markers: false,
-    onEnter: function() {sunshineAnimation()},
-    onEnterBack: function() {restartSunshineAnimation()} 
-  });
-
-  ScrollTrigger.create({
-    trigger: "#example-2",
-    pin: "#example-2",
-    start: "bottom bottom",
-    end: "+=2000",
-    markers: false,
-    onEnter: function() {coffeeAnimation()},
-    onEnterBack: function() {restartCoffeeAnimation()} //TODO FIX enterBack ISSUE
-  });
-
-  ScrollTrigger.create({
-    trigger: "#example-3",
-    pin: "#example-3",
-    start: "bottom bottom",
-    end: "+=2000",
-    markers: false,
-    onEnter: function() {flowerAnimation(), drawSurfsup()} //TODO draw surfsup
-  });*/
