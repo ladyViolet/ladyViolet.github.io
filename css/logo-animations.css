@@ -4,29 +4,19 @@
   padding: 0;
 }
 
-body {
-  height: 200vh;
-}
-
 .example {
-  width: 100vw;
-  height: 100vh;
+  padding: 2em;
 }
 .example svg {
-  height: 100%;
-  width: 50%;
+  width: 100%;
+  height: auto;
   align-self: center;
   display: block;
   margin: auto;
 }
 
-@media screen and (min-width: 800px) {
-  .example svg {
-    width: 30%;
-  }
-}
 #example-1 {
-  background-image: linear-gradient(#e6e6e6, rgb(255, 190, 121));
+  background-image: linear-gradient(#d6fffe, rgb(255, 190, 121));
 }
 
 #example-0 {
@@ -40,16 +30,8 @@ body {
 #example-3 {
   background-color: #ffdca4;
 }
-#example-3 #singlefin {
-  height: 80%;
-  width: 100%;
-  padding: 2em 2em 0 2em;
-}
 #example-3 #surfsup {
-  position: relative;
-  height: 20%;
-  width: 100%;
-  padding: 2em;
+  margin-top: 10px;
 }
 
 #heart-2 {

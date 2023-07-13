@@ -3,48 +3,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 //SUNSHINE ANIMATION
 //sunrise
-var t1 = gsap.timeline({repeat: 0});
-t1.from("#a", {y:-100, duration: 2});
+var sunriseAnimation = gsap.timeline({repeat: -1, repeatDelay: 3});
 
-var t2 = gsap.timeline({repeat: 0});
-t2.from("#body", {y:70, duration: 2});
-
-//ray sparkle & text pop
-var t3 = gsap.timeline({repeat: 0, delay: 1.8});
-t3.from(".ray", {
-    opacity: 0,
-    stagger: {
-      grid: [0,13],
-      axis: "x",
-      from: "center",
-      amount: 0.5
-    }
-  }); 
-  t3.from("#HEY", {
-    duration: 1.3,
-    ease: "bounce.out",
-    opacity: 0,
-    y: -200
-  });
-  t3.from("#SUNSHINE", {
-    duration: 1,
-    ease: "back.out",
-    opacity: 0,
-    x: 200
-  });
-
-  //complete timeline
-  var sunshineAnimation = function() { 
-    t1.play();
-    t2.play();
-    t3.play();
-};
-
-  var restartSunshineAnimation = function() { 
-    t1.restart(true, false);
-    t2.restart(true, false);
-    t3.restart(true, false);
-};
+sunriseAnimation.from("#a", {y:-100, duration: 2},0), //the "0" marks the same starting point of clip-path & path
+sunriseAnimation.from("#body", {y:70, duration: 2},0),
+sunriseAnimation.from(".ray", {
+  opacity: 0,
+  stagger: {
+    grid: [0,13],
+    axis: "x",
+    from: "center",
+    amount: 0.5
+  }
+}),
+sunriseAnimation.from("#HEY", {
+  duration: 1.3,
+  ease: "bounce.out",
+  opacity: 0,
+  y: -200
+}),
+sunriseAnimation.from("#SUNSHINE", {
+  duration: 1,
+  ease: "back.out",
+  opacity: 0,
+  x: 200
+});
 
 //BUTTERFLY ANIMATION
 gsap.from("#left-upper-wing", {scaleX: .7, transformOrigin: 'right', duration: 1, repeat: -1, yoyo: true});
@@ -52,13 +35,13 @@ gsap.from("#left-lower-wing", {scaleX: .7, transformOrigin: 'right', duration: 1
 gsap.from("#right-upper-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 gsap.from("#right-lower-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 gsap.from("#triangle", {scale: .97, transformOrigin: 'center', repeat: -1, yoyo: true});
-var t0 = gsap.timeline({repeat: -1, yoyo: true});
-t0.from("#triangle", {
+var butterflyAnimation = gsap.timeline({repeat: -1, yoyo: true});
+butterflyAnimation.from("#triangle", {
  fill: '#b6ecf0',
  duration: 1,
  yoyo: true
 }), 
-t0.from("#triangle", {
+butterflyAnimation.from("#triangle", {
  fill: '#ffccaa',
  duration: 1,
  yoyo: true
@@ -110,54 +93,46 @@ morph_1.chain(morph_2);
 morph_2.chain(morph_3);
 
 //pop letters
-var t4 = gsap.timeline({repeat: 0, delay: 2.5});
+var t4 = gsap.timeline({repeat: -1, repeatDelay: 2});
+t4.add( function(){ morph_1.start() } ),
 t4.from(".letter-1", {
-    opacity: 0,
-    stagger: {
-      grid: [1,9],
-      axis: "x",
-      from: "end",
-      amount: 1
-    }
-  }), 
-  t4.from(".coffee", {
-    duration: 1,
-    ease: "elastic",
-    opacity: 0,
-    scale: 0.5
-  }),
+  opacity: 0,
+  delay: 2.5,
+  stagger: {
+    grid: [1,9],
+    axis: "x",
+    from: "end",
+    amount: 1
+  }
+}), 
+t4.from(".coffee", {
+  duration: 1,
+  ease: "elastic",
+  opacity: 0,
+  scale: 0.5
+}),
 t4.from(".letter-2", {
-    opacity: 0,
-    stagger: {
-      grid: [1,4],
-      axis: "x",
-      from: "end",
-      amount: 0.5
-    }
-  }), 
-  t4.from(".mornings", {
-    duration: 1,
-    ease: "elastic",
-    opacity: 0,
-    scale: 0.5
-  });
+  opacity: 0,
+  stagger: {
+    grid: [1,4],
+    axis: "x",
+    from: "end",
+    amount: 0.5
+  }
+}), 
+t4.from(".mornings", {
+  duration: 1,
+  ease: "elastic",
+  opacity: 0,
+  scale: 0.5
+}),
+t4.to("#heart-2", {
+  scale: 0.9, 
+  opacity: 1, 
+  duration: 2, 
+  ease: "elastic"
+});
   
-var showHeart = gsap.timeline({repeat: 0, delay: 7});
-showHeart.to("#heart-2", {scale: 0.9, opacity: 1, duration: 2, ease: "elastic"});
-
-//complete animation
-  var coffeeAnimation = function() {
-    morph_1.start();
-    t4.play();
-    showHeart.play();
-  } 
-
-  var restartCoffeeAnimation = function() {
-    morph_1.start();
-    t4.restart(true, false);
-    showHeart.restart(true, false);
-  } 
-
 //FLOWER ANIMATION
 var flowerAnimation = function() {
   gsap.to(".flower", {
@@ -178,8 +153,15 @@ var drawSurfsup = function () {
 
 //TRIGGER EVENTS
 window.onload = function () {
-  t0.play();
+  sunriseAnimation.play();
+  butterflyAnimation.play();
+  flowerAnimation();
+  //drawSurfsup();
+  t4.play();
+
 }
+
+/*
 ScrollTrigger.create({
     trigger: "#example-1",
     pin: "#example-1",
@@ -207,4 +189,4 @@ ScrollTrigger.create({
     end: "+=2000",
     markers: false,
     onEnter: function() {flowerAnimation(), drawSurfsup()} //TODO draw surfsup
-  });
+  });*/
