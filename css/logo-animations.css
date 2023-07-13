@@ -1,3 +1,19 @@
+:root {
+  --color-1-1: #3f2140;
+  --color-1-2: #ad7fa8;
+  --color-1-3: #ffa477;
+  --color-2-1: #f0e9f1;
+  --color-2-2: #3cacae;
+  --color-2-3: #c8f4f9;
+  --color-3-1: #d5a157;
+  --color-3-2: #b85c4f;
+  --color-3-3: #f2c7c7;
+  --color-4-1: #b6ecf0;
+  --color-4-2: #ffbb7c;
+  --color-4-3: #3f2e3e;
+  --summer-haze: linear-gradient(#d6fffe, rgb(255, 190, 121));
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,23 +31,33 @@
   margin: auto;
 }
 
-#example-1 {
-  background-image: linear-gradient(#d6fffe, rgb(255, 190, 121));
+#example-0 {
+  background-color: var(--color-1-1);
+  padding: 3em;
 }
 
-#example-0 {
-  background-color: #cba0c6;
+#example-1 {
+  background-color: var(--color-1-2);
+  padding: 5em;
 }
 
 #example-2 {
-  background-color: #342828;
+  background-color: var(--color-1-3);
+  padding: 3em;
 }
 
 #example-3 {
-  background-color: #ffdca4;
+  background-color: var(--color-2-1);
 }
 #example-3 #surfsup {
   margin-top: 10px;
+}
+
+#example-4 {
+  background-color: var(--color-2-2);
+}
+#example-4 svg {
+  margin-top: 40%;
 }
 
 #heart-2 {
