@@ -61,10 +61,17 @@
   margin-top: 40%;
 }
 
+#example-5 {
+  background-color: var(--color-2-3);
+}
+#example-5 svg {
+  margin-top: 20%;
+}
+
 #heart-2 {
   opacity: 0;
 }
 
-#morph-1, #morph-2, #fill {
+#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera {
   visibility: hidden;
 }/*# sourceMappingURL=logo-animations.css.map */

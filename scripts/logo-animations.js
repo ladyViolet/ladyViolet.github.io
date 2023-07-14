@@ -159,6 +159,308 @@ vanAnimation.from(".wheels", {
 },0),
 vanAnimation.fromTo("#vito", {x: -500}, {x: 500, duration: 5},0);
 
+//MORPHING-OBJECTS ANIMATION
+//morph shell into monstera
+var morph_object_1_1 = KUTE.fromTo(
+  "#teil-7",
+  { path: "#teil-7" }, // from shape
+  { path: "#blatt-7" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_2_1 = KUTE.fromTo(
+  "#teil-6",
+  { path: "#teil-6" }, // from shape
+  { path: "#blatt-6" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_3_1 = KUTE.fromTo(
+  "#teil-5",
+  { path: "#teil-5" }, // from shape
+  { path: "#blatt-5" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_4_1 = KUTE.fromTo(
+  "#teil-4",
+  { path: "#teil-4" }, // from shape
+  { path: "#blatt-4" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_5_1 = KUTE.fromTo(
+  "#teil-3",
+  { path: "#teil-3" }, // from shape
+  { path: "#blatt-3" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_6_1 = KUTE.fromTo(
+  "#teil-2",
+  { path: "#teil-2" }, // from shape
+  { path: "#blatt-2" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_7_1 = KUTE.fromTo(
+  "#teil-1",
+  { path: "#teil-1" }, // from shape
+  { path: "#blatt-1" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
+//morph monstera into swallowtail
+var morph_object_1_2 = KUTE.fromTo(
+  "#teil-7",
+  { path: "#blatt-7" }, // from shape
+  { path: "#fuehler-re" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_2_2 = KUTE.fromTo(
+  "#teil-6",
+  { path: "#blatt-6" }, // from shape
+  { path: "#fluegel-re-o" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_3_2 = KUTE.fromTo(
+  "#teil-5",
+  { path: "#blatt-5" }, // from shape
+  { path: "#fluegel-re-u" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_4_2 = KUTE.fromTo(
+  "#teil-4",
+  { path: "#blatt-4" }, // from shape
+  { path: "#body-butterfly" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_5_2 = KUTE.fromTo(
+  "#teil-3",
+  { path: "#blatt-3" }, // from shape
+  { path: "#fluegel-li-u" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_6_2 = KUTE.fromTo(
+  "#teil-2",
+  { path: "#blatt-2" }, // from shape
+  { path: "#fluegel-li-o" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_7_2 = KUTE.fromTo(
+  "#teil-1",
+  { path: "#blatt-1" }, // from shape
+  { path: "#fuehler-li" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
+//morph swallowtail into fishtail
+var morph_object_1_3 = KUTE.fromTo(
+  "#teil-7",
+  { path: "#fluegel-li-o" }, // from shape
+  { path: "#li-o" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_2_3 = KUTE.fromTo(
+  "#teil-6",
+  { path: "#fluegel-re-o" }, // from shape
+  { path: "#re-o" }, // to shape
+  {
+     easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_3_3 = KUTE.fromTo(
+  "#teil-5",
+  { path: "#fluegel-li-u" }, // from shape
+  { path: "#bod-li-u" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_4_3 = KUTE.fromTo(
+  "#teil-4",
+  { path: "#fluegel-re-u" }, // from shape
+  { path: "#bod-re-u" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_5_3 = KUTE.fromTo(
+  "#teil-3",
+  { path: "#fuehler-li"}, // from shape
+  { path: "#bod-li-o"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_6_3 = KUTE.fromTo(
+  "#teil-2",
+  { path: "#fuehler-re" }, // from shape
+  { path: "#bod-re-o"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_7_3 = KUTE.fromTo(
+  "#teil-1",
+  { path: "#body-butterfly" }, // from shape
+  { path: "#fake-body"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
+morph_object_1_1.chain(morph_object_1_2);
+morph_object_2_1.chain(morph_object_2_2);
+morph_object_3_1.chain(morph_object_3_2);
+morph_object_4_1.chain(morph_object_4_2);
+morph_object_5_1.chain(morph_object_5_2);
+morph_object_6_1.chain(morph_object_6_2);
+morph_object_7_1.chain(morph_object_7_2);
+morph_object_1_2.chain(morph_object_1_3);
+morph_object_2_2.chain(morph_object_2_3);
+morph_object_3_2.chain(morph_object_3_3);
+morph_object_4_2.chain(morph_object_4_3);
+morph_object_5_2.chain(morph_object_5_3);
+morph_object_6_2.chain(morph_object_6_3);
+morph_object_7_2.chain(morph_object_7_3);
+morph_object_1_3.chain(morph_object_1_1);
+morph_object_2_3.chain(morph_object_2_1);
+morph_object_3_3.chain(morph_object_3_1);
+morph_object_4_3.chain(morph_object_4_1);
+morph_object_5_3.chain(morph_object_5_1);
+morph_object_6_3.chain(morph_object_6_1);
+morph_object_7_3.chain(morph_object_7_1);
+
 //TRIGGER EVENTS
 window.onload = function () {
   sunriseAnimation.play();
@@ -167,4 +469,11 @@ window.onload = function () {
   //drawSurfsup();
   coffeeAnimation.play();
   vanAnimation.play();
+  morph_object_1_1.start();
+  morph_object_2_1.start();
+  morph_object_3_1.start();
+  morph_object_4_1.start();
+  morph_object_5_1.start();
+  morph_object_6_1.start();
+  morph_object_7_1.start();
 }
