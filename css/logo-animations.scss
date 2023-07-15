@@ -22,7 +22,6 @@
 }
 
 .example {
-  padding: 2em;
     svg {
         width: 100%;
         height: auto;
@@ -32,28 +31,21 @@
     }
 }
 
-
-@media screen and (min-width: 800px) {
-    .example {
-        svg {
-            //width: 30%;
-        }
-    }
-  }
-  
 #example-0 {
     background-color: var(--color-1-1);
-    padding: 3em;
 }
 
 #example-1 {
     background-color: var(--color-1-2);
-    //padding: 5em;
+    padding: 15%;
+
+    @media screen and (min-width: 576px) {
+        padding: 5%;
+    }
 }
 
 #example-2 {
     background-color: var(--color-1-3);
-    padding: 3em;
 }
 
 #example-3 {
@@ -78,6 +70,16 @@
         margin-top: 20%;
     }
 }
+
+#example-0, #example-2, #example-3, #example-5 {
+    padding: 10%;
+    
+    @media screen and (min-width: 576px) {
+        padding: 3%;
+    }
+}
+
+
 
 #heart-2 {
     opacity: 0;
