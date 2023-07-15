@@ -54,11 +54,17 @@
 }
 
 #example-4 {
-  padding: unset;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   background-color: var(--color-2-2);
 }
 #example-4 svg {
-  margin-top: 40%;
+  margin-top: 10%;
+}
+@media screen and (min-width: 576px) {
+  #example-4 svg {
+    margin-top: 40%;
+  }
 }
 
 #example-5 {
@@ -68,11 +74,11 @@
   margin-top: 20%;
 }
 
-#example-0, #example-2, #example-3, #example-5 {
+#example-0, #example-2, #example-3, #example-4, #example-5 {
   padding: 10%;
 }
 @media screen and (min-width: 576px) {
-  #example-0, #example-2, #example-3, #example-5 {
+  #example-0, #example-2, #example-3, #example-4, #example-5 {
     padding: 3%;
   }
 }
