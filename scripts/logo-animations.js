@@ -91,9 +91,8 @@ var morph_3 = KUTE.fromTo(
 morph_1.chain(morph_2);
 morph_2.chain(morph_3);
 
-//pop letters
-var coffeeAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
-coffeeAnimation.add( function(){ morph_1.start() } ),
+var coffeeAnimation = gsap.timeline({repeat: -1, repeatDelay: 0});
+coffeeAnimation.add( function(){ morph_1.start() } ),//pop letters
 coffeeAnimation.from(".letter-1", {
   opacity: 0,
   delay: 2.5,
@@ -152,7 +151,7 @@ var drawSurfsup = function () {
 //VAN-ANIMATION
 var vanAnimation = gsap.timeline({repeat: -1});
 vanAnimation.from(".wheels", { 
-  rotation: -660, 
+  rotation: -800, 
   transformOrigin: "50% 50%", 
   duration: 5,
   ease: "none"
@@ -166,7 +165,7 @@ var morph_object_1_1 = KUTE.fromTo(
   { path: "#teil-7" }, // from shape
   { path: "#blatt-7" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -179,7 +178,7 @@ var morph_object_2_1 = KUTE.fromTo(
   { path: "#teil-6" }, // from shape
   { path: "#blatt-6" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -192,7 +191,7 @@ var morph_object_3_1 = KUTE.fromTo(
   { path: "#teil-5" }, // from shape
   { path: "#blatt-5" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -205,7 +204,7 @@ var morph_object_4_1 = KUTE.fromTo(
   { path: "#teil-4" }, // from shape
   { path: "#blatt-4" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -218,7 +217,7 @@ var morph_object_5_1 = KUTE.fromTo(
   { path: "#teil-3" }, // from shape
   { path: "#blatt-3" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -231,7 +230,7 @@ var morph_object_6_1 = KUTE.fromTo(
   { path: "#teil-2" }, // from shape
   { path: "#blatt-2" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -244,7 +243,7 @@ var morph_object_7_1 = KUTE.fromTo(
   { path: "#teil-1" }, // from shape
   { path: "#blatt-1" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -259,7 +258,7 @@ var morph_object_1_2 = KUTE.fromTo(
   { path: "#blatt-7" }, // from shape
   { path: "#fuehler-re" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -272,7 +271,7 @@ var morph_object_2_2 = KUTE.fromTo(
   { path: "#blatt-6" }, // from shape
   { path: "#fluegel-re-o" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -285,7 +284,7 @@ var morph_object_3_2 = KUTE.fromTo(
   { path: "#blatt-5" }, // from shape
   { path: "#fluegel-re-u" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -298,7 +297,7 @@ var morph_object_4_2 = KUTE.fromTo(
   { path: "#blatt-4" }, // from shape
   { path: "#body-butterfly" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -311,7 +310,7 @@ var morph_object_5_2 = KUTE.fromTo(
   { path: "#blatt-3" }, // from shape
   { path: "#fluegel-li-u" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -324,7 +323,7 @@ var morph_object_6_2 = KUTE.fromTo(
   { path: "#blatt-2" }, // from shape
   { path: "#fluegel-li-o" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -337,7 +336,7 @@ var morph_object_7_2 = KUTE.fromTo(
   { path: "#blatt-1" }, // from shape
   { path: "#fuehler-li" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -352,7 +351,7 @@ var morph_object_1_3 = KUTE.fromTo(
   { path: "#fluegel-li-o" }, // from shape
   { path: "#li-o" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -365,7 +364,7 @@ var morph_object_2_3 = KUTE.fromTo(
   { path: "#fluegel-re-o" }, // from shape
   { path: "#re-o" }, // to shape
   {
-     easing: "linear",
+    easing: "linear",
     repeat: 0,
     yoyo: false,
     duration: 1000,
@@ -461,6 +460,89 @@ morph_object_5_3.chain(morph_object_5_1);
 morph_object_6_3.chain(morph_object_6_1);
 morph_object_7_3.chain(morph_object_7_1);
 
+
+//SUN-MOON-MORPH ANIMATION
+var morphSun = KUTE.fromTo(
+  "#morphSun",
+  { path: "#morphSun" }, // from shape
+  { path: "#morphMoon" }, // to shape
+  {
+    easing: "linear",
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morphMoon = KUTE.fromTo(
+  "#morphSun",
+  { path: "#morphMoon" }, // from shape
+  { path: "#morphSun" }, // to shape
+  {
+    easing: "linear",
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
+var morphSunAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
+morphSunAnimation.to(".smallRay", {
+  opacity: .1, 
+  stagger: {
+    grid: "auto",
+    from: "center",
+    amount: 1.5
+  }
+},0),
+morphSunAnimation.to(".bigRay", {
+  opacity:.1, 
+  stagger: {
+    grid: "auto",
+    from: "center",
+    amount: 1.5
+  }
+},0),
+morphSunAnimation.to(".smallRay", {
+  opacity: .5, 
+  stagger: {
+    grid: "auto",
+    from: "center",
+    amount: 1.5
+  }
+},1),
+morphSunAnimation.to(".bigRay", {
+  opacity:.5, 
+  stagger: {
+    grid: "auto",
+    from: "center",
+    amount: 1.5
+  }
+},1),
+morphSunAnimation.to("#rays", {
+  opacity: 0,
+  duration: 1
+},"+=1", 3),
+morphSunAnimation.add( function(){ morphSun.start() },"-=1",4), //sun to moon,
+morphSunAnimation.to("#example-6",
+{backgroundColor: '#000047', ease:"linear"},"+=1",4),
+morphSunAnimation.to(".starz", {
+  opacity: 1, 
+  stagger: {
+    amount: 1.5
+  }
+},"+=2", 5),
+morphSunAnimation.to(".starz", {
+  opacity: 0,
+  duration: .8
+},"+=1", 6),
+morphSunAnimation.to("#morphSun", {
+  opacity: 0,
+  duration: .8
+},"-=1", 6),
+morphSunAnimation.add( function(){ morphMoon.start()},"-=1",6); //morph moon back to sun
+
 //TRIGGER EVENTS
 window.onload = function () {
   sunriseAnimation.play();
@@ -476,4 +558,5 @@ window.onload = function () {
   morph_object_5_1.start();
   morph_object_6_1.start();
   morph_object_7_1.start();
+  morphSunAnimation.play();
 }

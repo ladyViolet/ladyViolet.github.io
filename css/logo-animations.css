@@ -74,19 +74,23 @@
   margin-top: 20%;
 }
 
-#example-0, #example-2, #example-3, #example-4, #example-5 {
+#example-6 {
+  background-color: var(--color-3-1);
+}
+
+#example-0, #example-2, #example-3, #example-4, #example-5, #example-6 {
   padding: 10%;
 }
 @media screen and (min-width: 576px) {
-  #example-0, #example-2, #example-3, #example-4, #example-5 {
+  #example-0, #example-2, #example-3, #example-4, #example-5, #example-6 {
     padding: 3%;
   }
 }
 
-#heart-2 {
+#heart-2, .starz {
   opacity: 0;
 }
 
-#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera {
+#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon {
   visibility: hidden;
 }/*# sourceMappingURL=logo-animations.css.map */
