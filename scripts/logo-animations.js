@@ -438,6 +438,99 @@ var morph_object_7_3 = KUTE.fromTo(
   }
 );
 
+//morph whale into shell
+var morph_object_1_4 = KUTE.fromTo(
+  "#teil-7",
+  { path: "#li-o" }, // from shape
+  { path: "#teil-7" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_2_4 = KUTE.fromTo(
+  "#teil-6",
+  { path: "#re-o" }, // from shape
+  { path: "#teil-6" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_3_4 = KUTE.fromTo(
+  "#teil-5",
+  { path: "#bod-li-u" }, // from shape
+  { path: "#teil-5" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_4_4 = KUTE.fromTo(
+  "#teil-4",
+  { path: "#bod-re-u" }, // from shape
+  { path: "#teil-4" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_5_4 = KUTE.fromTo(
+  "#teil-3",
+  { path: "#bod-li-o"}, // from shape
+  { path: "#teil-3"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_6_4 = KUTE.fromTo(
+  "#teil-2",
+  { path: "#bod-re-o" }, // from shape
+  { path: "#teil-2"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_object_7_4 = KUTE.fromTo(
+  "#teil-1",
+  { path: "#fake-body" }, // from shape
+  { path: "#teil-1"}, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
 morph_object_1_1.chain(morph_object_1_2);
 morph_object_2_1.chain(morph_object_2_2);
 morph_object_3_1.chain(morph_object_3_2);
@@ -452,13 +545,21 @@ morph_object_4_2.chain(morph_object_4_3);
 morph_object_5_2.chain(morph_object_5_3);
 morph_object_6_2.chain(morph_object_6_3);
 morph_object_7_2.chain(morph_object_7_3);
-morph_object_1_3.chain(morph_object_1_1);
-morph_object_2_3.chain(morph_object_2_1);
-morph_object_3_3.chain(morph_object_3_1);
-morph_object_4_3.chain(morph_object_4_1);
-morph_object_5_3.chain(morph_object_5_1);
-morph_object_6_3.chain(morph_object_6_1);
-morph_object_7_3.chain(morph_object_7_1);
+morph_object_1_3.chain(morph_object_1_4);
+morph_object_2_3.chain(morph_object_2_4);
+morph_object_3_3.chain(morph_object_3_4);
+morph_object_4_3.chain(morph_object_4_4);
+morph_object_5_3.chain(morph_object_5_4);
+morph_object_6_3.chain(morph_object_6_4);
+morph_object_7_3.chain(morph_object_7_4);
+morph_object_7_2.chain(morph_object_7_3);
+morph_object_1_4.chain(morph_object_1_1);
+morph_object_2_4.chain(morph_object_2_1);
+morph_object_3_4.chain(morph_object_3_1);
+morph_object_4_4.chain(morph_object_4_1);
+morph_object_5_4.chain(morph_object_5_1);
+morph_object_6_4.chain(morph_object_6_1);
+morph_object_7_4.chain(morph_object_7_1);
 
 
 //SUN-MOON-MORPH ANIMATION
