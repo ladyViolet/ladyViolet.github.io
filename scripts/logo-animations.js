@@ -589,6 +589,14 @@ var morphMoon = KUTE.fromTo(
 );
 
 var morphSunAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
+morphSunAnimation.to("#morphSun", {
+  opacity: 1,
+  duration: 1.5
+},0),
+morphSunAnimation.to("#rays", {
+  opacity: 1,
+  duration: 1.5
+},0),
 morphSunAnimation.to(".smallRay", {
   opacity: .1, 
   stagger: {
@@ -596,7 +604,7 @@ morphSunAnimation.to(".smallRay", {
     from: "center",
     amount: 1.5
   }
-},0),
+},1),
 morphSunAnimation.to(".bigRay", {
   opacity:.1, 
   stagger: {
@@ -604,7 +612,7 @@ morphSunAnimation.to(".bigRay", {
     from: "center",
     amount: 1.5
   }
-},0),
+},1),
 morphSunAnimation.to(".smallRay", {
   opacity: .5, 
   stagger: {
@@ -612,7 +620,7 @@ morphSunAnimation.to(".smallRay", {
     from: "center",
     amount: 1.5
   }
-},1),
+},2),
 morphSunAnimation.to(".bigRay", {
   opacity:.5, 
   stagger: {
@@ -620,12 +628,12 @@ morphSunAnimation.to(".bigRay", {
     from: "center",
     amount: 1.5
   }
-},1),
+},2),
 morphSunAnimation.to("#rays", {
   opacity: 0,
   duration: 1
-},"+=1", 3),
-morphSunAnimation.add( function(){ morphSun.start() },"-=1",4), //sun to moon,
+},"+=1", 4),
+morphSunAnimation.add( function(){ morphSun.start() },"-=1",5), //sun to moon,
 morphSunAnimation.to("#example-6",
 {backgroundColor: '#000047', ease:"linear"},"+=1",4),
 morphSunAnimation.to(".starz", {
@@ -633,16 +641,16 @@ morphSunAnimation.to(".starz", {
   stagger: {
     amount: 1.5
   }
-},"+=2", 5),
+},"+=2", 6),
 morphSunAnimation.to(".starz", {
   opacity: 0,
   duration: .8
-},"+=1", 6),
+},"+=1", 7),
 morphSunAnimation.to("#morphSun", {
   opacity: 0,
   duration: .8
-},"-=1", 6),
-morphSunAnimation.add( function(){ morphMoon.start()},"-=1",6); //morph moon back to sun
+},"-=1", 7),
+morphSunAnimation.add( function(){ morphMoon.start()},"-=1",7); //morph moon back to sun
 
 //TRIGGER EVENTS
 window.onload = function () {
