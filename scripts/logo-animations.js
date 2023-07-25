@@ -652,6 +652,14 @@ morphSunAnimation.to("#morphSun", {
 },"-=1", 7),
 morphSunAnimation.add( function(){ morphMoon.start()},"-=1",7); //morph moon back to sun
 
+var yinSurfAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
+yinSurfAnimation.from("#yinSurf", {
+  opacity: 0,
+  rotation: -720,
+  transformOrigin: "center",
+  scale: .1,
+  duration: 1.5
+},0),
 //TRIGGER EVENTS
 window.onload = function () {
   sunriseAnimation.play();

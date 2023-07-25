@@ -78,11 +78,27 @@
   background-color: var(--color-3-1);
 }
 
-#example-0, #example-2, #example-3, #example-4, #example-5, #example-6 {
+#example-7 {
+  background-color: var(--color-3-2);
+}
+
+#example-8 {
+  background-color: var(--color-3-3);
+  padding-top: 15% !important;
+  padding-bottom: 15% !important;
+}
+@media screen and (min-width: 576px) {
+  #example-8 {
+    padding-top: 5.5% !important;
+    padding-bottom: 5.5% !important;
+  }
+}
+
+#example-0, #example-2, #example-3, #example-4, #example-5, #example-6, #example-7, #example-8 {
   padding: 10%;
 }
 @media screen and (min-width: 576px) {
-  #example-0, #example-2, #example-3, #example-4, #example-5, #example-6 {
+  #example-0, #example-2, #example-3, #example-4, #example-5, #example-6, #example-7, #example-8 {
     padding: 3%;
   }
 }
