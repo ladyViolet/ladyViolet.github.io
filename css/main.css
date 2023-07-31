@@ -219,6 +219,14 @@ section {
   display: block;
 }
 
+#title-desktop {
+  display: none;
+}
+
+#title-mobile {
+  display: block;
+}
+
 .featured-desc {
   color: black;
   margin-bottom: 0.5em;
@@ -297,9 +305,18 @@ section {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.about {
+  background: white;
+}
+
+#about-subtitle {
+  margin-top: 0 !important;
+}
+
 .contact {
   background: white;
   text-align: center;
+  padding-top: 2em !important;
 }
 
 .loveletter {
@@ -434,6 +451,12 @@ footer a:hover {
   }
   .featured img {
     float: right;
+  }
+  #title-desktop {
+    display: block;
+  }
+  #title-mobile {
+    display: none;
   }
   .left, .portfolio-left {
     display: grid;
