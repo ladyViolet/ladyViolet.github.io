@@ -21,6 +21,18 @@
     padding: 0;
 }
 
+#nav-back, #pageup {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#pageup {
+    color: #3f2140;
+}
+
+#arrow, #back-text {
+    fill: #3f2140;
+}
+
 .example {
     svg {
         width: 100%;
