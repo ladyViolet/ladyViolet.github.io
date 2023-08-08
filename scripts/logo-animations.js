@@ -652,6 +652,7 @@ morphSunAnimation.to("#morphSun", {
 },"-=1", 7),
 morphSunAnimation.add( function(){ morphMoon.start()},"-=1",7); //morph moon back to sun
 
+//YIN SURF ANIMATION
 var yinSurfAnimation = gsap.timeline({repeat: -1, repeatDelay: 2});
 yinSurfAnimation.from("#yinSurf", {
   opacity: 0,
@@ -659,11 +660,78 @@ yinSurfAnimation.from("#yinSurf", {
   transformOrigin: "center",
   scale: .1,
   duration: 1.5
-},0),
+},0);
+
+//BLACK CAT PEEK-A-BOO
+var catPeekaboo = gsap.timeline({repeat: -1, repeatDelay: 2, yoyo: true});
+catPeekaboo.to("#cat", {
+  y: -20,
+  duration: 2
+});
+
+//BOARD SHAPE MORPH
+var morph_board_1 = KUTE.fromTo(
+  "#noserider",
+  { path: "#noserider" }, // from shape
+  { path: "#midlength" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_board_2 = KUTE.fromTo(
+  "#noserider",
+  { path: "#midlength" }, // from shape
+  { path: "#fish" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_board_3 = KUTE.fromTo(
+  "#noserider",
+  { path: "#fish" }, // from shape
+  { path: "#performance" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+var morph_board_4 = KUTE.fromTo(
+  "#noserider",
+  { path: "#performance" }, // from shape
+  { path: "#noserider" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: false,
+    duration: 1000,
+    delay: 1500,
+    morphPrecision: 1
+  }
+);
+
+morph_board_1.chain(morph_board_2);
+morph_board_2.chain(morph_board_3);
+morph_board_3.chain(morph_board_4);
+morph_board_4.chain(morph_board_1);
+
 //TRIGGER EVENTS
 window.onload = function () {
   sunriseAnimation.play();
-  butterflyAnimation.play();
+  //butterflyAnimation.play();
   flowerAnimation();
   //drawSurfsup();
   coffeeAnimation.play();
@@ -676,4 +744,6 @@ window.onload = function () {
   morph_object_6_1.start();
   morph_object_7_1.start();
   morphSunAnimation.play();
+  catPeekaboo.play();
+  morph_board_1.start();
 }

@@ -48,11 +48,12 @@
 }
 
 #example-1 {
+    position: relative;
     background-color: var(--color-1-2);
-    padding: 15%;
+    padding: 5% 40%;
 
     @media screen and (min-width: 576px) {
-        padding: 5%;
+        padding: 1% 13.4%;
     }
 }
 
@@ -94,13 +95,21 @@
 }
 
 #example-7 {
+    position: relative;
     background-color: var(--color-3-2);
+    padding: 0 !important;
+    svg {
+        bottom: 0;
+        @media screen and (min-width: 576px) {
+            position: absolute;
+        }
+    }
 }
 
 #example-8 {
     background-color: var(--color-3-3);
-    padding-top: 15% !important;
-    padding-bottom: 15% !important;
+    padding-top: 12% !important;
+    padding-bottom: 12% !important;
 
     @media screen and (min-width: 576px) {
         padding-top: 5.5% !important;
@@ -120,6 +129,6 @@
     opacity: 0;
 }
 
-#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon {
+#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon, #fish, #midlength, #performance {
     visibility: hidden;
 }
