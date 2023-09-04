@@ -728,6 +728,79 @@ morph_board_2.chain(morph_board_3);
 morph_board_3.chain(morph_board_4);
 morph_board_4.chain(morph_board_1);
 
+//EAGLE_RAY FLOATING
+var eagleRay_morph_1_1 = KUTE.fromTo(
+  "#wing-1-1",
+  { path: "#wing-1-1" }, // from shape
+  { path: "#wing-1-2" }, // to shape
+  {
+    easing: "linear",
+    repeat: Infinity,
+    yoyo: true,
+    duration: 2000,
+    morphPrecision: 1
+  }
+);
+
+var eagleRay_morph_2_1 = KUTE.fromTo(
+  "#wing-2-1",
+  { path: "#wing-2-1" }, // from shape
+  { path: "#wing-2-2" }, // to shape
+  {
+    easing: "linear",
+    repeat: Infinity,
+    yoyo: true,
+    duration: 2000,
+    morphPrecision: 1
+  }
+);
+
+var eagleRay_morph_tail = KUTE.fromTo(
+  "#tail-1",
+  { path: "#tail-1" }, // from shape
+  { path: "#tail-2" }, // to shape
+  {
+    easing: "linear",
+    repeat: Infinity,
+    yoyo: true,
+    duration: 2000,
+    morphPrecision: 1
+  }
+);
+
+//DOTS APPEARANCE
+/*var eagleRayDots = gsap.timeline({repeat: -1,});
+eagleRayDots.to("#dots-state-1",{
+  opacity: 0,
+  duration: 1,
+  delay: 1.3
+},0),
+eagleRayDots.to("#dots-state-2",{
+  opacity: 1,
+  duration: 1,
+  delay: 1.3
+},1);*/
+
+var eagleRayDots = gsap.from(".eagleDot", {
+  repeat: -1,
+  opacity: .2,
+  yoyo: true,
+  stagger: {
+    grid: [0,13],
+    axis: "x",
+    from: "center",
+    amount: 1
+  }
+});
+
+//FINAL ANIMATION
+var eagleRayAnimation = function() {
+  eagleRay_morph_1_1.start();
+  eagleRay_morph_2_1.start();
+  eagleRay_morph_tail.start();
+}
+
+
 //TRIGGER EVENTS
 window.onload = function () {
   sunriseAnimation.play();
@@ -746,4 +819,5 @@ window.onload = function () {
   morphSunAnimation.play();
   catPeekaboo.play();
   morph_board_1.start();
+  eagleRayAnimation();
 }

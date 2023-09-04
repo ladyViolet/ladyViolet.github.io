@@ -117,6 +117,14 @@
     }
 }
 
+#example-9 {
+    background-color: #ad7fa8;
+    padding: 5%;
+    @media screen and (min-width: 576px) {
+        padding: 2%;
+    }
+}
+
 #example-0, #example-2, #example-3, #example-4, #example-5, #example-6, #example-7, #example-8 {
     padding: 10%;
     
@@ -125,10 +133,10 @@
     }
 }
 
-#heart-2, .starz, #morphSun {
+#heart-2, .starz, #morphSun, #dots-state-1, #dots-state-2 {
     opacity: 0;
 }
 
-#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon, #fish, #midlength, #performance {
+#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon, #fish, #midlength, #performance, #wings-state-2, #tail, #tail-2 {
     visibility: hidden;
 }
