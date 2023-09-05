@@ -120,15 +120,14 @@
 
 #example-9 {
   overflow: hidden;
-  background-color: #ad7fa8;
+  background-color: var(--color-4-1);
   background-image: url(/img/BG-test.png);
   background-size: cover;
-  padding: 0 3% 0 3%;
+  padding: 0 1% 0 1%;
 }
-@media screen and (min-width: 576px) {
-  #example-9 {
-    padding: 0 2% 0 2%;
-  }
+
+#example-10 {
+  background-color: var(--color-4-2);
 }
 
 #example-0, #example-2, #example-3, #example-4, #example-5, #example-6, #example-7, #example-8 {
