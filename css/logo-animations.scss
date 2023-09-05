@@ -121,7 +121,9 @@
 #example-9 {
     overflow: hidden;
     background-color: #ad7fa8;
-    padding: 0 5% 0 5%;
+    background-image: url(/img/BG-test.png);
+    background-size: cover;
+    padding: 0 3% 0 3%;
 
     @media screen and (min-width: 576px) {
         padding: 0 2% 0 2%;
@@ -140,6 +142,6 @@
     opacity: 0;
 }
 
-#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon, #fish, #midlength, #performance, #wings-state-2, #wings-state-3, #tail, #tail-2 {
+#morph-1, #morph-2, #fill, #fishtail, #swallowtail, #monstera, #morphMoon, #fish, #midlength, #performance, #wing-2, #wing-3, #tail, #tail-2 {
     visibility: hidden;
 }
