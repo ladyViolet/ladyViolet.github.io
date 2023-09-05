@@ -729,31 +729,90 @@ morph_board_3.chain(morph_board_4);
 morph_board_4.chain(morph_board_1);
 
 //EAGLE_RAY FLOATING
-var eagleRay_morph_1_1 = KUTE.fromTo(
-  "#wing-1-1",
-  { path: "#wing-1-1" }, // from shape
-  { path: "#wing-1-2" }, // to shape
+var eagleRay_morph_l_1 = KUTE.fromTo(
+  "#wing-l-1",
+  { path: "#wing-l-1" }, // from shape
+  { path: "#wing-l-2" }, // to shape
   {
     easing: "linear",
-    repeat: Infinity,
+    repeat: 0,
     yoyo: true,
-    duration: 2000,
+    duration: 1000,
     morphPrecision: 1
   }
 );
 
-var eagleRay_morph_2_1 = KUTE.fromTo(
-  "#wing-2-1",
-  { path: "#wing-2-1" }, // from shape
-  { path: "#wing-2-2" }, // to shape
+var eagleRay_morph_r_1 = KUTE.fromTo(
+  "#wing-r-1",
+  { path: "#wing-r-1" }, // from shape
+  { path: "#wing-r-2" }, // to shape
   {
     easing: "linear",
-    repeat: Infinity,
+    repeat: 0,
     yoyo: true,
-    duration: 2000,
+    duration: 1000,
     morphPrecision: 1
   }
 );
+  
+var eagleRay_morph_l_2 = KUTE.fromTo(
+  "#wing-l-1",
+  { path: "#wing-l-2" }, // from shape
+  { path: "#wing-l-3" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: true,
+    duration: 1000,
+    morphPrecision: 1
+  }
+);
+
+var eagleRay_morph_r_2 = KUTE.fromTo(
+  "#wing-r-1",
+  { path: "#wing-r-2" }, // from shape
+  { path: "#wing-r-3" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: true,
+    duration: 1000,
+    morphPrecision: 1
+  }
+);
+
+var eagleRay_morph_l_3 = KUTE.fromTo(
+  "#wing-l-1",
+  { path: "#wing-l-3" }, // from shape
+  { path: "#wing-l-1" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: true,
+    duration: 1500,
+    morphPrecision: 1
+  }
+);
+
+var eagleRay_morph_r_3 = KUTE.fromTo(
+  "#wing-r-1",
+  { path: "#wing-r-3" }, // from shape
+  { path: "#wing-r-1" }, // to shape
+  {
+    easing: "linear",
+    repeat: 0,
+    yoyo: true,
+    duration: 1500,
+    morphPrecision: 1
+  }
+);
+
+eagleRay_morph_l_1.chain(eagleRay_morph_l_2);
+eagleRay_morph_r_1.chain(eagleRay_morph_r_2);
+eagleRay_morph_l_2.chain(eagleRay_morph_l_3);
+eagleRay_morph_r_2.chain(eagleRay_morph_r_3);
+eagleRay_morph_l_3.chain(eagleRay_morph_l_1);
+eagleRay_morph_r_3.chain(eagleRay_morph_r_1);
 
 var eagleRay_morph_tail = KUTE.fromTo(
   "#tail-1",
@@ -769,18 +828,6 @@ var eagleRay_morph_tail = KUTE.fromTo(
 );
 
 //DOTS APPEARANCE
-/*var eagleRayDots = gsap.timeline({repeat: -1,});
-eagleRayDots.to("#dots-state-1",{
-  opacity: 0,
-  duration: 1,
-  delay: 1.3
-},0),
-eagleRayDots.to("#dots-state-2",{
-  opacity: 1,
-  duration: 1,
-  delay: 1.3
-},1);*/
-
 var eagleRayDots = gsap.from(".eagleDot", {
   repeat: -1,
   opacity: .2,
@@ -794,13 +841,13 @@ var eagleRayDots = gsap.from(".eagleDot", {
 });
 
 //MOVE RAY
-var moveEagleRay = gsap.timeline({repeat: -1})
-moveEagleRay.fromTo("#eagleRay", {y: 260, scale: .5, duration: 10, scale: 1, ease: "expo.in"}, {y: -260,scale: 1,duration: 10, scale: .3},);
+var moveEagleRay = gsap.timeline({repeat: -1, paused: true})
+moveEagleRay.fromTo("#eagleRay", {y: 260, scale: .5, rotationX: 0, duration: 10, scale: 1, ease: "expo.in"}, {y: -260, scale: 1, rotationX: 60, duration: 10, scale: .3},);
 
 //FINAL ANIMATION
 var eagleRayAnimation = function() {
-  eagleRay_morph_1_1.start();
-  eagleRay_morph_2_1.start();
+  eagleRay_morph_l_1.start();
+  eagleRay_morph_r_1.start();
   eagleRay_morph_tail.start();
   moveEagleRay.play();
 }
