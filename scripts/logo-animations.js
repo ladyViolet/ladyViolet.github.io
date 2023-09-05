@@ -793,11 +793,16 @@ var eagleRayDots = gsap.from(".eagleDot", {
   }
 });
 
+//MOVE RAY
+var moveEagleRay = gsap.timeline({repeat: -1})
+moveEagleRay.fromTo("#eagleRay", {y: 260, scale: .5, duration: 10, scale: 1, ease: "expo.in"}, {y: -260,scale: 1,duration: 10, scale: .3},);
+
 //FINAL ANIMATION
 var eagleRayAnimation = function() {
   eagleRay_morph_1_1.start();
   eagleRay_morph_2_1.start();
   eagleRay_morph_tail.start();
+  moveEagleRay.play();
 }
 
 

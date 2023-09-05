@@ -67,6 +67,7 @@
 }
 
 #example-4 {
+  overflow: hidden;
   padding-left: 0 !important;
   padding-right: 0 !important;
   background-color: var(--color-2-2);
@@ -118,12 +119,13 @@
 }
 
 #example-9 {
+  overflow: hidden;
   background-color: #ad7fa8;
-  padding: 5%;
+  padding: 0 5% 0 5%;
 }
 @media screen and (min-width: 576px) {
   #example-9 {
-    padding: 2%;
+    padding: 0 2% 0 2%;
   }
 }
 
