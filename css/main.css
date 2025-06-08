@@ -29,7 +29,7 @@
   src: local(""), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff2") format("woff2"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: "Alumni Sans Pinstripe", Helvetica, Arial, sans-serif;
   background-color: #e6e6e6;
@@ -70,16 +70,29 @@ img {
 
 .nav-container {
   background-color: #ad7fa8;
+  position: sticky;
+  z-index: 100000;
+  top: 0;
 }
-.nav-container a {
+.nav-container nav {
+  align-content: center;
+}
+.nav-container nav a {
   color: white;
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
   font-weight: 600;
 }
-.nav-container a:hover {
+.nav-container nav a:hover {
   color: #3f2140;
   font-weight: bold;
+}
+
+.sticky {
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+}
+.sticky header {
+  padding: 0.5em 1em;
 }
 
 header {
@@ -92,6 +105,9 @@ header .logo {
   color: #3f2140;
   font-family: "Barlow Condensed", Helvetica, Arial, sans-serif;
   float: left;
+}
+header .logo :hover {
+  filter: brightness(1.5);
 }
 header .logo .butterfly {
   height: 2em;
@@ -119,6 +135,10 @@ header ul a:hover {
 }
 .social-header i:hover {
   color: #3f2140;
+}
+
+.header-about {
+  background-color: #F0E9F1 !important;
 }
 
 #pageup {
@@ -521,14 +541,19 @@ footer a:hover {
   }
   .nav-container header {
     background: #ad7fa8;
+    padding: 1.5em 2em 1.5em 2em;
   }
-  header {
-    padding: 2em 2em 2em 2em;
+  .sticky header {
+    padding: 0.7em 2em;
+  }
+  .sticky .social-header {
+    padding: 0.7em 0;
   }
   .social-header {
     display: block;
     font-size: 1.5em;
-    padding: 2em 0 2em 0;
+    padding: 1.5em 0 1.5em 0;
+    align-content: center;
     background-color: white;
     width: 100%;
   }
@@ -575,10 +600,16 @@ footer a:hover {
 }
 @media only screen and (min-width: 1250px) {
   header {
-    padding: 2em 2em 2em 4em;
+    padding: 1.5em 2em 1.5em 4em !important;
   }
   .social-header {
-    padding: 2em 10em 2em 0;
+    padding: 1.5em 10em 1.5em 0 !important;
+  }
+  .sticky header {
+    padding: 0.9em 2em 0.9em 4em !important;
+  }
+  .sticky .social-header {
+    padding: 0.9em 10em 0.9em 0 !important;
   }
   section {
     padding: 10em 10em 4em 10em !important;
@@ -608,10 +639,16 @@ footer a:hover {
 }
 @media only screen and (min-width: 1550px) {
   header {
-    padding: 2em 2em 2em 4em;
+    padding: 1.5em 2em 1.5em 4em;
   }
   .social-header {
-    padding: 2em 20em 2em 0;
+    padding: 1.5em 20em 1.5em 0;
+  }
+  .sticky header {
+    padding: 1em 2em 1em 4em;
+  }
+  .sticky .social-header {
+    padding: 1em 20em 1em 0;
   }
   .featured img {
     max-width: 800px;

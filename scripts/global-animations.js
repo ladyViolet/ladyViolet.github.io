@@ -5,14 +5,24 @@ gsap.from("#left-lower-wing", {scaleX: .7, transformOrigin: 'right', duration: 1
 gsap.from("#right-upper-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 gsap.from("#right-lower-wing", {scaleX: .7, transformOrigin: 'left', duration: 1, repeat: -1, yoyo: true});
 
+//HEADER SHRINK
+//header height shrinks when scrolled down 20px from the top of the document
+var header = document.getElementById("nav-container");
+
+function shrinkHeader() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    header.classList.add("sticky");
+
+  } else {
+    header.classList.remove("sticky");  }
+}
+
 //PAGE UP BUTTON & BACK ARROW
 //Get pageup button
 var mybutton = document.getElementById("pageup");
 var backArrow = document.getElementById("nav-back");
         
 //button shows up when scrolled down 20px from the top of the document
-window.onscroll = function() {scrollFunction(), scrollFunctionArrow()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block"; 
@@ -40,6 +50,8 @@ function pageUpFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+//call sroll functions
+window.onscroll = function() {scrollFunction(), scrollFunctionArrow(), shrinkHeader()};
 
 //Container Animation
 var sections = gsap.utils.toArray(".animated-container").forEach(function(elem) {
