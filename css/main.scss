@@ -239,6 +239,161 @@ section {
     padding: 4em 2em;
 }
 
+.work-examples {
+    background-color: #3f2140;
+
+    .headline {
+        font-family: 'Staatliches', Trebuchet, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 5em;
+        color: #AD7FA8;
+        margin: 0;
+    }
+
+    .headline-left {
+        text-align: left;
+        padding: 1em 0 0 .2em;
+        margin-bottom: -.6em;
+    }
+
+    .headline-right {
+        text-align: right;
+        padding: 0 .2em .5em 0;
+        margin-top: -.6em;
+    }
+
+    #corporate-gallery {
+        background-color: #e6e6e6;
+        padding: 3em 0;
+        overflow-x: hidden;
+    }
+
+    #logo-gallery {
+        background-color: #3f2140;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    #web-gallery {
+        background-color: #e6e6e6;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 200%;
+    }
+
+    #slider-top {
+        padding-bottom: 2em;
+    }
+
+    #slider-logos {
+        padding-bottom: 5em;
+    }
+
+    .slider-img {
+        width: auto;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .corporate-img {
+        height: 200px;
+    }
+
+    .logo-img {
+        height: 300px;
+    }
+
+    .info-container {
+        background-color: white;
+        padding: 5em 2em 3em 2em;
+    }
+
+    .web-examples {
+        display: flex;
+        flex-direction: column;
+        background-color: #3f2140;
+    }
+
+    #mockup {
+        padding: 3em 2em 0 1.5em;
+        width: auto;
+    }
+
+    #activism-gallery {
+        background-color: white;
+    }
+
+    #seahorse {
+        width: 50%;
+        margin-left: -4em;
+        margin-top: -2.5em;
+        z-index: 1000;
+    }
+
+    .logo-container {
+        width: 60%;
+        margin: -13em auto 0 auto;
+        padding: 0 0 0 3em;
+    }   
+    
+    #art4change-logo {
+        width: 100%;
+    }  
+        
+    #jellyfish {
+        width: 100%;
+        margin: 2em 0 0 66%;
+    }
+
+    .double-img-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        z-index: 1;
+        
+        .grid-img {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #litterfree {
+            background-image: url(/img/update-06-25/litterfree.png);
+            margin-bottom: 1em;
+    }
+        #postcards {background-image: url(/img/update-06-25/postcards.png);}
+
+    }
+
+  
+    #info-postcards {
+        margin-top: -17em;
+        background: none;
+
+    }
+    
+    .title-75p {
+        width: 75%;
+    }
+    
+    #sum {
+        margin-top: .5em;
+    }
+
+    #thankyou {
+        margin-top: 1.5em;
+        color: #AD7FA8;
+    }
+
+    #nautilus {
+        width: 130%;
+        margin: 1.5em 0 0 50%;
+    }
+}
+
 .featured {
     position: relative;
     background-color: white;
@@ -491,7 +646,7 @@ footer {
 /*media queries*/
 @media only screen and (min-width: 500px) {
     header ul a {
-        padding: .5em 1em;
+        padding: .5em .5em;
     }
 }
 

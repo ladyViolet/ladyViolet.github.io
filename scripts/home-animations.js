@@ -18,6 +18,26 @@ duration: 2}, "-=2" /*offset value to get rid of initial delay*/);
 
 gsap.to(".scroll-hint", { y: 10, duration: 2, repeat: -1, ease: "bounce.out", delay: 4 });
 
+gsap.from(".transition1a", {
+    scrollTrigger: {
+        trigger: '.transition1a',
+        start: "top bottom"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 1.2
+});
+
+gsap.from(".transition1b", {
+    scrollTrigger: {
+        trigger: '.transition1b',
+        start: "top bottom"
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1.2
+});
+
 gsap.from(".transition2", {
     scrollTrigger: {
         trigger: '.transition2',

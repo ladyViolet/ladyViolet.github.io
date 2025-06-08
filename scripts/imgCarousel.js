@@ -1,24 +1,20 @@
-let loop1 = horizontalLoop(".image-a", {speed: 1.5, repeat: -1, paddingRight: 30});
-let loop2 = horizontalLoop(".image-b", {speed: 1.5, repeat: -1, paddingRight: 30});
+let loop = horizontalLoop(".slider-img", {speed: 1, repeat: -1, paddingRight: 25});
 
 function setDirection(value) {
-  if (loop1.direction !== value) {
-    gsap.to(loop1, {timeScale: value, duration: 0.3, overwrite: true});
-    loop1.direction = value;
-  }
-
-  if (loop2.direction !== value) {
-    gsap.to(loop2, {timeScale: value, duration: 0.3, overwrite: true});
-    loop2.direction = value;
+  if (loop.direction !== value) {
+    gsap.to(loop, {timeScale: value, duration: 0.3, overwrite: true});
+    loop.direction = value;
   }
 }
 
 Observer.create({
-  target: "#wrapper-1",
+  target: window,
   type: "wheel,scroll,touch",
   onDown: () => setDirection(1),
   onUp: () => setDirection(-1)
 })
+
+
 
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
