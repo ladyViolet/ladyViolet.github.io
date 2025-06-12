@@ -8,6 +8,7 @@ tl.from('.hero-design', {
     duration: 3,
     ease: Power4.easeOut
 })
+
 .from('.stagger-1', {
 opacity: 0,
 scale:0.1,
@@ -25,7 +26,8 @@ gsap.from(".transition1a", {
     },
     x: -50,
     opacity: 0,
-    duration: 1.2
+    duration: 1.2,
+    stagger: .3
 });
 
 gsap.from(".transition1b", {
@@ -35,7 +37,8 @@ gsap.from(".transition1b", {
     },
     x: 50,
     opacity: 0,
-    duration: 1.2
+    duration: 1.2,
+    stagger: .3
 });
 
 gsap.from(".transition2", {
@@ -51,7 +54,7 @@ gsap.from(".transition2", {
 
 gsap.from(".transition-3", {
   scrollTrigger: {
-    trigger: '.featured-title',
+    trigger: '#wordgram',
     start: "top bottom"
   },
   opacity: 0,

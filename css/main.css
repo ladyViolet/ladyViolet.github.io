@@ -162,6 +162,7 @@ header ul a:hover {
 }
 
 .hero {
+  min-height: 85vh;
   background: #cba0c6;
   color: white;
   display: grid;
@@ -170,7 +171,7 @@ header ul a:hover {
 }
 
 .content {
-  padding-top: 6em;
+  align-content: center;
 }
 
 .hero-design {
@@ -230,6 +231,9 @@ section {
   padding: 0 0.2em 0.5em 0;
   margin-top: -0.6em;
 }
+.work-examples #web-headline {
+  padding-bottom: 0.2em;
+}
 .work-examples #corporate-gallery {
   background-color: #e6e6e6;
   padding: 3em 0;
@@ -278,26 +282,38 @@ section {
   padding: 3em 2em 0 1.5em;
   width: auto;
 }
+.work-examples .google-batch {
+  text-align: center;
+  padding-bottom: 2em;
+}
+.work-examples .google-batch svg {
+  width: 120px;
+  height: auto;
+}
+.work-examples .google-batch a:hover svg {
+  transform: scale(0.9);
+  transform-origin: center;
+}
 .work-examples #activism-gallery {
   background-color: white;
 }
 .work-examples #seahorse {
-  width: 50%;
-  margin-left: -4em;
+  width: 53%;
+  margin-left: -5em;
   margin-top: -2.5em;
   z-index: 1000;
 }
 .work-examples .logo-container {
-  width: 60%;
-  margin: -13em auto 0 auto;
+  width: 65%;
+  margin: -15em auto 0 auto;
   padding: 0 0 0 3em;
 }
 .work-examples #art4change-logo {
   width: 100%;
 }
 .work-examples #jellyfish {
-  width: 100%;
-  margin: 2em 0 0 66%;
+  width: 65%;
+  margin: 0 0 -55% 70%;
 }
 .work-examples .double-img-grid {
   display: flex;
@@ -306,7 +322,8 @@ section {
   z-index: 1;
 }
 .work-examples .double-img-grid .grid-img {
-  height: 300px;
+  min-height: 300px;
+  aspect-ratio: 4/3;
   background-size: cover;
   background-position: center;
 }
@@ -318,26 +335,39 @@ section {
   background-image: url(/img/update-06-25/postcards.png);
 }
 .work-examples #info-postcards {
-  margin-top: -17em;
   background: none;
+  padding-bottom: 2em;
+  margin-top: -12em;
 }
 .work-examples .title-75p {
-  width: 75%;
+  width: 80%;
+}
+.work-examples #first-paragraph {
+  width: 90%;
 }
 .work-examples #sum {
-  margin-top: 0.5em;
+  font-size: 6em;
 }
 .work-examples #thankyou {
-  margin-top: 1.5em;
+  font-size: 3.5em;
+  margin-top: 0.5em;
   color: #AD7FA8;
 }
-.work-examples #nautilus {
-  width: 130%;
-  margin: 1.5em 0 0 50%;
+
+.separator-row {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .featured {
-  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
   background-color: white;
 }
 .featured svg > g > g:hover {
@@ -346,6 +376,9 @@ section {
   -moz-transition: opacity 0.2s ease-out;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
+}
+.featured .right {
+  padding-bottom: 4em;
 }
 
 .subtitle {
@@ -460,9 +493,11 @@ section {
 }
 
 .contact {
-  background: white;
+  background: #F0E9F1;
+  background: linear-gradient(180deg, rgb(240, 233, 241) 10%, rgb(255, 255, 255) 30%);
   text-align: center;
   padding-top: 2em !important;
+  padding-bottom: 1em;
 }
 
 .loveletter {
@@ -576,6 +611,18 @@ footer a:hover {
   header ul a {
     padding: 0.5em 0.5em;
   }
+  #info-postcards {
+    margin-top: -14em !important;
+  }
+  .title-75p {
+    width: 88% !important;
+  }
+  #first-paragraph {
+    width: 83% !important;
+  }
+  #sum {
+    margin-top: 0.5em;
+  }
 }
 @media only screen and (min-width: 800px) {
   header {
@@ -590,13 +637,13 @@ footer a:hover {
   .hero {
     padding: 4em;
   }
-  .content {
-    padding-top: 5em;
+  .headline {
+    font-size: 6em !important;
   }
   .featured, .portfolio {
     text-align: left;
   }
-  .featured, .portfolio-container {
+  .portfolio-container {
     display: grid;
     grid-template-columns: 40% auto;
   }
@@ -614,8 +661,7 @@ footer a:hover {
     place-content: center;
   }
   .right {
-    margin-left: 2em;
-    margin-top: 1em;
+    margin-top: 2em;
   }
   .skills {
     margin-bottom: -10em;
@@ -645,6 +691,53 @@ footer a:hover {
   .portfolio-right {
     padding-left: 2em;
   }
+  .work-examples #corporate-gallery {
+    padding: 5em 0 !important;
+  }
+  .work-examples .corporate-img {
+    height: 300px !important;
+  }
+  .work-examples .logo-img {
+    height: 400px !important;
+  }
+  .work-examples .google-batch svg {
+    width: 150px;
+  }
+  .work-examples #seahorse {
+    width: 45% !important;
+    margin: -3.5em 0 0 -6em !important;
+  }
+  .work-examples .logo-container {
+    width: 55% !important;
+    margin: -20em auto 0 auto !important;
+    padding: 0 0 0 3em;
+  }
+  .work-examples #art4change-logo {
+    width: 100%;
+  }
+  .work-examples .double-img-grid {
+    flex-direction: row !important;
+    -moz-column-gap: 1em !important;
+         column-gap: 1em !important;
+  }
+  .work-examples .grid-img {
+    min-height: unset !important;
+    width: 50% !important;
+  }
+  .work-examples #jellyfish {
+    width: 55% !important;
+    margin: 0 0 -53% 75%;
+  }
+  .work-examples #info-postcards {
+    margin-top: -14em !important;
+    padding-bottom: 3em !important;
+  }
+  .work-examples #second-paragraph {
+    width: 83%;
+  }
+  .work-examples .title-75p {
+    width: 80% !important;
+  }
   .end {
     padding-bottom: 2em;
   }
@@ -662,12 +755,15 @@ footer a:hover {
 @media only screen and (min-width: 1050px) {
   .nav-container {
     display: grid;
-    grid-template-columns: 66% auto;
+    grid-template-columns: 70% auto;
     background: unset;
   }
   .nav-container header {
     background: #ad7fa8;
     padding: 1.5em 2em 1.5em 2em;
+  }
+  .nav-container header .logo {
+    margin-top: 5px;
   }
   .sticky header {
     padding: 0.7em 2em;
@@ -693,18 +789,18 @@ footer a:hover {
   }
   .hero {
     display: grid;
-    grid-template-columns: 66% auto;
-    height: 90vh;
+    grid-template-columns: 70% auto;
+    min-height: 90vh;
     background: unset;
     padding: 0;
   }
   .hero .content {
     background: #cba0c6;
-    padding: 6em 2em 1em 2em;
+    padding: 0 2em 1em 2em !important;
   }
   .hero-design, .meet {
-    width: 120%;
-    margin-left: 30%;
+    width: 110%;
+    margin-left: 17%;
   }
   section {
     padding: 3em;
@@ -715,6 +811,62 @@ footer a:hover {
   .portfolio img {
     float: right;
     max-width: 500px;
+  }
+  #wordgram {
+    width: 90%;
+    align-self: center;
+  }
+  .work-examples .headline {
+    font-size: 8em !important;
+  }
+  .work-examples .headline-left {
+    padding: 1em 0 0 0.3em !important;
+    margin-bottom: -0.6em;
+  }
+  .work-examples .headline-right {
+    padding: 0 0.3em 0.5em 0 !important;
+    margin-top: -0.58em;
+  }
+  .work-examples #corporate-gallery {
+    padding: 6em 0 !important;
+  }
+  .work-examples .web-examples {
+    padding-top: 1em;
+  }
+  .work-examples .google-batch svg {
+    width: 180px;
+  }
+  .work-examples #seahorse {
+    width: 40% !important;
+    margin: -4em 0 0 -7em !important;
+  }
+  .work-examples .logo-container {
+    width: 55% !important;
+    margin: -27em auto 0 auto !important;
+    padding: 0 0 0 3em;
+  }
+  .work-examples #art4change-logo {
+    width: 100%;
+  }
+  .work-examples .double-img-grid {
+    flex-direction: row !important;
+    -moz-column-gap: 1.5em !important;
+         column-gap: 1.5em !important;
+    margin-top: 3em;
+    padding: 0 2em;
+  }
+  .work-examples .grid-img {
+    width: 50% !important;
+  }
+  .work-examples #jellyfish {
+    width: 52% !important;
+    margin: 0 0 -55% 74% !important;
+  }
+  .work-examples #info-postcards {
+    margin-top: -12em !important;
+  }
+  .work-examples .title-75p {
+    width: unset !important;
   }
   .form-group {
     padding-left: 2em;
@@ -740,9 +892,6 @@ footer a:hover {
   section {
     padding: 10em 10em 4em 10em !important;
   }
-  .hero .content {
-    padding: 4em 4em 2em 4em;
-  }
   .skills {
     padding: 5em !important;
   }
@@ -754,6 +903,60 @@ footer a:hover {
   }
   .portfolio img {
     max-width: 600px;
+  }
+  .work-examples .headline {
+    font-size: 10em !important;
+  }
+  .work-examples #corporate-gallery {
+    padding: 8em 0 !important;
+  }
+  .work-examples .corporate-img {
+    height: 400px !important;
+  }
+  .work-examples .logo-img {
+    height: 500px !important;
+  }
+  .work-examples #logo-gallery {
+    margin-bottom: 3em;
+  }
+  .work-examples #web-headline-1 {
+    padding-top: 0.6em !important;
+  }
+  .work-examples #web-headline {
+    margin-top: -0.65em;
+  }
+  .work-examples #mockup {
+    width: 70% !important;
+    margin-top: 2em;
+    margin-left: 5%;
+  }
+  .work-examples #seahorse {
+    width: 35% !important;
+  }
+  .work-examples .double-img-grid {
+    padding: 0 3em !important;
+  }
+  .work-examples #jellyfish {
+    width: 45% !important;
+    margin: 0 0 -48% 77% !important;
+  }
+  .work-examples #info-postcards {
+    padding: 0 3em 3em 3em !important;
+    margin-top: -5em !important;
+  }
+  .work-examples .logo-container {
+    margin-top: -29em !important;
+  }
+  .work-examples #sum {
+    margin-top: 0.3em !important;
+  }
+  .featured {
+    flex-direction: row;
+    grid-gap: 2em !important;
+    padding: 3em !important;
+  }
+  .left {
+    width: 70%;
   }
   .form-group {
     padding-left: 4em;
@@ -775,6 +978,33 @@ footer a:hover {
   }
   .sticky .social-header {
     padding: 1em 20em 1em 0;
+  }
+  .featured {
+    padding: 5em !important;
+  }
+  .work-examples .google-batch svg {
+    width: 200px !important;
+  }
+  .work-examples #seahorse {
+    width: 32% !important;
+  }
+  .work-examples .logo-container {
+    width: 48% !important;
+    margin-top: -33em !important;
+  }
+  .work-examples .double-img-grid {
+    -moz-column-gap: 3em !important;
+         column-gap: 3em !important;
+    margin-top: 4em;
+    padding: 0 5em !important;
+  }
+  .work-examples #jellyfish {
+    width: 40% !important;
+    margin: 0 0 -43% 80% !important;
+  }
+  .work-examples #info-postcards {
+    margin-top: -6em !important;
+    padding-left: 5em !important;
   }
   .featured img {
     max-width: 800px;
