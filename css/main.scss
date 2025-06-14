@@ -1091,6 +1091,13 @@ footer {
             font-size: 9em !important;
         }
 
+        .info-container {
+            padding: 5em 10em;
+            .featured-title {
+                margin-top: .5em;
+            }
+        }
+
         #corporate-gallery {
             padding: 6em 0 !important;
         }
@@ -1123,20 +1130,21 @@ footer {
 
         #seahorse {
             width: 35% !important;
+            margin: -5em 0 0 -5em !important;
         }
 
         .double-img-grid {
-            padding: 1.5em 4em 0 4em !important;
-            column-gap: 3em !important;
+            padding: 1.5em 10em 0 10em !important;
+            column-gap: 2em !important;
         }
 
         #jellyfish {
             width: 45% !important;
-            margin: 0 0 -48% 77% !important;
+            margin: 0 0 -48% 80% !important;
         }
 
         #info-postcards {
-            padding: 0 4em 3em 4em !important;
+            padding: 0 10em 3em 10em !important;
             margin-top: -5em !important;
         }
         
