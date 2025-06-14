@@ -33,6 +33,7 @@ body {
   margin: 0;
   font-family: "Alumni Sans Pinstripe", Helvetica, Arial, sans-serif;
   background-color: #e6e6e6;
+  overflow-x: hidden;
 }
 
 .impressum-body {
@@ -305,7 +306,6 @@ section {
   margin-left: -5em;
   margin-top: -2.5em;
   z-index: 1000;
-  filter: brightness(2.2);
 }
 .work-examples .logo-container {
   width: 65%;
@@ -318,7 +318,6 @@ section {
 .work-examples #jellyfish {
   width: 65%;
   margin: 0 0 -55% 70%;
-  filter: brightness(2.2);
 }
 .work-examples .double-img-grid {
   display: flex;

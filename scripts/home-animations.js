@@ -70,8 +70,8 @@ var floating = gsap.timeline({
   repeat: -1,
   paused: true
 })
-.to ('.floating', 3, {y:'+=8', rotation: '+=.5', ease: Sine.easeInOut})
-.to ('.floating', 3, {y:'-=8', rotation: '-=.5', ease: Sine.easeInOut})
+.to ('.floating', 3, {y:'+=8', rotation: '+=.5', scale: .99 , ease: Sine.easeInOut})
+.to ('.floating', 3, {y:'-=8', rotation: '-=.5', scale: 1.01 , ease: Sine.easeInOut})
 
 var fadeIn = gsap.utils.toArray(".fade-in").forEach(function(elem, index) {
   var fadeIN = gsap.timeline({
@@ -99,11 +99,6 @@ gsap.timeline({
         start: "top bottom"
     }
 })
-.from('#line', {
-  opacity: 0,
-  attr:{"stroke-dasharray":400}},
-  {attr:{"stroke-dashoffset":0}
-})
 .from('#mail', {
   scale: .2,
     opacity: 0,
@@ -113,6 +108,12 @@ gsap.timeline({
 })
 .to('#open', {
   opacity: 1
+})
+.from('#line', {
+  duration: 2,
+  opacity: 0,
+  attr:{"stroke-dasharray":400}},
+  {attr:{"stroke-dashoffset":0}
 })
 .to('#hearts', {
   opacity:1
