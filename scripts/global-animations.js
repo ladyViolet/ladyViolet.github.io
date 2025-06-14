@@ -55,7 +55,6 @@ window.onscroll = function() {scrollFunction(), scrollFunctionArrow(), shrinkHea
 
 //Container Animation
 var sections = gsap.utils.toArray(".animated-container").forEach(function(elem) {
-
   var blocks = elem.querySelectorAll(".transition3");
 
   var tl = gsap.timeline({
@@ -70,7 +69,7 @@ var sections = gsap.utils.toArray(".animated-container").forEach(function(elem) 
   })
   // in css .word is 'overflow:hidden'
   .from(blocks, {opacity:0, y: 50, duration: .8, stagger:.2}) 
-  })
+})
 
 //FOOTER
 gsap.from("#fade-1", {opacity: 0, y:1, repeat: -1, duration: 1, yoyo: true, ease: "bounce.out"});

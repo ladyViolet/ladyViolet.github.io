@@ -10,66 +10,88 @@ tl.from('.hero-design', {
 })
 
 .from('.stagger-1', {
-opacity: 0,
-scale:0.1,
-y: -50,
-stagger: .3,
-ease: Power4.easeOut,
-duration: 2}, "-=2" /*offset value to get rid of initial delay*/);
+  opacity: 0,
+  scale:0.1,
+  y: -50,
+  stagger: .3,
+  ease: Power4.easeOut,
+  duration: 2
+}, "-=2" /*offset value to get rid of initial delay*/);
 
 gsap.to(".scroll-hint", { y: 10, duration: 2, repeat: -1, ease: "bounce.out", delay: 4 });
 
-gsap.from(".transition1a", {
+var slideInUp = gsap.utils.toArray(".slide-in-up").forEach(function(elem, index) {
+  var tlSlideInUp = gsap.timeline({
     scrollTrigger: {
-        trigger: '.transition1a',
-        start: "top bottom"
+      trigger: elem,
+      start: "top 90%",
+      markers: false
     },
-    x: -50,
-    opacity: 0,
-    duration: 1.2,
-    stagger: .3
+  })
+  .from(elem, {opacity: 0, y: 50, duration: .8, stagger:.3}) 
 });
 
-gsap.from(".transition1b", {
+var slideInDown = gsap.utils.toArray(".slide-in-down").forEach(function(elem, index) {
+  var tlSlideInDown = gsap.timeline({
     scrollTrigger: {
-        trigger: '.transition1b',
-        start: "top bottom"
+      trigger: elem,
+      start: "top 90%",
+      markers: false
     },
-    x: 50,
-    opacity: 0,
-    duration: 1.2,
-    stagger: .3
+  })
+  .from(elem, {opacity: 0, y: '-=10', duration: 1, stagger:.1})
 });
 
-gsap.from(".transition2", {
+var slideInRight = gsap.utils.toArray(".slide-in-right").forEach(function(elem, index) {
+  var tlSlideInRight = gsap.timeline({
     scrollTrigger: {
-        trigger: '.transition2',
-        start: "top bottom"
+      trigger: elem,
+      start: "top 90%",
+      markers: false
     },
-    y: 50,
-    opacity: 0,
-    duration: 1.2,
-    stagger: .3
+  })
+  .from(elem, {opacity: 0, x: 100, duration: .8, stagger:.3}) 
 });
 
-gsap.from(".transition-3", {
-  scrollTrigger: {
-    trigger: '#wordgram',
-    start: "top bottom"
-  },
-  opacity: 0,
-  duration: .5,
-  stagger: .1
+var slideInLeft = gsap.utils.toArray(".slide-in-left").forEach(function(elem, index) {
+  var tlSlideInLeft = gsap.timeline({
+    scrollTrigger: {
+      trigger: elem,
+      start: "top 90%",
+      markers: false
+    },
+  })
+  .from(elem, {opacity: 0, x: -100, duration: .8, stagger:.3}) 
 });
 
-gsap.to("#moon", {opacity: 0, duration: 2, repeat: -1, yoyo: true});
-gsap.to("#stars", {opacity: 0, duration: 1, repeat: -1, yoyo: true});
-gsap.to('#card-1, #card-2, #card-3', {y: 5, opacity: 0, duration: 3, repeat: -1, yoyo: true, stagger: .3});
-gsap.to("#inner-lens", {rotate: 180, transformOrigin: 'center', duration: .5, repeat: -1, yoyo: true, repeatDelay: 1, ease: "bounce.out"});
-gsap.to("#outer-lens", {rotate: -180,  transformOrigin: 'center', duration: .5, repeat: -1, yoyo: true, repeatDelay: 1, ease: "bounce.out"});
-gsap.to("#curve", {scaleX: .2, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
-gsap.to("#ancor", {rotate: 5, transformOrigin: 'center', duration: 2, repeat: -1, ease: "elastic.out(1, 0.3)", yoyo: true});
-gsap.to("#pen", {x:5, y:5, repeat: -1, duration: 2, yoyo: true});
+//floating animation
+var floating = gsap.timeline({
+  yoyo: true,
+  repeat: -1,
+  paused: true
+})
+.to ('.floating', 3, {y:'+=8', rotation: '+=.5', ease: Sine.easeInOut})
+.to ('.floating', 3, {y:'-=8', rotation: '-=.5', ease: Sine.easeInOut})
+
+var fadeIn = gsap.utils.toArray(".fade-in").forEach(function(elem, index) {
+  var fadeIN = gsap.timeline({
+    onComplete: function(){floating.play()},
+    scrollTrigger: {
+      trigger: elem,
+      start: "top bottom",
+      markers: false
+    },
+  })
+  .from(elem, {y: -100, opacity: 0, duration: 3, stagger:.3}) 
+});
+
+gsap.from('#sum', {
+	scrollTrigger: '#sum',
+  y: -50,
+  duration: 2,
+  delay:  .5,
+  ease: 'bounce.out'
+});
 
 gsap.timeline({
   scrollTrigger: {
