@@ -22,9 +22,9 @@ function buildLoops() {
   // kill previous loops if we’re rebuilding
   [loop1, loop2, loop3].forEach(tl => tl?.kill && tl.kill());
 
-  loop1 = horizontalLoop(".slider-img-1", { speed: 1, repeat: -1, paddingRight: 25 });
-  loop2 = horizontalLoop(".slider-img-2", { speed: 1, repeat: -1, paddingRight: 25 });
-  loop3 = horizontalLoop(".slider-img-3", { speed: 1, repeat: -1, paddingRight: 25 });
+  loop1 = horizontalLoop(".slider-img-1", { speed: .5, repeat: -1, paddingRight: 25 });
+  loop2 = horizontalLoop(".slider-img-2", { speed: .5, repeat: -1, paddingRight: 25 });
+  loop3 = horizontalLoop(".slider-img-3", { speed: .8, repeat: -1, paddingRight: 25 });
 
   setDirection( 1, loop1);  // left‑to‑right
   setDirection(-1, loop2);  // right‑to‑left
