@@ -21,12 +21,12 @@
   font-weight: 400;
   src: local(""), url("../fonts/staatliches-v11-latin-regular.woff2") format("woff2"), url("../fonts/staatliches-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* alumni-sans-pinstripe-regular - latin */
+/* alumni-sans-pinstripe-regular - latin*/
 @font-face {
   font-family: "Alumni Sans Pinstripe";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff2") format("woff2"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("../fonts/AlumniSans-ExtraLight.ttf") format("truetype"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff2") format("woff2"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff") format("woff");
 }
 body {
   min-height: 100vh;
@@ -82,7 +82,7 @@ img {
   color: white;
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
-  font-weight: 600;
+  font-weight: 500;
 }
 .nav-container nav a:hover {
   color: #3f2140;
@@ -411,7 +411,8 @@ section {
   color: black;
   margin-bottom: 0.5em;
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.3em;
+  word-spacing: 0.05em;
   font-weight: 500;
 }
 
@@ -506,14 +507,13 @@ section {
 }
 
 .section-title {
-  font-weight: bold;
   font-size: 2em;
   margin-top: 0.3em;
 }
 
 .section-subtitle {
   font-size: 1.5em;
-  margin-top: -1em;
+  margin-top: -1.2em;
   color: #ad7fa8;
 }
 .section-subtitle .fa-heart {
