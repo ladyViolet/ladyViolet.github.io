@@ -290,7 +290,8 @@ section {
         display: flex;
         flex-direction: row;
         gap: 25px;
-        width: 200%;
+        //width: 200%;
+        white-space: nowrap;
     }
 
     #slider-top {

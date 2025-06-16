@@ -251,7 +251,7 @@ section {
   display: flex;
   flex-direction: row;
   gap: 25px;
-  width: 200%;
+  white-space: nowrap;
 }
 .work-examples #slider-top {
   padding-bottom: 2em;

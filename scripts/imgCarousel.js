@@ -1,7 +1,3 @@
-let loop1 = horizontalLoop(".slider-img-1", {speed: 1, repeat: -1, paddingRight: 25});
-let loop2 = horizontalLoop(".slider-img-2", {speed: 1, repeat: -1, paddingRight: 25});
-let loop3 = horizontalLoop(".slider-img-3", {speed: 1, repeat: -1, paddingRight: 25});
-
 function setDirection(value, loop) {
   if (loop.direction !== value) {
     gsap.to(loop, {timeScale: value, duration: 0.3, overwrite: true});
@@ -9,9 +5,43 @@ function setDirection(value, loop) {
   }
 }
 
-setDirection(1, loop1);
-setDirection(-1, loop2);
-setDirection(1, loop3);
+// Wait for *every* <img> in the galleries to finish.
+// --------------------------------------------------
+function imagesReady() {
+  const imgs = document.querySelectorAll("#corporate-gallery img, #logo-gallery img");
+  return Promise.all([...imgs].map(img =>
+    img.complete ? Promise.resolve() :
+    new Promise(res => img.addEventListener("load", res, { once: true }))
+  ));
+}
+
+// -----------------------------------------
+// Build all three infinite‑scroll timelines
+// -----------------------------------------
+function buildLoops() {
+  // kill previous loops if we’re rebuilding
+  [loop1, loop2, loop3].forEach(tl => tl?.kill && tl.kill());
+
+  loop1 = horizontalLoop(".slider-img-1", { speed: 1, repeat: -1, paddingRight: 25 });
+  loop2 = horizontalLoop(".slider-img-2", { speed: 1, repeat: -1, paddingRight: 25 });
+  loop3 = horizontalLoop(".slider-img-3", { speed: 1, repeat: -1, paddingRight: 25 });
+
+  setDirection( 1, loop1);  // left‑to‑right
+  setDirection(-1, loop2);  // right‑to‑left
+  setDirection( 1, loop3);
+
+  ScrollTrigger.refresh();  // make sure ST knows the updated sizes
+}
+
+// --------------------
+// Kick everything off
+// --------------------
+let loop1, loop2, loop3;
+
+imagesReady().then(() => {
+  buildLoops();
+  window.addEventListener("resize", gsap.utils.debounce(buildLoops, 200));
+});
 
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
@@ -30,7 +60,7 @@ Features:
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
-  let tl = gsap.timeline({repeat: config.repeat, paused: config.paused, defaults: {ease: "none"}, scrollTrigger: '#corporatedesign-start', onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
+  let tl = gsap.timeline({repeat: config.repeat, paused: config.paused, defaults: {ease: "none"}, onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
     length = items.length,
     startX = items[0].offsetLeft,
     times = [],
