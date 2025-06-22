@@ -330,7 +330,6 @@ section {
     #web-headline, #web-headline-1 {display: none;}
     
     #web-headline-2 {
-        background-color: #3f2140;
         margin-bottom: -2.2em;
         line-height: 1em;
     }
@@ -396,10 +395,10 @@ section {
         row-gap: 2em;
         padding: 2em;
         z-index: 1;
-        width: auto;
         
         .grid-img {
             min-height: 300px;
+            width: auto;
             aspect-ratio: 4/3;
             background-size: cover;
             background-position: center;
