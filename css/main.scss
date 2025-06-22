@@ -326,16 +326,27 @@ section {
         flex-direction: column;
         background-color: #3f2140;
     }
+    
+    #web-headline, #web-headline-1 {display: none;}
+    
+    #web-headline-2 {
+        background-color: #3f2140;
+        margin-bottom: -2.2em;
+        line-height: 1em;
+    }
+    #mockup {display: none;}
 
-    #mockup {
+    #mockup, #mockup-mobil {
         -webkit-filter: drop-shadow(0px 0px 3px #ffffffae);
         filter: drop-shadow(0px 0px 3px #ffffffae);
-        padding: 3em 2em 0 1.4em;
+        padding: 1em 2em 0 1.4em;
+        width: 92% !important;
     }
 
     .google-batch {
         text-align: center;
         padding-bottom: 2em;
+        padding-top: 1.2em;
         svg {
             width: 120px;
             height: auto;
@@ -687,7 +698,8 @@ footer {
     header ul a {
         padding: .5em .5em;
     }
-    
+      
+    #web-headline-2 {margin-bottom: -2.4em !important;}
     #info-postcards {margin-top: -14em !important;}
     .title-75p {width: 88% !important;}
     #first-paragraph {width: 83% !important;}
@@ -807,8 +819,14 @@ footer {
             padding: 5em 3em 3em 3em;
         }
 
+        #web-headline, #web-headline-1 {display: block;}
+        #web-headline-2 {display: none;}
+        #mockup {display: block;}
+        #mockup-mobil {display: none;}
+
         .google-batch {
         svg {width: 150px;}
+        padding-top: unset;
         }
 
         #seahorse {
@@ -983,7 +1001,7 @@ footer {
         }
 
         #mockup {
-            padding: 4em 3em 0 2.4em;
+            padding: 1em 3em 0 2.4em;
         }
 
         .google-batch {
@@ -1123,7 +1141,6 @@ footer {
 
         #mockup {
             width: 70% !important;
-            margin-top: 2em;
             margin-left: 5%;
         }
 

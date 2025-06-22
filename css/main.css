@@ -282,14 +282,26 @@ section {
   flex-direction: column;
   background-color: #3f2140;
 }
+.work-examples #web-headline, .work-examples #web-headline-1 {
+  display: none;
+}
+.work-examples #web-headline-2 {
+  background-color: #3f2140;
+  margin-bottom: -2.2em;
+  line-height: 1em;
+}
 .work-examples #mockup {
+  display: none;
+}
+.work-examples #mockup, .work-examples #mockup-mobil {
   filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.6823529412));
-  padding: 3em 2em 0 1.4em;
-  width: auto;
+  padding: 1em 2em 0 1.4em;
+  width: 92% !important;
 }
 .work-examples .google-batch {
   text-align: center;
   padding-bottom: 2em;
+  padding-top: 1.2em;
 }
 .work-examples .google-batch svg {
   width: 120px;
@@ -612,6 +624,9 @@ footer a:hover {
   header ul a {
     padding: 0.5em 0.5em;
   }
+  #web-headline-2 {
+    margin-bottom: -2.4em !important;
+  }
   #info-postcards {
     margin-top: -14em !important;
   }
@@ -710,6 +725,21 @@ footer a:hover {
   }
   .work-examples .info-container {
     padding: 5em 3em 3em 3em;
+  }
+  .work-examples #web-headline, .work-examples #web-headline-1 {
+    display: block;
+  }
+  .work-examples #web-headline-2 {
+    display: none;
+  }
+  .work-examples #mockup {
+    display: block;
+  }
+  .work-examples #mockup-mobil {
+    display: none;
+  }
+  .work-examples .google-batch {
+    padding-top: unset;
   }
   .work-examples .google-batch svg {
     width: 150px;
@@ -847,7 +877,7 @@ footer a:hover {
     padding-bottom: 0 !important;
   }
   .work-examples #mockup {
-    padding: 4em 3em 0 2.4em;
+    padding: 1em 3em 0 2.4em;
   }
   .work-examples .google-batch svg {
     width: 180px;
@@ -953,7 +983,6 @@ footer a:hover {
   }
   .work-examples #mockup {
     width: 70% !important;
-    margin-top: 2em;
     margin-left: 5%;
   }
   .work-examples #activism-gallery {
