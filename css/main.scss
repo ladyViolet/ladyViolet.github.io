@@ -820,9 +820,9 @@ footer {
         }
 
         #web-headline, #web-headline-1 {display: block;}
-        #web-headline-2 {display: none;}
+        #web-headline-2 {display: none !important;}
         #mockup {display: block;}
-        #mockup-mobil {display: none;}
+        #mockup-mobil {display: none !important;}
 
         .google-batch {
         svg {width: 150px;}
