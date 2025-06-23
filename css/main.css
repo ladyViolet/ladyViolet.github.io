@@ -28,10 +28,6 @@
   font-weight: 400;
   src: local(""), url("../fonts/AlumniSans-ExtraLight.ttf") format("truetype"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff2") format("woff2"), url("../fonts/alumni-sans-pinstripe-v1-latin-regular.woff") format("woff");
 }
-html {
-  overflow-x: hidden;
-}
-
 body {
   min-height: 100vh;
   margin: 0;
