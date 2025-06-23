@@ -40,12 +40,15 @@
          url('../fonts/alumni-sans-pinstripe-v1-latin-regular.woff') format('woff'); // Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ 
 }
 
+html, body {
+  overflow-x: clip;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Alumni Sans Pinstripe', Helvetica, Arial, sans-serif;
     background-color: #e6e6e6;
-    overflow-x: hidden !important;
 }
 
 .impressum-body {
