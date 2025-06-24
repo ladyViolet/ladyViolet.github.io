@@ -40,7 +40,7 @@ let loop1, loop2, loop3;
 
 imagesReady().then(() => {
   buildLoops();
-  window.addEventListener("resize", gsap.utils.debounce(buildLoops, 200));
+  //window.addEventListener("resize", gsap.utils.debounce(buildLoops, 200));
 });
 
 /*
