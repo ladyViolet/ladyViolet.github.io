@@ -324,7 +324,7 @@ section {
 }
 .work-examples .logo-container {
   width: 65%;
-  margin: -15em auto 0 auto;
+  margin: -16em auto 0 auto;
   padding: 0 0 0 3em;
 }
 .work-examples #art4change-logo {
@@ -624,7 +624,7 @@ footer a:hover {
     padding: 0.5em 0.5em;
   }
   #web-headline-2 {
-    margin-bottom: -2.4em !important;
+    margin-bottom: -2.5em !important;
   }
   #info-postcards {
     margin-top: -14em !important;
