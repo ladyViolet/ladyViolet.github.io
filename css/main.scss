@@ -102,7 +102,7 @@ img {
 
         a:hover {
             color: #3f2140;
-            font-weight: bold;
+            //font-weight: bold;
         }
     }
 }
@@ -366,6 +366,7 @@ section {
 
     #activism-gallery {
         background-color: white;
+        overflow-x: clip;
     }
 
     #seahorse {
@@ -698,6 +699,7 @@ footer {
 @media only screen and (min-width: 500px) {
     header ul a {
         padding: .5em .5em;
+        &:hover {font-weight: bold;}
     }
       
     #web-headline-2 {margin-bottom: -2.5em !important;}

@@ -89,7 +89,6 @@ img {
 }
 .nav-container nav a:hover {
   color: #3f2140;
-  font-weight: bold;
 }
 
 .sticky {
@@ -315,6 +314,7 @@ section {
 }
 .work-examples #activism-gallery {
   background-color: white;
+  overflow-x: clip;
 }
 .work-examples #seahorse {
   width: 53%;
@@ -622,6 +622,9 @@ footer a:hover {
 @media only screen and (min-width: 500px) {
   header ul a {
     padding: 0.5em 0.5em;
+  }
+  header ul a:hover {
+    font-weight: bold;
   }
   #web-headline-2 {
     margin-bottom: -2.5em !important;
