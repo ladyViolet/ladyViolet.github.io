@@ -32,15 +32,40 @@ function buildLoops() {
 
   ScrollTrigger.refresh();  // make sure ST knows the updated sizes
 }
+//allow users to pause carousel on mousedown/touch
+function enableHoldToPause(loop, container) {
+  if (!loop || !container) return;
+
+  const resume = () => {
+    loop.play();
+    if (typeof loop.direction === "number") {
+      loop.timeScale(loop.direction);
+    }
+  };
+
+  container.addEventListener("mousedown", () => loop.pause());
+  container.addEventListener("mouseup", resume);
+  container.addEventListener("mouseleave", resume);
+  container.addEventListener("touchstart", () => loop.pause());
+  container.addEventListener("touchend", resume);
+}
 
 // --------------------
 // Kick everything off
 // --------------------
 let loop1, loop2, loop3;
+const loopContainers = [
+  document.querySelector(".slider-img-1").closest(".slider"),
+  document.querySelector(".slider-img-2").closest(".slider"),
+  document.querySelector(".slider-img-3").closest(".slider"),
+];
 
 imagesReady().then(() => {
   buildLoops();
   //window.addEventListener("resize", gsap.utils.debounce(buildLoops, 200));
+  enableHoldToPause(loop1, loopContainers[0]);
+  enableHoldToPause(loop2, loopContainers[1]);
+  enableHoldToPause(loop3, loopContainers[2]);
 });
 
 /*
@@ -57,6 +82,7 @@ Features:
    - current() - returns the current index (if an animation is in-progress, it reflects the final index)
    - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
  */
+
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
