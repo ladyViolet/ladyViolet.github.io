@@ -39,6 +39,31 @@ body {
   background-color: #e6e6e6;
 }
 
+#logo-page {
+  display: block;
+  background-color: #AD7FA8;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+}
+#logo-page .logo {
+  max-width: 40vw;
+  display: block;
+  margin: 0 auto;
+}
+#logo-page .logo-name {
+  display: block;
+  font-family: "Staatliches", Helvetica, Arial, sans-serif;
+  font-size: 6em;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 100vw;
+  color: #cba0c6;
+}
+#logo-page .hidden {
+  display: none;
+}
+
 .impressum-body {
   background-color: #3f2140;
 }
